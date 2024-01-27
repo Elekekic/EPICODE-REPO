@@ -1,0 +1,26 @@
+main {
+    text-align: center;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header div {
+    color: #004d4c;
+    background: #fdfbf1;
+    padding: 20px;
+    border-top: 1px solid #ffd877;
+    margin-bottom: 20px;
+    text-align: center;
+}
+#logo {
+    display: block;
+    width: 230px;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+
+body {
+    text-align: center;
+}

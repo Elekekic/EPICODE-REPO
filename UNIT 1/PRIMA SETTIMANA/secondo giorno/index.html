@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Primi passi operativi per creare un modello di pagina HTML per un post. Scopri come inziare in modo facile " />
+    <title> Pratica S1/L2 </title>
+    <link href="style.css" rel="stylesheet" />
+</head>
+
+<body>
+    <header>
+        <img src="assets/img/logo (1).svg" width="250px" />
+        <p> Epicode il blog dei developers</p>
+        <nav>
+            <ul>
+                <li>
+                    <a href="Javascript:void(0)">Home</a>
+                </li>
+                <li>
+                    <a href="Javascript:void(0)">Articoli</a>
+                </li>
+                <li>
+                    <a href="Javascript:void(0)">Job</a>
+                </li>
+            </ul>
+
+        </nav>
+    </header>
+    <hr />
+    <!-- PARTE CENTRALE FINO AD ARRIVARE PRIMA DEL VIDEO -->
+    <main>
+        <h2>Come creare un template per i post</h2>
+        <section>
+            <p> Di Elena Kekic - pubblicato nel 23/01/2024 </p>
+            <p> La prima cosa da fare è suddividere in blocchi logici la pagina, identificando le <b> parti comuni</b>
+                da applicare a tutte le pagine </p>
+            <p> Le varie aree saranno quindi suddivise in: </p>
+            <article id="section">
+                <ul>
+                    <li>
+                        Contenuti di intestazione del tag <code> &lt;header&gt; </code>
+                    </li>
+                    <li>
+                        Contenuti centrali variabili del tag <code> &lt;main&gt; </code> (corpo principale)
+                    </li>
+                    <li>
+                        Contenuti di intestazione del tag <code> &lt;footer&gt; </code>
+                    </li>
+                </ul>
+            </article>
+
+            <h2> Formattazione del codice </h2>
+
+            <article id="section">
+                <p> Il testo dell'articolo dovrà essere formattato per identificare tutte le parti da <b>selezionare con
+                        i CSS.</b>
+                    Perciò i passsi saranno: </p>
+                <ol>
+                    <li>
+                        Progettare su carta il markuo finale, assegnando ad ogni specifico testo il tag appropriato
+                    </li>
+                    <li>
+                        Scrivere HMTL dai tag esterni a quelli interni e dall'alto verso il basso
+                    </li>
+                    <li>
+
+                        Applicare gli stili CSS
+                    </li>
+                    </ul>
+            </article>
+            <p> L'applicazione di stili CSS è cresciuta negli ultimi anni fino a raggiungere la diffusione
+                pressochè totale.</p>
+            <!-- TABELLA -->
+
+            <article>
+                <table>
+                    <thead>
+                        <caption> Diffusione dei CSS</caption>
+                        <tr>
+                            <th> Anno </th>
+                            <th> % di utilizzo </th>
+                            <th> Supporto browser </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>2000</td>
+                            <td>20 &percnt;</td>
+                            <td>17 &percnt;</td>
+                        </tr>
+                        <tr>
+                            <td>2002</td>
+                            <td>35 &percnt;</td>
+                            <td>22 &percnt;</td>
+                        </tr>
+                        <tr>
+                            <td>2004</td>
+                            <td>45 &percnt;</td>
+                            <td>42 &percnt;</td>
+                        </tr>
+                        <tr>
+                            <td>2008</td>
+                            <td>80 &percnt;</td>
+                            <td>51 &percnt;</td>
+                        </tr>
+                        <tr>
+                            <td>2012</td>
+                            <td>100 &percnt;</td>
+                            <td>76 &percnt;</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </article>
+            <p> Un test di validazione potrà essere fatto tramite il <a href="https://jigsaw.w3.org/css-validator/"
+                    target="_blank" title=" CSS Validator">
+                    tool online</a> dedicato allo scopo. Una volta
+                Ottimizzato il tutto, avremmo raggiunto il nostro obiettivo ed essere stati dei veri developers come
+                loro:
+            </p>
+            <!-- VIDEO -->
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/dvOvHXruEDM?si=w061kt0uKogMiid2"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen></iframe>
+        </section>
+        <!-- SCRITTA DELLE NOVITA-->
+        <form id="form">
+            <h2> Novità </h2>
+            <div>
+                <p> Vuoi rimanere aggiornato su altre novità del blog? Iscriviti alla nostra newsletter: </p>
+                <fieldset>
+                    <input type="email" placeholder="Inserisci l'email" />
+                    <button type="button"> Iscriviti! </button>
+            </div>
+            </fieldset>
+        </form>
+    </main>
+    <!-- COMINCIA ASIDE-->
+    <aside id="aside">
+        <h2> Articoli Correlati </h2>
+        <a href="Javascript:void(0)">Validare il codice HTML</a>
+        <p> Categoria: develop </p>
+        <p> Data: 18-9-2020 </p>
+        <a href="Javascript:void(0)">Correggere le sintassi</a>
+        <p> Categoria: develop </p>
+        <p> Data: 16-9-2020 </p>
+        <a href="Javascript:void(0)">Meno Kb nella pagina </a>
+        <p> Categoria: ottimizzazione </p>
+        <p> Data: 30-9-2020 </p>
+    </aside>
+    <hr />
+
+    <footer id="footer">
+        <p>Blog Epicode &copy;2024 </p>
+        <p> <i> Testata online da Elena Kekic, registrata con prot. n.213/2018 - Via Luigi Einaudi 2 - Milano. P.IVA
+                00112233 <a href="mailto:info@epicode.school"> info@epicode.school </a></i></p>
+    </footer>
+</body>
+
+</html>
