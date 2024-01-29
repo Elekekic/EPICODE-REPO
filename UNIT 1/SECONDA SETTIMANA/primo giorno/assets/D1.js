@@ -64,7 +64,7 @@ myName = 'Kekic';
 console.log (myName);
 
 // const esercizio5 ='errore';
-// esercizio5 = 'errore';
+// esercizio5 = 'errore1';
 // console.log (esercizio5);
 
 
@@ -92,11 +92,11 @@ console.log (numero1 - numero2 - numero3 - numero4 - x );
 
 let name1 = 'john'; 
 let name2 ='John'; 
-console.log (name1 == name2 );
+console.log (name1 == name2);
 
 // EXTRA 
 
 name2=name2.toLowerCase();
 name1=name1.toLowerCase();
-console.log (name1 ==name2);
+console.log (name1===name2);
 
