@@ -1,0 +1,44 @@
+body {
+    background-image: url(/assets/img/sfondo.png);
+    background-repeat: repeat;
+    font-family: 'Poppins', sans-serif;
+    padding: 15px;
+    font-size: 0.8em;
+
+}
+
+header {
+    background: rgb(2, 0, 36);
+    background: linear-gradient(0deg, rgba(2, 0, 36, 1) 0%, rgba(2, 125, 154, 1) 52%);
+    text-align: center;
+    text-transform: uppercase;
+    color: white;
+    padding: 10px;
+    font-weight: bold;
+}
+
+b {
+    color: rgb(180, 4, 168);
+}
+
+hr {
+    overflow: hidden;
+}
+#pwicons {
+    color: gray;
+}
+
+.whiteb {
+    background: white ;
+    padding: 15px;
+}
+
+
+footer {
+    background: rgb(2, 0, 36);
+    background: linear-gradient(0deg, rgba(2, 0, 36, 1) 0%, rgba(2, 125, 154, 1) 52%);
+    text-align: center;
+    text-transform: uppercase;
+    color: white;
+    padding: 10px;
+}
