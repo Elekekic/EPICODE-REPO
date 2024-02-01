@@ -109,7 +109,7 @@ console.log (check3and7(21));
 /* ->  */
 
 function reverseString(str = "") {
-    return 'EDOCIPE';
+    return str = 'EDOCIPE';
 }
 
 console.log (reverseString('EPICODE'));
@@ -123,7 +123,7 @@ console.log (reverseString('EPICODE'));
 /* -> */
 
 function upperFirst () {
-    
+
 }
 
 /* ESERCIZIO 9
