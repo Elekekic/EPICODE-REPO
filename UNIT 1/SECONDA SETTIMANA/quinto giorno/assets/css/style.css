@@ -1,0 +1,175 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    color: #E9EDEE;
+}
+
+/* HEADER */
+img {
+    width: 100px;
+    margin: 10px;
+}
+
+#logo {
+    background-color: #222F3F;
+
+}
+
+nav {
+    background-color: #36475B;
+    padding: 10px 0px;
+}
+
+nav p {
+    text-align: left;
+    margin: 0;
+    font-size: 15px;
+    padding-left: 15px;
+}
+
+/* MAIN */
+main {
+    margin: 30px;
+    color: #E9EDEE;
+}
+
+#parte_arancione p {
+    padding: 7px;
+    border: 20px;
+    background-color: #F56600;
+    text-align: center;
+}
+
+#back_image {
+    background-image: url(/assets/img/bg-image.png);
+    height: 110px;
+    width: auto;
+    background-position: top;
+    background-size: contain;
+    background-repeat: repeat;
+    padding: 1.65em;
+}
+
+#back_image h2,
+p {
+    text-align: center;
+}
+
+#text_inside {
+    text-align: center;
+}
+
+/* PARTE BIANCA CON IMMAGINI */
+#white_back {
+    background-color: whitesmoke;
+    padding: 20px;
+    margin-top: 30px;
+}
+
+#white_back p {
+    font-weight: bold;
+    margin: 0;
+    text-align: left;
+    color: black;
+}
+
+.prima_img {
+    background-image: url(/assets/img/img_1.jpg);
+    width: 300px;
+    height: 400px;
+    margin: 20px;
+    border-radius: 10px 10px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top;
+    display: inline-block;
+    filter: drop-shadow(gray 1rem 1rem 10px);
+    object-fit: cover;
+}
+
+.seconda_img {
+    background-image: url(/assets/img/img_2.jpg);
+    width: 300px;
+    height: 400px;
+    margin: 20px;
+    border-radius: 10px 10px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top;
+    filter: drop-shadow(gray 1rem 1rem 10px);
+    display: inline-block;
+    object-fit: cover;
+}
+
+.terza_img {
+    background-image: url(/assets/img/img_3.jpg);
+    width: 300px;
+    height: 400px;
+    margin: 20px;
+    border-radius: 10px 10px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top;
+    filter: drop-shadow(gray 1rem 1rem 10px);
+    display: inline-block;
+    object-fit: cover;
+}
+.quarta_img {
+    background-image: url(/assets/img/img_4.jpg);
+    width: 300px;
+    height: 400px;
+    margin: 20px;
+    border-radius: 10px 10px;
+    display: inline-block;
+    background-size: cover;
+    background-position: top;
+    filter: drop-shadow(gray 1rem 1rem 10px);
+    background-repeat: no-repeat;
+
+}
+
+.black_text_color p {
+    align-items: center;
+    color: black;
+}
+
+.img {
+    object-fit: contain;
+}
+
+.blue_text_color {
+    font-size: small;
+    font-weight: bold;
+    color: #0f5258;
+}
+
+/* IMMAGINI GRANDI */
+
+.img_wide {
+    width: 100%;
+    margin: 0;
+}
+
+#label {
+    color: black;
+    font-weight: bold;
+    text-align: center;
+}
+
+
+#footer_link {
+    padding: 10px 0px;
+    background-color: #36475B;
+    font-weight: bold;
+    text-align: center;
+}
+
+
+a {
+    color: white;
+}
+
+#footer_logo {
+    background-color: #222F3F;
+    padding: 25px 25px;
+} 
