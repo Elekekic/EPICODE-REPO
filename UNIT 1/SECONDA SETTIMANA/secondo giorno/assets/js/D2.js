@@ -4,6 +4,8 @@
 
 /* --> */
 
+console.log('ESERCIZIO 1');
+
 let numero1 = 23
 let numero2 = 12
 
@@ -24,6 +26,7 @@ console.log(valutazione)
 */
 
 /* -> */
+console.log('ESERCIZIO 2');
 
 let n5 = 5;
 let risultato;
@@ -41,6 +44,7 @@ console.log(risultato)
 */
 
 /* -> */
+console.log('ESERCIZIO 3');
 
 let n6 = 25;
 let resto = n6 % 5;
@@ -57,6 +61,7 @@ console.log(resto)
 */
 
 /* -> */
+console.log('ESERCIZIO 4');
 
 let a = 6;
 let b = 2;
@@ -80,6 +85,7 @@ console.log(somma);
 */
 
 /* -> */
+console.log('ESERCIZIO 5');
 
 let totalShoppingCart = 49;
 
@@ -97,6 +103,8 @@ if (totalShoppingCart > 50) {
 */
 
 /* -> */
+console.log('ESERCIZIO 6');
+
 let blackFriday = 0.8;
 let totalShoppingCart2 = 80 * blackFriday;
 let spedizione2 = 10;
@@ -115,6 +123,8 @@ if (totalShoppingCart2 >= 50) {
 */
 
 /* -> */
+console.log('ESERCIZIO 7');
+
 let el = 3;
 let en = 4;
 let aa = 5;
@@ -147,6 +157,7 @@ if (el > en) {
 */
 
 /* -> */
+console.log('ESERCIZIO 8');
 
 let n10 = 10;
 console.log(typeof 10);
@@ -156,6 +167,7 @@ console.log(typeof 10);
 */
 
 /* -> */
+console.log('ESERCIZIO 9');
 
 n6 = 26;
 let resto1 = n6 % 2;
@@ -171,6 +183,8 @@ console.log(resto1);
 /* ESERCIZIO 10
   Modifica la logica del seguente algoritmo in modo che mostri in console il messaggio corretto in ogni circostanza.
 */
+console.log('ESERCIZIO 10');
+
 
 let val = 7
 if (val < 5) {
@@ -189,6 +203,8 @@ if (val < 5) {
 
 
 /* -> */
+console.log('ESERCIZIO 11');
+
 const me = {
   name: 'John',
   lastName: 'Doe',
@@ -204,6 +220,8 @@ console.log(me);
 */
 
 /* -> */
+console.log('ESERCIZIO 12');
+
 
 delete me.lastName;
 
@@ -214,6 +232,7 @@ console.log(me);
 */
 
 /* -> */
+console.log('ESERCIZIO 13');
 
 delete me.skills [2];
 console.log(me);
@@ -223,6 +242,8 @@ console.log(me);
 */
 
 /* -> */
+console.log('ESERCIZIO 14');
+
 const newArray = []
 newArray.push(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
 
@@ -233,6 +254,7 @@ console.log(newArray);
 */
 
 /* -> */
+console.log('ESERCIZIO 15');
 
 newArray [9] = 100;
 console.log (newArray);
