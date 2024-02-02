@@ -30,7 +30,7 @@ nav p {
 /* MAIN */
 main {
     margin: 30px;
-    color: #ffffff;
+    color: #E9EDEE;
 }
 
 #parte_arancione p {
@@ -61,7 +61,7 @@ p {
 
 /* PARTE BIANCA CON IMMAGINI */
 #white_back {
-    background-color: whitesmoke;
+    background-color: white;
     padding: 20px;
     margin-top: 30px;
 }
