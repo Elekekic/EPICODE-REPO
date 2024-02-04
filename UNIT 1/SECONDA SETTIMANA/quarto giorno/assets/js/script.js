@@ -108,7 +108,7 @@ console.log (check3and7(21));
 
 /* ->  */
 
-function reverseString(str = "") {
+function reverseString(str) {
     return str = 'EDOCIPE';
 }
 
