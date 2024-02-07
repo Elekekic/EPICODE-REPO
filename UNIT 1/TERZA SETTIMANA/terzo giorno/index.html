@@ -6,25 +6,31 @@
     <meta name="author" content="Elena Kekic">
     <meta name="description" content="Prima To-do List">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="assets/css/style.css">
     <title>To-do List </title>
 </head>
 
 <body>
-    <h1> TASKS </h1>
-    <hr>
+    <div class="h1">
+        <h1> TASKS </h1>
+    </div>
 
-    <div>
-        <h3> To-do list </h3>
+    <br>
+
+    <div class="big_div">
+        <h2> To-do list </h2>
+
         <div class="container">
-            <input type="text" placeholder="Aggiungi la tua task" id="new_task" required >
-            <button type="button" onclick="aggiungiTask()"> Crea </button>
+            <input type="text" required placeholder="Aggiungi la tua task" id="new_task" class="input">
+            <button type="button" onclick="aggiungiTask()" class="button" role="button" id="button"> Crea </button>
         </div>
-        <div class="container_list">
-            <ul id="todo_list">
 
-
-            </ul>
+        <div class="container" >
+            <ul id="todo_list" class="lista"> </ul>
         </div>
     </div>
     </main>
