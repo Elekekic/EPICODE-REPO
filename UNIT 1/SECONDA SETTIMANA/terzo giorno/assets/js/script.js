@@ -120,6 +120,10 @@ for (i = 0; i < starWarsCharacters.length; i++) {
 
 console.log(charactersNames);
 
+for (i = 0; I > starWarsCharacters.lenght)  {
+    charactersNames.push(starWarsCharacters[i].name); 
+}
+
 
 /* ESERCIZIO 3
   Seguendo i passaggi precedenti crea un nuovo array chiamato "femaleCharacters" e inserisci al suo interno tutti gli oggetti femminili.
