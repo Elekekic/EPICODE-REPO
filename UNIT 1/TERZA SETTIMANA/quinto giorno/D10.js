@@ -229,11 +229,15 @@ const rollTheDices = (numero) => {
 
 console.log("---ESERCIZIO 9---");
 
-/* const howManyDays = (data) => {
-  const differenza = new Date() - new Date(data);
+const howManyDays = () => {
+  const date = new Date() - new Date(data);
   
+  const giorniPassati = Math.floor(date / (1000 * 60 * 60 * 24));
 
-} */ 
+  return giorniPassati;
+}
+const data = "2004-12-30";
+console.log(howManyDays(data));
 
 
 /* ESERCIZIO 10
@@ -243,8 +247,16 @@ console.log("---ESERCIZIO 9---");
 console.log("---ESERCIZIO 10---");
 
 const isTodayMyBirthday = () => {
-
+  const data = "2004-12-30"; 
+  if (data === Date()) {
+    return true 
+  } else {
+    return false
+  }
 }
+
+console.log(isTodayMyBirthday()); 
+
 
 
 // Arrays & Oggetti
@@ -460,7 +472,7 @@ console.log("---ESERCIZIO 17---");
 } 
 
 
-console.log(searchByTitle()); */ 
+console.log(searchByTitle()); */
 
 
 /* ESERCIZIO 18
@@ -502,7 +514,7 @@ const container = () => {
 */
 
 const td = () => {
-  return document.querySelectorAll("td"); 
+  return document.querySelectorAll("td");
 }
 
 /* ESERCIZIO 22
@@ -518,10 +530,11 @@ const td = () => {
 const color = () => {
   const links = document.querySelectorAll("a")
   links.forEach(link => {
-    link.style.backgroundColor = "red";})
-  }
+    link.style.backgroundColor = "red";
+  })
+}
 
-  color(); 
+color();
 
 
 
@@ -530,16 +543,38 @@ const color = () => {
 */
 
 const lista = () => {
-  
+  const li = document.createElement("li");
+  li.innerText = "Prova per vedere se va";
+  li.id = "myList";
+  const lista = document.getElementById("Mylist");
+  lista.appendChild(li);
 }
+
+lista();
 
 /* ESERCIZIO 25
   Scrivi una funzione per svuotare la lista non ordinata con id "myList".
 */
 
+const svuota = () => {
+  const liDaRimuovere = document.getElementById("myList");
+  liDaRimuovere.remove();
+}
+
+svuota(); 
+
 /* ESERCIZIO 26
   Scrivi una funzione per aggiungere ad ogni tag <tr> la classe CSS "test"
 */
+
+const trTest = () => {
+  const tr = document.querySelectorAll("tr");
+  tr.forEach(tr => {
+    tr.classList.add("test");
+  });
+}
+
+trTest(); 
 
 // [EXTRA] JS Avanzato
 
@@ -587,5 +622,4 @@ console.log(isItPrime(5));
 console.log(isItPrime(1));
 console.log(isItPrime(10));
 
-/* Questo array viene usato per gli esercizi. Non modificarlo. */
 
