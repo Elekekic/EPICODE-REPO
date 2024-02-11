@@ -38,11 +38,14 @@ changePcontent();
 */
 
 const changeUrls = function () {
-    let newLink = " https://www.google.com";
-    document.querySelector("a").href = newLink;
+    const newLink = "https://www.google.com";
+    document.querySelector('a').href = newLink;
+    document.querySelectorAll(`footer a:not([href="${newLink}"])`);
+    
 }
 
 changeUrls();
+
 
 /* ESERCIZIO 5
  Scrivi una funzione che aggiunga un nuovo elemento lista alla seconda lista non ordinata
