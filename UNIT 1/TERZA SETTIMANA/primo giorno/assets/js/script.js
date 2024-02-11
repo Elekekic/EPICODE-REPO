@@ -2,7 +2,7 @@
        Scrivi una funzione per cambiare il titolo della pagina in qualcos'altro
     */
 
-const changeTitle = function () {
+const changeTitle = () => {
     document.getElementsByTagName('h1')[0].innerText = 'COMPITO S3/D1'
 }
 
@@ -13,7 +13,7 @@ changeTitle();
  Scrivi una funzione per aggiungere al titolo della pagina una classe "myHeading"
 */
 
-const addClassToTitle = function () {
+const addClassToTitle = () => {
     document.getElementsByTagName('h1')[0].className = "myHeading"
 }
 addClassToTitle();
@@ -23,7 +23,7 @@ addClassToTitle();
  Scrivi una funzione che cambi il testo dei p figli di un div
 */
 
-const changePcontent = function () {
+const changePcontent = () => {
     let nuovoP = document.querySelectorAll('div p')
     for (let i = 0; i < nuovoP.length; i++) {
         nuovoP[i].innerText = 'ho cambiato tutti i p';
@@ -37,7 +37,7 @@ changePcontent();
  link (tranne quello nel footer) con il valore https://www.google.com
 */
 
-const changeUrls = function () {
+const changeUrls = () => {
     const newLink = "https://www.google.com";
     document.querySelector('a').href = newLink;
     document.querySelectorAll(`footer a:not([href="${newLink}"])`);
@@ -51,7 +51,7 @@ changeUrls();
  Scrivi una funzione che aggiunga un nuovo elemento lista alla seconda lista non ordinata
 */
 
-const addToTheSecond = function () {
+const addToTheSecond = () => {
     let li = document.createElement('li');
     li.innerText = ('4rd (testo aggiunto)');
     let b = document.getElementById('secondList')
@@ -65,7 +65,7 @@ addToTheSecond();
  Scrivi una funzione che aggiunga un paragrafo al primo div
 */
 
-const addParagraph = function () {
+const addParagraph = () => {
     document.querySelector('div').innerHTML += '<p> paragrafo aggiunto <p> '
 }
 
@@ -76,7 +76,7 @@ addParagraph();
  Scrivi una funzione che faccia scomparire la prima lista non ordinata
 */
 
-const hideFirstUl = function () {
+const hideFirstUl = () => {
     const a = document.getElementById("firstList");
     a.setAttribute('style', 'display: none');
 
@@ -89,7 +89,7 @@ hideFirstUl();
  Scrivi una funzione che renda verde il background di ogni lista non ordinata
 */
 
-const paintItGreen = function () {
+const paintItGreen = () => {
     const element = document.getElementById("secondList");
     element.style.backgroundColor = "green";
 }
@@ -101,7 +101,7 @@ paintItGreen();
  Scrivi una funzione che rimuova l'ultima lettera dall'h1 ogni volta che l'utente lo clicca
 */
 
-const makeItClickable = function () {
+const makeItClickable = () => {
     const heading1 = document.getElementById("heading1");
     heading1.addEventListener("click", function () {
         const contenuto = heading1.textContent;
@@ -116,7 +116,7 @@ makeItClickable();
  Crea una funzione che, al click sul footer, riveli l'URL del link interno come contenuto di un alert()
 */
 
-const revealFooterLink = function () {
+const revealFooterLink = () => {
     let footerLink = document.getElementById('linkinterno');
 
     const alertLink = () => {
@@ -137,7 +137,7 @@ revealFooterLink();
 */
 const tabella = document.getElementById("tableArea");
 
-const generateTable = function () {
+const generateTable = () => {
     const table = document.createElement("table");
     const tr = document.createElement("tr");
 
@@ -169,7 +169,7 @@ generateTable();
   precedentemente creata e fornisca i dati necessari come parametri
 */
 
-const addRow = function () {
+const addRow = () => {
     const tbody = document.createElement("tbody");
 
     const riga4 = document.createElement("td");
@@ -199,7 +199,7 @@ addRow();
 Crea una funzione che nasconda le immagini della tabella quando eseguita
 */
 
-/*const hideAllImages = function () {
+/*const hideAllImages = () => {
     const img = document.getElementById("img");
     img.style.display = "none";
 }
@@ -210,7 +210,7 @@ hideAllImages(); */
 Crea una funzione che cambi il colore del h2 con id "changeMyColor" con un colore random ad ogni click ricevuto
 */
 
-const changeColorWithRandom = function () {
+const changeColorWithRandom = () => {
     const h2 = document.getElementById("changeMyColori");
 
     const randomColor = () => {
