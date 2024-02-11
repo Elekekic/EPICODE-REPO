@@ -99,16 +99,31 @@ paintItGreen();
 */
 
 const makeItClickable = function () {
+    const heading1 = document.getElementById("heading1"); 
+    heading1.addEventListener("click", function() {
+        const contenuto = heading1.textContent; 
+        heading1.textContent = contenuto.slice(0, -1); 
+    } )
 
 }
+
+makeItClickable(); 
 
 /* ESERCIZIO 10
  Crea una funzione che, al click sul footer, riveli l'URL del link interno come contenuto di un alert()
 */
 
 const revealFooterLink = function () {
+let footer = document.querySelector('footer'); 
+let footerLink = document.getElementById('linkinterno'); 
 
+const alertLink = () => {
+    alert(`https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Manipulating_documents);`)
+ }
+
+    footer.addEventListener('click', alertLink); 
 }
+
 
 /* ESERCIZIO 11
  Crea una funzione che crei una tabella nell'elemento con id "tableArea". 
@@ -191,5 +206,5 @@ Crea una funzione che cambi il colore del h2 con id "changeMyColor" con un color
 */
 
 const changeColorWithRandom = function () { 
-    
+
 }
