@@ -72,5 +72,20 @@ hr {
 .lista{
     list-style-type: none;
     text-align: left;
+    padding-right: 4px; 
+}
+
+.container {
+    background-color: rgba(255, 255, 255, 0.302);
+    padding: 2px;
+    margin-top: 10px;
+    width: 400px;
+   margin-left: auto;
+   margin-right: auto;
+   border-radius: 5px;
+}
+
+.completed {
+    text-decoration: line-through; 
 }
 

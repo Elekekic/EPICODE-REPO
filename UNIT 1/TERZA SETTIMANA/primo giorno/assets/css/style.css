@@ -22,3 +22,24 @@ footer {
 .myHeading {
   color: #ff00d6;
 }
+
+tbody td {
+  padding: 20px; 
+
+}
+
+th {
+  padding: 20px;
+}
+
+#tableArea {
+  width: 450px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 40px;
+  border: 1px solid black;
+}
+
+img {
+  width: 100px;
+}

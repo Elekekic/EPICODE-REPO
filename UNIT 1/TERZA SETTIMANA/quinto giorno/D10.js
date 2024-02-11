@@ -491,8 +491,13 @@ const searchAndDivide = () => {
 
 
 /* ESERCIZIO 19
-  Scrivi una funzione chiamata "removeIndex" che riceve un numero come parametro e ritorna l'array "movies" fornito privo dell'elemento nella posizione ricevuta come parametro.
+  Scrivi una funzione chiamata "removeIndex" che riceve un numero come parametro e ritorna l'array 
+  "movies" fornito privo dell'elemento nella posizione ricevuta come parametro.
 */
+
+const removeIndex = (numero) => {
+
+}
 
 
 

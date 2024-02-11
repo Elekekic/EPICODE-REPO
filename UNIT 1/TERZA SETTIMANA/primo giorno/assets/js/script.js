@@ -33,7 +33,8 @@ changePcontent();
 
 
 /* ESERCIZIO 4
- Scrivi una funzione che cambi la proprietà href di ogni link (tranne quello nel footer) con il valore https://www.google.com
+ Scrivi una funzione che cambi la proprietà href di ogni 
+ link (tranne quello nel footer) con il valore https://www.google.com
 */
 
 const changeUrls = function () {
@@ -49,8 +50,10 @@ changeUrls();
 
 const addToTheSecond = function () {
     let li = document.createElement('li');
-    li.innerText = ('4rd (testo aggiunto)')
-    document.getElementById('secondList').appendChild(li);
+    li.innerText = ('4rd (testo aggiunto)');
+    let b = document.getElementById('secondList')
+    b.appendChild(li);
+
 };
 
 addToTheSecond();
@@ -71,9 +74,9 @@ addParagraph();
 */
 
 const hideFirstUl = function () {
-    document.getElementById("firstList").style.visibility = "hidden";
+    const a = document.getElementById("firstList");
+    a.setAttribute('style', 'display: none');
 
-    //.setAttribute('style',  'display: none')
 }
 
 hideFirstUl();
@@ -84,42 +87,109 @@ hideFirstUl();
 */
 
 const paintItGreen = function () {
-
+    const element = document.getElementById("secondList");
+    element.style.backgroundColor = "green";
 }
+
+paintItGreen();
+
 
 /* ESERCIZIO 9
  Scrivi una funzione che rimuova l'ultima lettera dall'h1 ogni volta che l'utente lo clicca
 */
 
-const makeItClickable = function () { }
+const makeItClickable = function () {
+
+}
 
 /* ESERCIZIO 10
  Crea una funzione che, al click sul footer, riveli l'URL del link interno come contenuto di un alert()
 */
 
-const revealFooterLink = function () { }
+const revealFooterLink = function () {
+
+}
 
 /* ESERCIZIO 11
  Crea una funzione che crei una tabella nell'elemento con id "tableArea". 
- La tabella avrà 5 elementi e questa struttura: immagine, nome prodotto, quantità, prezzo
+ La tabella avrà 5 elementi e questa struttura: immagine, nome prodotto, 
+ quantità, prezzo
 */
+const tabella = document.getElementById("tableArea");
 
-const generateTable = function () { }
+const generateTable = function () {
+    const table = document.createElement("table");
+    const tr = document.createElement("tr");
+
+    const cella4 = document.createElement("th");
+    cella4.innerText = ("Immagine ");
+    const cella1 = document.createElement("th");
+    cella1.innerText = ("Nome prodotto ");
+    const cella2 = document.createElement("th");
+    cella2.innerText = ("Quantità ");
+    const cella3 = document.createElement("th");
+    cella3.innerText = ("Prezzo ");
+   
+
+
+    table.appendChild(tr);
+
+    tr.appendChild(cella4);
+    tr.appendChild(cella1);
+    tr.appendChild(cella2);
+    tr.appendChild(cella3);
+
+    tabella.appendChild(table);
+}
+
+generateTable();
 
 /* ESERCIZIO 12
- Crea una funzione che aggiunga una riga alla tabella precedentemente creata e fornisca i dati necessari come parametri
+ Crea una funzione che aggiunga una riga alla tabella
+  precedentemente creata e fornisca i dati necessari come parametri
 */
 
-const addRow = function () { }
+const addRow = function () {
+    const tbody = document.createElement("tbody");
+
+    const riga4 = document.createElement("td");
+    const img = document.createElement("img");
+    img.id = "img"; 
+    img.src = "assets/img/iphone.avif";
+    riga4.appendChild(img);
+    const riga1 = document.createElement("td");
+    riga1.innerText = ("Iphone 13")
+    const riga2 = document.createElement("td");
+    riga2.innerText = (" 245 pezzi")
+    const riga3 = document.createElement("td");
+    riga3.innerHTML = ("<p> 600 € <p>")
+
+    tbody.appendChild(riga4);
+    tbody.appendChild(riga1);
+    tbody.appendChild(riga2);
+    tbody.appendChild(riga3);
+
+    tabella.appendChild(tbody);
+
+}
+
+addRow();
 
 /* ESERCIZIO 14
 Crea una funzione che nasconda le immagini della tabella quando eseguita
 */
 
-const hideAllImages = function () { }
+const hideAllImages = function () {
+const img = document.getElementById("img"); 
+img.style.display = "none"; 
+}
+
+hideAllImages(); 
 
 /* EXTRA ESERCIZIO 15
 Crea una funzione che cambi il colore del h2 con id "changeMyColor" con un colore random ad ogni click ricevuto
 */
 
-const changeColorWithRandom = function () { }
+const changeColorWithRandom = function () { 
+    
+}
