@@ -211,11 +211,11 @@ const changeColorWithRandom = function () {
     const h2 = document.getElementById("changeMyColori");
 
     const randomColor = () => {
-        const lettere = '0123456789ABCDEF';
-        const color = '#';
+        let lettere = ['0', '1', '2', '3' , '4', '5', '6' , '7', '8' , '9' , 'A', 'B', 'C', 'D', 'E', 'F'];
+        let color = '#';
 
         for (let i = 0; i < 6; i++) {
-            color += lettere[Math.floor(Math.random() * 16)];
+            color += lettere[Math.floor(Math.random() * lettere.length)];
         }
         return color;
 

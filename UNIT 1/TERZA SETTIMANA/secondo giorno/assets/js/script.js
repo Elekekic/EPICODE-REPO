@@ -7,7 +7,7 @@ console.log("---ESERCIZIO 1 ----")
 
 
 
-function Stringainsieme(stringa1, stringa2) {
+const Stringainsieme = (stringa1, stringa2) => {
   console.log((stringa1.substring(0, 2) + stringa2.slice(-3)).toUpperCase());
 }
 
@@ -22,6 +22,17 @@ Stringainsieme("Panda", "Rosso");
 
 console.log("---ESERCIZIO 2 ----")
 
+const valoreRandom = () => {
+  let array = []; 
+
+  for ( let i = 0; i < 10; i++) {
+    array.push(Math.floor(Math.random()* 101 ))
+  }
+  return array
+}
+
+const randomValore = valoreRandom(); 
+console.log(randomValore); 
 
 
 
@@ -58,7 +69,6 @@ function sommaArray(array) {
   return somma;
 }
 
-// Esempio d'uso
 const risultatoSomma = sommaArray(numeri2);
 console.log(risultatoSomma);
 
@@ -111,6 +121,19 @@ console.log(Risultato6);
 */
 
 console.log("---ESERCIZIO 7 ----")
+
+
+let array = ["Si", "migliora", "sempre"];
+
+const arrayNumeri = () => {
+  const lunghezza = array.map(function(arr) {
+    return arr.length; 
+  });
+  return lunghezza; 
+}
+
+console.log(arrayNumeri());
+
 
 
 
