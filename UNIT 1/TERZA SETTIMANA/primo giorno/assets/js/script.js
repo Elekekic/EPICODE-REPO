@@ -3,7 +3,7 @@
     */
 
 const changeTitle = function () {
-    document.getElementsByTagName('h1')[0].innerText = 'COMPITO S3/D6'
+    document.getElementsByTagName('h1')[0].innerText = 'COMPITO S3/D1'
 }
 
 changeTitle();
@@ -99,30 +99,32 @@ paintItGreen();
 */
 
 const makeItClickable = function () {
-    const heading1 = document.getElementById("heading1"); 
-    heading1.addEventListener("click", function() {
-        const contenuto = heading1.textContent; 
-        heading1.textContent = contenuto.slice(0, -1); 
-    } )
+    const heading1 = document.getElementById("heading1");
+    heading1.addEventListener("click", function () {
+        const contenuto = heading1.textContent;
+        heading1.textContent = contenuto.slice(0, -1);
+    })
 
 }
 
-makeItClickable(); 
+makeItClickable();
 
 /* ESERCIZIO 10
  Crea una funzione che, al click sul footer, riveli l'URL del link interno come contenuto di un alert()
 */
 
 const revealFooterLink = function () {
-let footer = document.querySelector('footer'); 
-let footerLink = document.getElementById('linkinterno'); 
+    let footerLink = document.getElementById('linkinterno');
 
-const alertLink = () => {
-    alert(`https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Manipulating_documents);`)
- }
+    const alertLink = () => {
+        alert(`https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Manipulating_documents`);
+    }
 
-    footer.addEventListener('click', alertLink); 
+    footerLink.addEventListener('click', alertLink);
 }
+
+revealFooterLink();
+
 
 
 /* ESERCIZIO 11
@@ -144,7 +146,7 @@ const generateTable = function () {
     cella2.innerText = ("Quantità ");
     const cella3 = document.createElement("th");
     cella3.innerText = ("Prezzo ");
-   
+
 
 
     table.appendChild(tr);
@@ -169,7 +171,7 @@ const addRow = function () {
 
     const riga4 = document.createElement("td");
     const img = document.createElement("img");
-    img.id = "img"; 
+    img.id = "img";
     img.src = "assets/img/iphone.avif";
     riga4.appendChild(img);
     const riga1 = document.createElement("td");
@@ -195,16 +197,34 @@ Crea una funzione che nasconda le immagini della tabella quando eseguita
 */
 
 const hideAllImages = function () {
-const img = document.getElementById("img"); 
-img.style.display = "none"; 
+    const img = document.getElementById("img");
+    img.style.display = "none";
 }
 
-hideAllImages(); 
+hideAllImages();
 
 /* EXTRA ESERCIZIO 15
 Crea una funzione che cambi il colore del h2 con id "changeMyColor" con un colore random ad ogni click ricevuto
 */
 
-const changeColorWithRandom = function () { 
+const changeColorWithRandom = function () {
+    const h2 = document.getElementById("changeMyColori");
 
+    const randomColor = () => {
+        const lettere = '0123456789ABCDEF';
+        const color = '#';
+
+        for (let i = 0; i < 6; i++) {
+            color += lettere[Math.floor(Math.random() * 16)];
+        }
+        return color;
+
+    }
+
+    h2.addEventListener('click', function() {
+        const getColor = randomColor(); 
+        h2.style.color = getColor; 
+    });
 }
+
+changeColorWithRandom(); 
