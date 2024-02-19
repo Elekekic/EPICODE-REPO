@@ -34,6 +34,7 @@ button.addEventListener('click', function() {
 });
 
 function pescaNumero() {
+<<<<<<< HEAD
     let coloraCasella = Math.floor((Math.random() * 90) + 1);
     console.log(coloraCasella);
     if (NumeriUsati.includes(coloraCasella)) {
@@ -49,6 +50,23 @@ function colora(coloraCasella) {
     const tabellone = document.querySelectorAll('.cella');
     for (let i = 0; i < tabellone.length; i++) {
         if (parseInt(tabellone[i].innerText) === coloraCasella) {
+=======
+    let pesca = Math.floor((Math.random() * 90) + 1);
+    console.log(pesca);
+    if (NumeriUsati.includes(pesca)) {
+        pescaNumero();
+    } else {
+        numeroPescato.innerText = `Numero estratto: ${pesca}`;
+        NumeriUsati.push(pesca);
+        colora(pesca);
+    }
+}
+
+function colora(pesca) {
+    const tabellone = document.querySelectorAll('.cella');
+    for (let i = 0; i < tabellone.length; i++) {
+        if (parseInt(tabellone[i].innerText) === pesca) {
+>>>>>>> 99ebc5dbe0aa024e1f5f4896028fabc99263a658
             tabellone[i].classList.add('numeroPescato');
         }
     }
