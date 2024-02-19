@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /* ESERCIZIO 1
  Scrivi una funzione di nome "area", che riceve due parametri (l1, l2) e calcola l'area del rettangolo associato.
 */
@@ -138,3 +139,5 @@ function upperFirst () {
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
+=======
+>>>>>>> d346c0e64312bb850cf9bef118dcd5c8c9399519

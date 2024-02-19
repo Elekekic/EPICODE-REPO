@@ -96,7 +96,6 @@ console.log (name1 == name2);
 
 // EXTRA 
 
-name2=name2.toLowerCase();
-name1=name1.toLowerCase();
+name2 = name2.toLowerCase();
 console.log (name1===name2);
 

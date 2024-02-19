@@ -4,6 +4,8 @@
 
 /* --> */
 
+console.log('ESERCIZIO 1');
+
 let numero1 = 23
 let numero2 = 12
 
@@ -24,6 +26,7 @@ console.log(valutazione)
 */
 
 /* -> */
+console.log('ESERCIZIO 2');
 
 let n5 = 5;
 let risultato;
@@ -41,6 +44,7 @@ console.log(risultato)
 */
 
 /* -> */
+console.log('ESERCIZIO 3');
 
 let n6 = 25;
 let resto = n6 % 5;
@@ -57,6 +61,7 @@ console.log(resto)
 */
 
 /* -> */
+console.log('ESERCIZIO 4');
 
 let a = 6;
 let b = 2;
@@ -74,25 +79,42 @@ console.log(somma);
 
 /* ESERCIZIO 5
   Stai lavorando su un sito di e-commerce. Stai salvando il saldo totale del carrello dell'utente in una variabile "totalShoppingCart".
-  C'è una promozione in corso: se il totale del carrello supera 50, l'utente ha diritto alla spedizione gratuita (altrimenti la spedizione ha un costo fisso pari a 10).
+  C'è una promozione in corso: se il totale del carrello supera 50, l'utente ha diritto alla spedizione gratuita 
+  (altrimenti la spedizione ha un costo fisso pari a 10).
   Crea un algoritmo che determini l'ammontare totale che deve essere addebitato all'utente per il checkout.
 */
 
-/* -> */ 
+/* -> */
+console.log('ESERCIZIO 5');
 
-let totalShoppingCart = 51; 
+let totalShoppingCart = 49;
+
+
 if (totalShoppingCart > 50) {
-  console.log ('spedizione è gratuita quindi utente spende' + totalShoppingCart);
+  console.log('spedizione è gratuita quindi utente spende ' + totalShoppingCart);
 } else {
-  console.log ('spedizione non gratuita' + (totalShoppingCart + 10));
+  console.log("spedizione non gratuita, addebito all'utente per il checkout è di " + (totalShoppingCart + 10));
 }
 
 /* ESERCIZIO 6
   Stai lavorando su un sito di e-commerce. Oggi è il Black Friday e viene applicato il 20% su ogni prodotto.
-  Modifica la risposta precedente includendo questa nuova promozione nell'algoritmo, determinando come prima se le spedizioni sono gratuite oppure no e e calcolando il totale.
+  Modifica la risposta precedente includendo questa nuova promozione nell'algoritmo,
+  determinando come prima se le spedizioni sono gratuite oppure no e e calcolando il totale.
 */
 
 /* -> */
+console.log('ESERCIZIO 6');
+
+let blackFriday = 0.8;
+let totalShoppingCart2 = 80 * blackFriday;
+let spedizione2 = 10;
+
+if (totalShoppingCart2 >= 50) {
+  console.log("Costo dell'ordine è di " + totalShoppingCart2);
+} else {
+  console.log("Costo dell'ordine è di " + (totalShoppingCart2 + spedizione));
+}
+
 
 /* ESERCIZIO 7
   Crea tre variabili, e assegna un valore numerico a ciascuna di esse.
@@ -101,7 +123,33 @@ if (totalShoppingCart > 50) {
 */
 
 /* -> */
+console.log('ESERCIZIO 7');
 
+let el = 3;
+let en = 4;
+let aa = 5;
+
+if (el > en) {
+  if (aa > el) {
+    console.log(aa + ', ' + el + ', ' + en);
+  } else {
+    if (aa > en) {
+      console.log(el + ', ' + aa + ', ' + en);
+    } else {
+      console.log(el + ', ' + en + ', ' + aa);
+    }
+  }
+} else {
+  if (aa > en) {
+    console.log(aa + ', ' + en + ', ' + el);
+  } else {
+    if (aa > el) {
+      console.log(el + ', ' + aa + ', ' + en);
+    } else {
+      console.log(en + ', ' + el + ', ' + aa);
+    }
+  }
+}
 
 
 /* ESERCIZIO 8
@@ -109,6 +157,7 @@ if (totalShoppingCart > 50) {
 */
 
 /* -> */
+console.log('ESERCIZIO 8');
 
 let n10 = 10;
 console.log(typeof 10);
@@ -118,34 +167,34 @@ console.log(typeof 10);
 */
 
 /* -> */
+console.log('ESERCIZIO 9');
 
-n6 = 25;
+n6 = 26;
 let resto1 = n6 % 2;
 
-if (resto1 === 0) {
-  resto1 = 'pari'
-} else {
-  resto1 = 'dispari'
+if (resto1 === 0) resto1 = 'pari'
+else resto1 = 'dispari'
 
-}
 
-console.log(resto1)
+console.log(resto1);
 
 
 
 /* ESERCIZIO 10
   Modifica la logica del seguente algoritmo in modo che mostri in console il messaggio corretto in ogni circostanza.
 */
+console.log('ESERCIZIO 10');
 
-/*let val = 7
-if (val < 10) {
-  console.log("Meno di 10");
-} else if (val < 5) {
+
+let val = 7
+if (val < 5) {
   console.log("Meno di 5");
+} else if (val < 10) {
+  console.log("tra 5 e 9");
 } else {
   console.log("Uguale a 10 o maggiore");
 }
-*/
+
 
 
 /* ESERCIZIO 11
@@ -154,6 +203,8 @@ if (val < 10) {
 
 
 /* -> */
+console.log('ESERCIZIO 11');
+
 const me = {
   name: 'John',
   lastName: 'Doe',
@@ -169,6 +220,8 @@ console.log(me);
 */
 
 /* -> */
+console.log('ESERCIZIO 12');
+
 
 delete me.lastName;
 
@@ -179,19 +232,32 @@ console.log(me);
 */
 
 /* -> */
+console.log('ESERCIZIO 13');
 
-delete me.skills [2]
-console.log (me); 
+delete me.skills [2];
+console.log(me);
 
 /* ESERCIZIO 14
   Scrivi del codice per creare un array inizialmente vuoto. Riempilo successivamente con i numeri da 1 a 10.
 */
 
 /* -> */
+console.log('ESERCIZIO 14');
 
+const newArray = []
+newArray.push(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
+
+console.log(newArray);
 
 /* ESERCIZIO 15
   Scrivi del codice per sostituire l'ultimo elemento dell'array, ovvero il valore 10, con il valore 100.
 */
 
-/* SCRIVI QUI LA TUA RISPOSTA */
+/* -> */
+console.log('ESERCIZIO 15');
+
+newArray [9] = 100;
+console.log (newArray);
+
+
+
