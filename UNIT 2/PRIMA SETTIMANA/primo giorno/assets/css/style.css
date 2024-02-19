@@ -68,8 +68,12 @@ main {
     margin-bottom: 1.5em;
 }
 
-#badge img {
-    border: 4px solid #00A0C6;
+#badge{
+    width: fit-content; 
+   border:#a02571 5px solid; 
+}
+#badge_img {  
+     border: 5px solid #00A0C6;
 }
 
 section {
