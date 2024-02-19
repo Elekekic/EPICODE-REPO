@@ -257,6 +257,13 @@ footer a {
         margin: 0;
     }
 
+    header {
+        height: 90px;
+      
+    }
+    .middle {
+        vertical-align: middle;
+    }
 
     header div img {
         width: 120px;
@@ -264,25 +271,31 @@ footer a {
     }
 
     header div:first-child {
-        vertical-align: top;
+        display: inline-block; 
     }
 
     header div p {
+        vertical-align: middle;
         display: inline;
         padding-left: 20px;
     }
 
 
     nav ul {
+        vertical-align: middle;
+
         display: inline;
-        width: fit-content;
         float: right;
     }
 
     header div {
+        vertical-align: middle;
+
         display: inline;
         float: left;
     }
+
+
 
     table {
         width: 70%;
