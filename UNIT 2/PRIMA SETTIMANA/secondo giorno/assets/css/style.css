@@ -1,0 +1,463 @@
+/* IMPOSTAZIONI GENERALI */
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: Poppins, 'Helvetica Neue', sans-serif;
+    font-size: 1.4rem;
+    line-height: 1.5;
+    padding: 15px;
+    background-image: url('../img/sfondo.png');
+    background-position: center center;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+hr {
+    display: none;
+}
+
+/* rimuove l'elemento */
+
+/* HEADER */
+header {
+    background: rgb(0, 160, 198);
+    background: linear-gradient(180deg, rgba(0, 160, 198, 1) 0%, rgba(3, 109, 134, 1) 68%);
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: white;
+    box-shadow: 0 3px 3px #444;
+    margin-bottom: 1.5em;
+    padding: 2em 1.5em;
+}
+
+header div img {
+    margin-bottom: 20px;
+}
+
+header nav ul {
+    margin: 0;
+}
+
+header nav li {
+    list-style: none;
+}
+
+header nav li a {
+    color: white;
+    text-decoration: none;
+}
+
+header nav li a:hover {
+    color: red;
+}
+
+header nav li a::before {
+    content: "\22c6\0020";
+}
+
+/* MAIN */
+main {
+    background-color: #fff;
+    box-shadow: 0 3px 3px #444;
+    padding: 2em 1em;
+    margin-bottom: 1.5em;
+}
+
+
+
+#badge_img {
+    width: 70px;
+    border: 5px solid #00A0C6;
+}
+
+section {
+    background-color: #e3e3e3;
+    padding: 1em;
+    margin-bottom: 2em;
+}
+
+section h2 {
+    text-align: center;
+    color: #333;
+    background-color: #919191;
+    font-size: 2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 1em;
+}
+
+
+/* ELEMENTI NEL MAIN - ARTICLE */
+h1 {
+    font-size: 2.6rem;
+    font-weight: bold;
+    letter-spacing: -0.03em;
+    margin-bottom: 0.7em;
+}
+
+p,
+address,
+ul,
+ol,
+dl,
+blockquote {
+    margin-bottom: 1.2em;
+}
+
+h1+p {
+    color: #a0a0a0;
+}
+
+ul,
+ol {
+    margin-left: 2em;
+}
+
+a {
+    color: #00A0C6;
+    font-weight: bold;
+}
+
+strong {
+    color: #a02571;
+    font-weight: bold;
+}
+
+code {
+    background-color: #e3e3e3;
+    border: 1px solid #969494;
+    border-radius: 5px;
+}
+
+iframe {
+    width: 100%;
+    height: auto;
+    margin-bottom: 2em;
+    border-radius: 20px;
+}
+
+/* TABELLE */
+table {
+    margin-bottom: 2em;
+}
+
+caption {
+    font-weight: bold;
+    font-style: italic;
+}
+
+thead tr {
+    background-color: #3f6bca;
+    color: #ffffff;
+}
+
+th,
+td {
+    padding: 12px 15px;
+    vertical-align: bottom;
+    text-align: center;
+}
+
+tbody tr {
+    border-bottom: 1px solid #dddddd;
+}
+
+tbody tr:nth-of-type(even) {
+    background-color: #f3f3f3;
+}
+
+tbody tr:last-of-type {
+    border-bottom: 2px solid #3f6bca;
+}
+
+/* FORM */
+input {
+    padding: 13px;
+    width: 300px;
+    border: 0;
+    border-bottom: 1px dashed #333;
+
+}
+
+button {
+    padding: 7px 7px;
+    background-color: #3f6bca;
+    border: 0;
+    color: white;
+    font-weight: bold;
+}
+
+/* ELEMENTI NELL' ASIDE */
+aside h2 {
+    text-align: center;
+    color: #333;
+    font-size: 2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 1em;
+}
+
+aside div {
+    background-color: #e3e3e3;
+    border: 1px solid #c3c3c3;
+    margin-bottom: 1em;
+    padding: 1em;
+}
+
+aside div p:last-child {
+    margin-bottom: 0;
+    font-size: 0.8em;
+    text-align: right;
+}
+
+
+/* FOOTER */
+footer {
+    background: rgb(53, 53, 53);
+    background: linear-gradient(0deg, rgba(53, 53, 53, 1) 0%, rgba(5, 85, 103, 1) 68%);
+    box-shadow: 0 3px 3px #444;
+    color: #f0f0f0;
+    padding: 1em;
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+footer a {
+    color: fuchsia;
+}
+
+
+@media screen and (min-width: 576px) {
+
+
+    #underline {
+        position: relative;
+        left: 200px;
+        bottom: 28px;
+        width: 250px;
+        opacity: 0.6;
+    }
+
+    #badge {
+        width: 100px;
+        float: left;
+    }
+
+    #badge_undertext {
+        float: none;
+        clear: left;
+
+    }
+
+    section p {
+        position: relative;
+        bottom: 30px;
+    }
+
+    section form {
+        position: relative;
+        bottom: 30px;
+    }
+
+
+    section h2 {
+        position: relative;
+        width: 130px;
+        height: 30px;
+        bottom: 45px;
+/*         opacity: 1; */
+        box-shadow: 5px 6px 10px -5px #000000;
+        z-index: 10;
+    }
+
+
+    header {
+        position: sticky;
+        top: 0px;
+        z-index: 1000;
+    }
+
+    #icons {
+        position: fixed;
+        bottom: 0;
+        right: 5px;
+        z-index: 1100;
+    }
+
+
+
+    .blue_icons {
+        margin-bottom: 10px;
+        padding: 7px;
+        background-color: rgba(128, 128, 128, 0.413)
+    }
+
+    .red_icon {
+        color: red;
+    }
+
+    .blue_icons {
+        color: blue;
+    }
+}
+
+#icons a {
+    display: block;
+    margin-bottom: 10px;
+    padding: 7px;
+    background-color: rgba(99, 93, 209, 0.309);
+    border: 2px solid #5357b686;
+    border-radius: 7px;
+
+}
+
+
+@media screen and (min-width: 768px) {
+
+    h1 {
+        font-size: 90px;
+
+    }
+
+
+
+    #underline {
+        position: relative;
+        left: 10px;
+        bottom: 90px;
+        width: 800px;
+        opacity: 0.6;
+    }
+
+
+    table {
+        margin: 0 auto;
+    }
+
+    nav ul {
+        padding-left: 0;
+    }
+
+    nav ul li {
+        display: inline;
+    }
+
+    #first_icons {
+        position: fixed;
+        top: 6px;
+
+    }
+
+
+
+}
+
+@media screen and (min-width: 1200px) {
+    body {
+        padding: 0px 90px 0px 90px;
+    }
+
+    #underline {
+        position: relative;
+        left: 450px;
+        bottom: 20px;
+        width: 500px;
+        opacity: 0.6;
+    }
+
+
+    h1 {
+        font-size: 55px;
+        margin: 0;
+    }
+
+    header {
+        height: 90px;
+
+    }
+
+    .middle {
+        vertical-align: middle;
+    }
+
+    header div img {
+        width: 120px;
+        float: left;
+    }
+
+    header div:first-child {
+        display: inline-block;
+    }
+
+    header div p {
+        vertical-align: middle;
+        display: inline;
+        padding-left: 20px;
+    }
+
+
+    nav ul {
+        vertical-align: middle;
+
+        display: inline;
+        float: right;
+    }
+
+    header div {
+        vertical-align: middle;
+
+        display: inline;
+        float: left;
+    }
+
+
+
+    table {
+        width: 70%;
+        margin-top: 60px;
+        margin-bottom: 60px;
+
+    }
+
+    iframe {
+        float: left;
+        width: 50%;
+        height: 200px;
+    }
+
+    section {
+        float: right;
+        height: 200px;
+        width: 50%;
+        border-radius: 20px;
+    }
+
+    aside div {
+
+        width: 33.3%;
+        float: left;
+
+    }
+
+    main {
+        height: 1500px;
+    }
+
+
+}
+
+@media print {
+
+    header,
+    iframe,
+    section,
+    aside,
+    footer {
+        display: none;
+    }
+}
