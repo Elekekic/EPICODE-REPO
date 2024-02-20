@@ -68,8 +68,6 @@ main {
     margin-bottom: 1.5em;
 }
 
-
-
 #badge_img {
     width: 70px;
     border: 5px solid #00A0C6;
@@ -231,7 +229,9 @@ footer a {
     color: fuchsia;
 }
 
-
+.middle img {
+    width: 170px;
+}
 
 
     #underline {
@@ -243,8 +243,10 @@ footer a {
     }
 
     #badge {
-        width: 100px;
+        height: 79px;
         float: left;
+        border: 5px solid #a02571; 
+        margin-right: 20px;
     }
 
     #badge_undertext {
@@ -267,16 +269,17 @@ footer a {
     section h2 {
         position: relative;
         width: 130px;
-        height: 30px;
+        height: 35px;
         bottom: 45px;
         /*         opacity: 1; */
-        box-shadow: 5px 6px 10px -5px #000000;
+        box-shadow: 7px 5px 5px 0px rgba(0,0,0,0.4),0px 7px 15px -3px rgba(0,0,0,0.1);
         z-index: 10;
     }
 
 
     header {
         position: sticky;
+        font-size: 2rem;
         top: 0px;
         z-index: 1000;
     }
@@ -301,15 +304,18 @@ footer a {
     }
 
     .blue_icons {
+    
         color: blue;
     }
 
 #icons a {
     display: block;
+    width: 40px;
+    height: 40px;
     margin-bottom: 10px;
     padding: 7px;
-    background-color: rgba(99, 93, 209, 0.309);
-    border: 2px solid #5357b686;
+    background-color: rgba(215, 215, 215, 0.5);
+    border: 2px solid rgb(20, 59, 107);
     border-radius: 7px;
 
 }
@@ -348,21 +354,29 @@ footer a {
     font-size: 5em;
 }
 
+#underline {
+    position: relative;
+    bottom: 35px;
+    width: 300px;
+    left: 0px;
+    opacity: 0.6;
+}
+
+
+
+h1 {
+    font-size: 35px;
+
+}
+
 
 @media screen and (min-width: 768px) {
 
-    h1 {
-        font-size: 70px;
-
-    }
-
-
-
     #underline {
         position: relative;
-        left: 10px;
-        bottom: 75px;
-        width: 600px;
+        left: 270px;
+        bottom: 35px;
+        width: 330px;
         opacity: 0.6;
     }
 
@@ -417,6 +431,8 @@ footer a {
     }
 
     .middle {
+        position: relative;
+        top: -19px; 
         vertical-align: middle;
     }
 
@@ -445,7 +461,6 @@ footer a {
 
     header div {
         vertical-align: middle;
-
         display: inline;
         float: left;
     }
