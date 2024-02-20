@@ -202,7 +202,7 @@ aside h2 {
     margin-bottom: 1em;
 }
 
-aside div {
+.schede {
     background-color: #e3e3e3;
     border: 1px solid #c3c3c3;
     margin-bottom: 1em;
@@ -232,7 +232,6 @@ footer a {
 }
 
 
-@media screen and (min-width: 576px) {
 
 
     #underline {
@@ -270,7 +269,7 @@ footer a {
         width: 130px;
         height: 30px;
         bottom: 45px;
-/*         opacity: 1; */
+        /*         opacity: 1; */
         box-shadow: 5px 6px 10px -5px #000000;
         z-index: 10;
     }
@@ -304,7 +303,6 @@ footer a {
     .blue_icons {
         color: blue;
     }
-}
 
 #icons a {
     display: block;
@@ -316,11 +314,45 @@ footer a {
 
 }
 
+.schede {
+    position: relative;
+}
+
+.schede_p {
+    width: 200px;
+}
+
+
+.date {
+   text-align: right;
+}
+
+.date span {
+    font-size: 1em;
+}
+
+.schede div,
+.schede_p {
+    display: inline-block;
+
+}
+
+.schede div {
+    position: absolute;
+    right: 55px;
+    width: 25px;
+    opacity: 0.1;
+}
+
+.schede div span {
+    font-size: 5em;
+}
+
 
 @media screen and (min-width: 768px) {
 
     h1 {
-        font-size: 90px;
+        font-size: 70px;
 
     }
 
@@ -329,14 +361,17 @@ footer a {
     #underline {
         position: relative;
         left: 10px;
-        bottom: 90px;
-        width: 800px;
+        bottom: 75px;
+        width: 600px;
         opacity: 0.6;
     }
 
 
     table {
         margin: 0 auto;
+        width: 70%;
+        margin-top: 60px;
+        margin-bottom: 60px;
     }
 
     nav ul {
@@ -415,15 +450,6 @@ footer a {
         float: left;
     }
 
-
-
-    table {
-        width: 70%;
-        margin-top: 60px;
-        margin-bottom: 60px;
-
-    }
-
     iframe {
         float: left;
         width: 50%;
@@ -448,7 +474,7 @@ footer a {
         height: 1500px;
     }
 
-
+   
 }
 
 @media print {
