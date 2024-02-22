@@ -11,6 +11,7 @@ body {
 
 }
 
+
 .yellow {
     background: rgb(125, 125, 125);
     background: linear-gradient(0deg, rgba(125, 125, 125, 0.2953551049325981) 0%, rgba(253, 253, 204, 1) 33%);
@@ -27,6 +28,7 @@ body {
     background: linear-gradient(0deg, rgba(125, 125, 125, 0.2953551049325981) 0%, rgba(201, 201, 247, 1) 33%);
 }
 
+
 .yellow,
 .green,
 .purple {
@@ -35,6 +37,7 @@ body {
     width: 250px;
     height: 180px;
 }
+
 
 .yellow h2,
 p,
@@ -58,43 +61,74 @@ p {
     
 }
 
-.yellow:hover, .purple:hover {
-    animation: animazione 0.2s ease-in-out 0.3s alternate both;
-}
 
+
+
+.yellow:hover, .purple:hover {
+    animation: animazione 0.2s ease-in-out 0.3s alternate both, waddle 0.5s ease 0s 1 normal forwards;
+}
 
 .green:hover {
-    animation: secondaAnimazione 0.2s ease-in-out 0.3s alternate both;
+    animation: secondaAnimazione 0.2s ease-in-out 0.3s alternate both, waddle 0.5s ease 0s 1 normal forwards;
 }
 
-
 .yellow:not(:hover), .purple:not(:hover) {
-    animation: ritornoAnimazione1 0.2s ease-in-out;
+    animation: ritornoAnimazione1 0.2s ease-in-out; 
 }
 
 .green:not(:hover) {
-    animation: ritornoAnimazione2 0.2s ease-in-out;
+    animation: ritornoAnimazione2 0.2s ease-in-out; 
 }
 
 @keyframes secondaAnimazione {
-    from {transform: scale(1) rotate(5deg);}
-  to {transform: scale(1.2) rotate(0deg);} 
+    from {
+        transform: scale(1) rotate(5deg);
+    }
+    to {
+        transform: scale(1.2) rotate(0deg);
+    }
 }
 
 @keyframes animazione {
-  from {transform: scale(1) rotate(-5deg);}
-  to {transform: scale(1.2) rotate(0deg);}
+    from {
+        transform: scale(1) rotate(-5deg);
+    }
+    to {
+        transform: scale(1.2) rotate(0deg);
+    }
 }
 
 @keyframes ritornoAnimazione1 {
-    from {transform: scale(1.2) rotate(0deg);}
-  to {transform: scale(1) rotate(-5deg);} 
+    from {
+        transform: scale(1.2) rotate(0deg);
+    }
+    to {
+        transform: scale(1) rotate(-5deg);
+    }
 }
 
 @keyframes ritornoAnimazione2 {
-    from {transform: scale(1.2) rotate(0deg);}
-  to {transform: scale(1) rotate(5deg);} 
+    from {
+        transform: scale(1.2) rotate(0deg);
+    }
+    to {
+        transform: scale(1) rotate(5deg);
+    }
 }
 
+@keyframes waddle {
+    from {
+        transform: scale(1) rotate(5deg) translateX(0%);
+    }
+    30% {
+        transform: rotate(-6deg) translateX(15px);
+    }
+    60% {
+        transform: rotate(2.4deg) translateX(9px);
+    }
+    100% {
+        transform: scale(1.2) rotate(0deg);
+    }
+}
 
 
