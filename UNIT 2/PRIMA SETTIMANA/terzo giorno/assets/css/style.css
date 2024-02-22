@@ -1,11 +1,12 @@
 html,
 body {
+    margin: 0;
     text-align: center;
     font-family: Arial, Helvetica, sans-serif;
-    color: #742305; 
+    color: #742305;
 }
 
-/* HEADER */ 
+/* HEADER */
 
 .background_nav1 {
     background-color: #FEF7E2;
@@ -15,7 +16,7 @@ body {
 
 
 
-.background_nav2 img, 
+.background_nav2 img,
 .background_nav2 h2 {
     display: inline;
     vertical-align: middle;
@@ -46,11 +47,11 @@ li {
 }
 
 .list {
-    
-display: flex;
-flex-wrap: wrap;
-align-content: space-around; 
-justify-content: space-around;
+
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-around;
+    justify-content: space-around;
 
 }
 
@@ -59,12 +60,12 @@ main div img {
 }
 
 
-/* MAIN */ 
+/* MAIN */
 
 main h1 {
     padding: 30px;
-    margin: 0 auto; 
-    font-weight:800; 
+    margin: 0 auto;
+    font-weight: 800;
     width: 400px;
     font-size: 3em;
 }
@@ -72,44 +73,133 @@ main h1 {
 
 
 .mini_section {
-    background-color:#FEF7E2;
+    background-color: #FEF7E2;
     border-radius: 60px;
-    padding-bottom: 20px;
     margin: 30px;
+    height: 415px;
+
 }
 
 .background_img {
-    border-radius: 30px 30px 0px 0px; 
-    margin-bottom: 20px;
+    border-radius: 30px 30px 0px 0px;
+    margin-bottom: 25px;
     height: 270px;
     background-repeat: no-repeat;
     background-size: cover;
-    background-image: url("../img/honey.jpg"); 
+    background-image: url("../img/honey.jpg");
 }
 
 section div button {
+    position: relative;
+    bottom: 25px;
     background-color: #FFDF7F;
     cursor: pointer;
     font-weight: bold;
     border: none;
     font-size: 1em;
     padding: 10px;
-    width: 200px;
-    border-radius: 50px; 
+    width: 220px;
+    border-radius: 50px;
+    color: #742305;
 }
 
 .mini_section_p {
     display: flex;
-    align-items: flex-start;
-    flex-direction: column; 
+    align-items: center;
+    flex-direction: column;
     flex-wrap: nowrap;
+    width: 65%;
 }
 
 .mini_section_p p {
     margin: 0;
-    padding-left: 40px;
 }
 
+.mini_section_p p:first-child {
+    font-size: 1.2em;
+}
+
+.mini_section_p p:nth-child(2) {
+    font-size: 0.9em;
+}
+
+.text_to_the_right {
+    position: relative;
+    bottom: 42px;
+    left: 100px;
+}
+
+/* ASIDE */
+
+aside h2 {
+    padding: 30px;
+    margin: 0 auto;
+    font-weight: 800;
+    width: 400px;
+    font-size: 2em;
+}
+
+.background_aside {
+    background-color: #FEF7E2;
+    padding: 20px;
+    border-radius: 50px;
+    text-align: left;
+    padding-inline: 6%;
+}
+
+.background_aside h3 {
+    font-size: 1.7em;
+}
+
+.background_aside p {
+    padding-bottom: 10px;
+}
+
+.aside_img {
+    text-align: center;
+}
+
+@media screen and (min-width: 768px) {
+    .shop {
+        padding: 30px;
+        width: 30%;
+        flex-grow: 1;
+    }
+
+
+    .list {
+
+        display: flex;
+        flex-wrap: nowrap;
+        align-content: space-around;
+        justify-content: space-around;
+        align-items: center;
+
+    }
+
+    .background_nav2 img,
+    .background_nav2 h2 {
+        width: 30px;
+        font-size: medium;
+        display: inline;
+        vertical-align: middle;
+    }
+
+    .background_nav1 {
+        background-color: #FEF7E2;
+        padding: 10px;
+        border-radius: 0px;
+    }
+
+    ul li {
+        font-size: 0.9em;
+    }
 
 
 
+
+    section div button {
+        padding: 0;
+        width: 280px;
+    }
+}
