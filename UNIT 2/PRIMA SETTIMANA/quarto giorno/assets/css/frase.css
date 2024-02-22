@@ -24,22 +24,21 @@ body {
     margin: 0;
     width: 110px;
     opacity: 0;
-    animation: frasi 12s ease-in-out infinite 0s;
+    animation: frasi 6s ease-in-out infinite 0s;
 }
 
 #primo {
     color: #7479A1; 
-    animation-delay: 0s;
 }
 
 #secondo {
      color: #E86F68;
-    animation-delay: 4s;
+    animation-delay: 2s;
 }
 
 #terzo {
-    color: #5DBD7E; 
-    animation-delay: 8s; 
+    color: #65c788; 
+    animation-delay: 4s; 
 }
 
 
