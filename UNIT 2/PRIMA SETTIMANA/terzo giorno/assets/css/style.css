@@ -1,0 +1,115 @@
+html,
+body {
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #742305; 
+}
+
+/* HEADER */ 
+
+.background_nav1 {
+    background-color: #FEF7E2;
+    padding: 10px;
+    border-radius: 50px;
+}
+
+
+
+.background_nav2 img, 
+.background_nav2 h2 {
+    display: inline;
+    vertical-align: middle;
+}
+
+
+.shop {
+    padding: 30px;
+    width: 70%;
+    flex-grow: 1;
+}
+
+ul {
+    list-style-type: none;
+    display: inline;
+    padding: 0;
+}
+
+li {
+    font-weight: bold;
+    display: inline;
+    background-color: #FFDF7F;
+    border-radius: 60px;
+    font-size: 1.2em;
+    margin: 10px;
+    padding: 20px;
+    width: 30%;
+}
+
+.list {
+    
+display: flex;
+flex-wrap: wrap;
+align-content: space-around; 
+justify-content: space-around;
+
+}
+
+main div img {
+    width: 50%;
+}
+
+
+/* MAIN */ 
+
+main h1 {
+    padding: 30px;
+    margin: 0 auto; 
+    font-weight:800; 
+    width: 400px;
+    font-size: 3em;
+}
+
+
+
+.mini_section {
+    background-color:#FEF7E2;
+    border-radius: 60px;
+    padding-bottom: 20px;
+    margin: 30px;
+}
+
+.background_img {
+    border-radius: 30px 30px 0px 0px; 
+    margin-bottom: 20px;
+    height: 270px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url("../img/honey.jpg"); 
+}
+
+section div button {
+    background-color: #FFDF7F;
+    cursor: pointer;
+    font-weight: bold;
+    border: none;
+    font-size: 1em;
+    padding: 10px;
+    width: 200px;
+    border-radius: 50px; 
+}
+
+.mini_section_p {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column; 
+    flex-wrap: nowrap;
+}
+
+.mini_section_p p {
+    margin: 0;
+    padding-left: 40px;
+}
+
+
+
+

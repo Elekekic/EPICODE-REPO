@@ -234,79 +234,79 @@ footer a {
 }
 
 
-    #underline {
-        position: relative;
-        left: 200px;
-        bottom: 28px;
-        width: 250px;
-        opacity: 0.6;
-    }
+#underline {
+    position: relative;
+    left: 200px;
+    bottom: 28px;
+    width: 250px;
+    opacity: 0.6;
+}
 
-    #badge {
-        height: 79px;
-        float: left;
-        border: 5px solid #a02571; 
-        margin-right: 20px;
-    }
+#badge {
+    height: 79px;
+    float: left;
+    border: 5px solid #a02571;
+    margin-right: 20px;
+}
 
-    #badge_undertext {
-        float: none;
-        clear: left;
+#badge_undertext {
+    float: none;
+    clear: left;
 
-    }
+}
 
-    section p {
-        position: relative;
-        bottom: 30px;
-    }
+section p {
+    position: relative;
+    bottom: 30px;
+}
 
-    section form {
-        position: relative;
-        bottom: 30px;
-    }
-
-
-    section h2 {
-        position: relative;
-        width: 130px;
-        height: 35px;
-        bottom: 45px;
-        /*         opacity: 1; */
-        box-shadow: 7px 5px 5px 0px rgba(0,0,0,0.4),0px 7px 15px -3px rgba(0,0,0,0.1);
-        z-index: 10;
-    }
+section form {
+    position: relative;
+    bottom: 30px;
+}
 
 
-    header {
-        position: sticky;
-        font-size: 2rem;
-        top: 0px;
-        z-index: 1000;
-    }
-
-    #icons {
-        position: fixed;
-        bottom: 0;
-        right: 5px;
-        z-index: 1100;
-    }
+section h2 {
+    position: relative;
+    width: 130px;
+    height: 35px;
+    bottom: 45px;
+    /*         opacity: 1; */
+    box-shadow: 7px 5px 5px 0px rgba(0, 0, 0, 0.4), 0px 7px 15px -3px rgba(0, 0, 0, 0.1);
+    z-index: 10;
+}
 
 
+header {
+    position: sticky;
+    font-size: 2rem;
+    top: 0px;
+    z-index: 1000;
+}
 
-    .blue_icons {
-        margin-bottom: 10px;
-        padding: 7px;
-        background-color: rgba(128, 128, 128, 0.413)
-    }
+#icons {
+    position: fixed;
+    bottom: 0;
+    right: 5px;
+    z-index: 1100;
+}
 
-    .red_icon {
-        color: red;
-    }
 
-    .blue_icons {
-    
-        color: blue;
-    }
+
+.blue_icons {
+    margin-bottom: 10px;
+    padding: 7px;
+    background-color: rgba(128, 128, 128, 0.413)
+}
+
+.red_icon {
+    color: red;
+}
+
+.blue_icons {
+
+    color: blue;
+}
 
 #icons a {
     display: block;
@@ -330,7 +330,7 @@ footer a {
 
 
 .date {
-   text-align: right;
+    text-align: right;
 }
 
 .date span {
@@ -432,7 +432,7 @@ h1 {
 
     .middle {
         position: relative;
-        top: -19px; 
+        top: -19px;
         vertical-align: middle;
     }
 
@@ -489,7 +489,7 @@ h1 {
         height: 1500px;
     }
 
-   
+
 }
 
 @media print {
