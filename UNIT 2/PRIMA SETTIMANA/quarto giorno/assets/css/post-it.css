@@ -3,7 +3,8 @@ body {
     display: flex;
     flex-wrap: wrap;
     text-align: center;
-    background-color: #666666;
+    background-color: #363636;
+
 
     font-family: "Indie Flower", cursive;
     font-weight: 600;
@@ -13,26 +14,29 @@ body {
 
 
 .yellow {
-    background: rgb(125, 125, 125);
-    background: linear-gradient(0deg, rgba(125, 125, 125, 0.2953551049325981) 0%, rgba(253, 253, 204, 1) 33%);
+    background: rgb(63, 94, 251);
+    background: radial-gradient(circle, rgba(63, 94, 251, 1) 0%, rgba(252, 70, 107, 1) 100%);
+    
 }
 
 .green {
-    background: rgb(125, 125, 125);
-    background: linear-gradient(0deg, rgba(125, 125, 125, 0.2953551049325981) 0%, rgba(202, 252, 203, 1) 33%);
+    background: rgb(236, 49, 49);
+    background: radial-gradient(circle, rgba(236, 49, 49, 1) 0%, rgba(148, 233, 169, 1) 100%);
+    
 
 }
 
 .purple {
-    background: rgb(125, 125, 125);
-    background: linear-gradient(0deg, rgba(125, 125, 125, 0.2953551049325981) 0%, rgba(201, 201, 247, 1) 33%);
+    background: rgb(238, 174, 202);
+    background: radial-gradient(circle, rgba(238, 174, 202, 1) 0%, rgba(148, 187, 233, 1) 100%);
+    
 }
 
 
 .yellow,
 .green,
 .purple {
-    box-shadow: 22px 18px 19px -3px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 0px 30px 3px #0e0e0e93;
     margin: 20px;
     width: 250px;
     height: 180px;
@@ -50,7 +54,8 @@ p {
 }
 
 
-.yellow, .purple {
+.yellow,
+.purple {
     animation-delay: 0.3s;
     transform: rotate(-5deg);
 }
@@ -58,13 +63,14 @@ p {
 .green {
     animation-delay: 0.3s;
     transform: rotate(5deg);
-    
+
 }
 
 
 
 
-.yellow:hover, .purple:hover {
+.yellow:hover,
+.purple:hover {
     animation: animazione 0.2s ease-in-out 0.3s alternate both, waddle 0.5s ease 0s 1 normal forwards;
 }
 
@@ -72,18 +78,20 @@ p {
     animation: secondaAnimazione 0.2s ease-in-out 0.3s alternate both, waddle 0.5s ease 0s 1 normal forwards;
 }
 
-.yellow:not(:hover), .purple:not(:hover) {
-    animation: ritornoAnimazione1 0.2s ease-in-out; 
+.yellow:not(:hover),
+.purple:not(:hover) {
+    animation: ritornoAnimazione1 0.2s ease-in-out;
 }
 
 .green:not(:hover) {
-    animation: ritornoAnimazione2 0.2s ease-in-out; 
+    animation: ritornoAnimazione2 0.2s ease-in-out;
 }
 
 @keyframes secondaAnimazione {
     from {
         transform: scale(1) rotate(5deg);
     }
+
     to {
         transform: scale(1.2) rotate(0deg);
     }
@@ -93,6 +101,7 @@ p {
     from {
         transform: scale(1) rotate(-5deg);
     }
+
     to {
         transform: scale(1.2) rotate(0deg);
     }
@@ -102,6 +111,7 @@ p {
     from {
         transform: scale(1.2) rotate(0deg);
     }
+
     to {
         transform: scale(1) rotate(-5deg);
     }
@@ -111,6 +121,7 @@ p {
     from {
         transform: scale(1.2) rotate(0deg);
     }
+
     to {
         transform: scale(1) rotate(5deg);
     }
@@ -120,15 +131,16 @@ p {
     from {
         transform: scale(1) rotate(5deg) translateX(0%);
     }
+
     30% {
         transform: rotate(-6deg) translateX(15px);
     }
+
     60% {
         transform: rotate(2.4deg) translateX(9px);
     }
+
     100% {
         transform: scale(1.2) rotate(0deg);
     }
 }
-
-
