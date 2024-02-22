@@ -15,7 +15,7 @@ body {
 
 .yellow {
     background: rgb(63, 94, 251);
-    background: radial-gradient(circle, rgba(63, 94, 251, 1) 0%, rgba(252, 70, 107, 1) 100%);
+    background: radial-gradient(circle, rgb(102, 31, 210) 0%, rgba(252, 70, 107, 1) 100%);
     
 }
 
@@ -36,6 +36,9 @@ body {
 .yellow,
 .green,
 .purple {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     box-shadow: 0px 0px 30px 3px #0e0e0e93;
     margin: 20px;
     width: 250px;
@@ -49,8 +52,9 @@ p,
 p,
 .purple h2,
 p {
+    margin: 0;
     position: relative;
-    top: 50px;
+    top: 60px;
 }
 
 
