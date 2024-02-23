@@ -12,6 +12,13 @@ body {
 
 /* HEADER */
 
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+
 nav {
     padding: 20px;
     display: flex;
@@ -241,7 +248,7 @@ aside {
     display: flex;
     flex-direction: column;
     position: sticky; 
-    top: 33px; 
+    top: 100px; 
 }
 
 .big_box {
