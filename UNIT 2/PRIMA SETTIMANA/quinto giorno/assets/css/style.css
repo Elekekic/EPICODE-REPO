@@ -316,7 +316,46 @@ aside {
 }
 
 
-@media screen and ( max-width: 768px) {
+@media screen and ( max-width: 769px) {
 
-    
+    .container {
+        display: flex;
+        width: 50%;
+    }
+
+
+    .trending {
+        height: 350px;
+    }
+
+    .big_box {
+        flex-direction: column-reverse;
+    }
+
+    .smaller_box {
+        width: 95%;
+    }
+
+    .smaller_box2 {
+        display: flex;
+        flex-wrap: nowrap;
+        width: 100%;
+    }
+
+    .aside_buttons {
+        width: 90%;
+        height: 40%;
+        align-content: center; 
+        justify-content: flex-start; 
+        margin-bottom: 10px;
+    }
+
+    .buttons_style {
+       height: 32px;
+       margin: 10px;
+    }
+
+    .aside_list {
+        width: 90%;
+    }
 }
