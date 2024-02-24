@@ -49,7 +49,7 @@ nav ul li {
     color: white;
 }
 
-.under_nav{
+.under_nav {
     display: flex;
     justify-content: flex-end;
     background-color: #ffc017;
@@ -109,7 +109,7 @@ nav ul li {
     display: flex;
     margin-top: 50px;
     padding-left: 95px;
-    font-size: small ;
+    font-size: small;
 }
 
 .trending_on_medium h4 {
@@ -121,7 +121,7 @@ nav ul li {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    align-items: center; 
+    align-items: center;
     height: 250px;
 }
 
@@ -149,7 +149,7 @@ nav ul li {
     position: relative;
     top: 5px;
     width: 20px;
-   border-radius: 20%; 
+    border-radius: 20%;
 }
 
 
@@ -169,9 +169,9 @@ nav ul li {
 
 .trending_boxes p {
     width: 10%;
-font-weight: bold;
-color: #19191924;
-font-size: 2em;
+    font-weight: bold;
+    color: #19191924;
+    font-size: 2em;
 }
 
 
@@ -218,13 +218,13 @@ font-size: 2em;
 
 .gray_bg {
     background-color: #96969630;
-    padding:2px 10px 2px 10px;
+    padding: 2px 10px 2px 10px;
     border-radius: 30px;
 }
 
 
 .articles_middle p {
-    margin-top: 0; 
+    margin-top: 0;
 }
 
 
@@ -244,6 +244,7 @@ font-size: 2em;
     align-items: center;
     margin: 5px;
 }
+
 .bookmark {
     margin-left: auto;
     margin-right: 20px;
@@ -252,8 +253,8 @@ font-size: 2em;
 aside {
     display: flex;
     flex-direction: column;
-    position: sticky; 
-    top: 110px; 
+    position: sticky;
+    top: 110px;
 }
 
 .big_box {
@@ -285,11 +286,11 @@ aside {
 }
 
 .aside_list {
-   border-top: 2px solid #19191915;
+    border-top: 2px solid #19191915;
 }
 
 .aside_list ul {
-    padding-left:0; 
+    padding-left: 0;
 }
 
 .aside_list ul li {
@@ -298,6 +299,7 @@ aside {
     font-size: 0.9em;
     padding-inline: 10px;
 }
+
 .aside_list {
     display: flex;
 }
@@ -305,7 +307,7 @@ aside {
 .buttons_style {
     background-color: rgb(255, 255, 255);
     color: #1919199e;
-    border: 1px solid rgba(0, 0, 0, 0.187); 
+    border: 1px solid rgba(0, 0, 0, 0.187);
     padding: 7px 13px 7px 13px;
     border-radius: 3px;
     cursor: pointer;
@@ -316,7 +318,7 @@ aside {
 }
 
 
-@media screen and ( max-width: 769px) {
+@media screen and (max-width: 769px) {
 
     .container {
         display: flex;
@@ -345,14 +347,14 @@ aside {
     .aside_buttons {
         width: 90%;
         height: 40%;
-        align-content: center; 
-        justify-content: flex-start; 
+        align-content: center;
+        justify-content: flex-start;
         margin-bottom: 10px;
     }
 
     .buttons_style {
-       height: 32px;
-       margin: 10px;
+        height: 32px;
+        margin: 10px;
     }
 
     .aside_list {
@@ -376,4 +378,76 @@ aside {
         font-size: 0.9rem;
         width: 50%;
     }
+}
+
+
+@media screen and (max-width: 568px) {
+
+
+    #our_story {
+        display: none;
+    }
+
+    #membership {
+        display: none;
+    }
+
+    #write {
+        display: none;
+    }
+
+    .trending {
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-around;
+        height: 800px;
+    }
+
+    .trending_on_medium {
+        padding-left: 18px;
+    }
+
+
+    .text_under_nav_left {
+        width: 100%;
+        font-size: 0.5rem;
+        align-items: flex-start;
+    }
+
+    .text_under_nav_left p {
+        width: 90%;
+        font-size: 1rem;
+    }
+
+
+    svg {
+        display: none;
+    }
+
+    .button {
+        font-size: 0.9rem;
+        width: 70%;
+    }
+
+    .section_container {
+        margin-bottom: 20px;
+    }
+
+    .articles_middle {
+        font-size: 0.7rem;
+    }
+
+    .aside_buttons {
+        width: 100%;
+    }
+
+   .buttons_style {
+    margin: 5px;
+   }
+    
+   .smaller_box2 {
+    width: 96%;
+    padding-left: 15px;
+    padding-right: 15px;
+   }
 }

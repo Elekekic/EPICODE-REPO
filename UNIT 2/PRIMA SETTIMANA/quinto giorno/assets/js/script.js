@@ -6,18 +6,18 @@ console.log(M);
 console.log(lettereM.length);
 
 
-/* lettereM.forEach((gElement, i) => {
+lettereM.forEach((gElement, i) => {
     setTimeout(() => {
         gElement.style.fill = 'transparent';
-    }, i * 400); 
-}); */
+    }, i * 600); 
+}); 
 
-/* lettereM.forEach(function(lettera) {
+lettereM.forEach(function(lettera) {
     setInterval(function() {
         alternareVisibilita(lettera);
-    }, 200);
+    }, 1000);
 });
- */
+
 
 
 
@@ -26,7 +26,7 @@ for (let i = 0; i < lettereM.length; i++ ) {
 let numeroRandom = Math.floor(Math.random() * lettereM.length); 
 
  lettereM[numeroRandom]
- setTimeout(() => {
+ setInterval(() => {
     alternareVisibilita(lettereM[numeroRandom])
 }, i * 10);
 
