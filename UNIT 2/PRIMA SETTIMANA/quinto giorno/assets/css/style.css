@@ -358,4 +358,22 @@ aside {
     .aside_list {
         width: 90%;
     }
+
+    .nav_list {
+        font-size: 0.8rem;
+    }
+
+    .text_under_nav_left {
+        font-size: 0.6rem;
+    }
+
+    .text_under_nav_right {
+        width: 55%;
+
+    }
+
+    .button {
+        font-size: 0.9rem;
+        width: 50%;
+    }
 }

@@ -45,6 +45,9 @@ window.addEventListener('scroll', function() {
        navChange.style.backgroundColor = '';  
        buttonChange.style.backgroundColor = ''; 
     }
+    window.addEventListener('beforeunload', () => {
+        window.scrollTo(0, 0);
+        });
 }); 
 
 
