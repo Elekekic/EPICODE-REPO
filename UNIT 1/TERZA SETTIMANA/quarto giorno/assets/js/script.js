@@ -34,31 +34,14 @@ button.addEventListener('click', function() {
 });
 
 function pescaNumero() {
-<<<<<<< HEAD
-    let coloraCasella = Math.floor((Math.random() * 90) + 1);
-    console.log(coloraCasella);
-    if (NumeriUsati.includes(coloraCasella)) {
-        coloraCasellaNumero();
-    } else {
-        numerocoloraCasellato.innerText = `Numero estratto: ${coloraCasella}`;
-        NumeriUsati.push(coloraCasella);
-        colora(coloraCasella);
-    }
-}
-
-function colora(coloraCasella) {
-    const tabellone = document.querySelectorAll('.cella');
-    for (let i = 0; i < tabellone.length; i++) {
-        if (parseInt(tabellone[i].innerText) === coloraCasella) {
-=======
-    let pesca = Math.floor((Math.random() * 90) + 1);
-    console.log(pesca);
-    if (NumeriUsati.includes(pesca)) {
+    let pescaN = Math.floor((Math.random() * 90) + 1);
+    console.log(pescaN);
+    if (NumeriUsati.includes(pescaN)) {
         pescaNumero();
     } else {
-        numeroPescato.innerText = `Numero estratto: ${pesca}`;
-        NumeriUsati.push(pesca);
-        colora(pesca);
+        numeroPescato.innerText = `Numero estratto: ${pescaN}`;
+        NumeriUsati.push(pescaN);
+        colora(pescaN);
     }
 }
 
@@ -66,7 +49,6 @@ function colora(pesca) {
     const tabellone = document.querySelectorAll('.cella');
     for (let i = 0; i < tabellone.length; i++) {
         if (parseInt(tabellone[i].innerText) === pesca) {
->>>>>>> 99ebc5dbe0aa024e1f5f4896028fabc99263a658
             tabellone[i].classList.add('numeroPescato');
         }
     }

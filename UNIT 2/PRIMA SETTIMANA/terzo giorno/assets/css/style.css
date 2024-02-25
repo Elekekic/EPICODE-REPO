@@ -1,5 +1,6 @@
-html,
+
 body {
+    width: 100%;
     margin: 0;
     text-align: center;
     font-family: Arial, Helvetica, sans-serif;
@@ -8,10 +9,17 @@ body {
 
 /* HEADER */
 
+header {
+    margin-top: 25px;
+    display: flex;
+    justify-content: center;
+}
+
 .background_nav1 {
     background-color: #FEF7E2;
+    width: 80%;
     padding: 10px;
-    border-radius: 50px;
+    border-radius: 25%;
 }
 
 
@@ -23,10 +31,10 @@ body {
 }
 
 
+
 .shop {
-    padding: 30px;
-    width: 70%;
-    flex-grow: 1;
+    padding: 35px;
+    width: 60%;
 }
 
 ul {
@@ -75,7 +83,7 @@ main h1 {
 .mini_section {
     background-color: #FEF7E2;
     border-radius: 60px;
-    margin: 30px;
+    margin: 20px;
     height: 415px;
 
 }
@@ -126,7 +134,8 @@ section div button {
 .text_to_the_right {
     position: relative;
     bottom: 42px;
-    left: 100px;
+    left: 320px;
+    width: 10%;
 }
 
 /* ASIDE */
@@ -140,8 +149,13 @@ aside h2 {
 }
 
 .background_aside {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
     background-color: #FEF7E2;
     padding: 20px;
+    margin: 20px;
     border-radius: 50px;
     text-align: left;
     padding-inline: 6%;
@@ -149,10 +163,12 @@ aside h2 {
 
 .background_aside h3 {
     font-size: 1.7em;
+    font-weight: 800;
 }
 
 .background_aside p {
-    padding-bottom: 10px;
+    width: 80%;
+    
 }
 
 .aside_img {
@@ -190,6 +206,7 @@ aside h2 {
     }
 
     .background_nav1 {
+        
         background-color: #FEF7E2;
         padding: 10px;
         border-radius: 0px;
