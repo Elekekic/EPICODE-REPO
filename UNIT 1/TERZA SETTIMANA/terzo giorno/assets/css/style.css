@@ -79,7 +79,6 @@ hr {
 .container {
     box-shadow: 0 0 15px 4px rgba(0, 0, 0, 0.06);
     background-color: rgba(255, 255, 255, 0.302);
-    padding: 2px;
     margin-top: 10px;
     width: 400px;
    margin-left: auto;
@@ -106,9 +105,10 @@ hr {
     cursor: pointer;
 }
 
-#task_name {
-    
+#task_name { 
     display: inline;
+    padding-top: 10px;
+    padding-bottom: 10px;
     width: 400px;
 }
 
