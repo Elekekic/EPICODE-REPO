@@ -1,0 +1,59 @@
+@import '../partials/mixins.scss'; 
+
+
+.animate {
+    width: 500px;
+    @include floating; 
+    position: absolute;
+    top: 90px; 
+    bottom: 0;
+    animation: immagine 2s forwards;
+}
+
+@keyframes immagine {
+    from { transform: translateY(50%); opacity: 0%;}
+    to {transform: translateY(0); opacity: 100%;}
+}
+
+
+.inner_text h1 {
+    position: absolute;
+    top:0; 
+    animation: texts 3s forwards;
+}
+
+@keyframes texts {
+    from { transform: translateY(50%); opacity: 0%;}
+    to {transform: translateY(0); opacity: 100%;}
+}
+
+.inner_text p {
+    position: absolute;
+    top: 180px; 
+    animation: texts 3s forwards;
+}
+
+
+.inner_text {
+    .primoButton {
+        position: absolute;
+        top: 220px; 
+        animation: texts 5s forwards;
+    }
+    
+    .secondoButton {
+        position: absolute;
+        top: 220px; 
+       left: 150px; 
+        animation: texts 5s forwards;
+    }
+    
+    .terzoButton {
+        position: absolute;
+        top: 220px; 
+        left: 250px;
+        animation: texts 5s forwards;
+    }
+}
+
+
