@@ -1,0 +1,104 @@
+/*  #D533O #FCC560 #A0CBAD #8FB1BE #00012A  */
+
+.container-fluid  a {
+    color: #00012A; 
+}
+.container-fluid  a:hover {
+    color: #D53302;
+}
+.navbar-brand img {
+    filter: hue-rotate(350deg) saturate(40%);
+}
+
+.avatar_nav img {
+    position: relative;
+    width: 50px;
+    border-radius: 50%;
+}
+
+.bell {
+    position: relative;
+    display: inline-block;
+    background-color: rgba(236, 235, 235, 0.786);
+    padding: 7px;
+    border-radius: 50%;
+    margin: 15px;
+    cursor: pointer;
+}
+
+.avatar_nav {
+    position: relative;
+    display: inline-block;
+    background-color: rgba(236, 235, 235, 0.786);
+    padding: 7px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.bell svg {
+    font-size: 56px;
+    color: #8d8d92;
+    width: 30px;
+    height: 30px;
+    padding: 4px; 
+    border-radius: 50%;  
+}
+
+.img {
+    width: 40px;
+    font-size: 56px;
+    border-radius: 50%;  
+}
+
+.bell_notification {
+    position: absolute;
+    top: 0; 
+    right: 1px; 
+    width: 15px;
+    height: 15px;
+    padding: 4px;
+    background-color: #D53302;
+    border: 3px solid #ffffff;
+    border-radius: 50%;
+  }
+
+  .bell_notification2 {
+    position: absolute;
+    top: 50px;
+    right: 5px; 
+    width: 15px;
+    height: 15px;
+    border: 3px solid #ffffff;
+    background-color: #56ff89;
+    border-radius: 50%;
+  }
+
+.hero {
+    background: rgb(12,1,42);
+background: linear-gradient(0deg, rgba(12,1,42,1) 0%, rgba(139,171,184,1) 100%);
+  }
+
+.bg_color_button button {
+    background-color: #A0CBAD ;
+  }
+
+
+.button1:hover {
+    color: #A0CBAD !important; 
+}
+
+.button2:hover {
+    color:  #FCC560 !important; 
+}
+
+
+.svg {
+    margin: 10px;
+}
+
+.under_hero {
+    margin: 10px;
+    color: #ffffff;
+    background-color: #D53302;
+    border-radius: 50%; 
+}

@@ -701,3 +701,85 @@ const regioni = [
 		'prov_regione': 'VENETO',
 	},
 ];
+
+// vado a prendermi la select dove metterò le regioni 
+const menuRegioni = document.getElementById('regioni_menu');
+// vado a prendermi la select dove metterò le province
+const menuProvince = document.getElementById('province_menu');
+// prendo il div dove andrò a mettere i stemmi 
+const stemmi = document.getElementById('nascosto');
+// mi creo l'array che mi serve per il metodo filter 
+let provinceReg = [];
+
+
+// meglio usare window invece di document, per evitare che vadi in errore 
+window.addEventListener('load', init);
+
+
+//
+function init() {
+	menuProvince.setAttribute('disabled', 'true');
+	for (let i = 0; i < regioni.length; i++) {
+		let option = document.createElement('option');
+		option.setAttribute('value', regioni[i].prov_regione);
+		option.innerText = regioni[i].prov_regione;
+		menuRegioni.appendChild(option);
+	}
+}
+
+menuRegioni.addEventListener('change', function () {
+	let regione = this.value;
+	if (regione == '') {
+		stemmi.style.display = 'none';
+		menuProvince.innerHTML = '<option value="" selected></option>';
+		menuProvince.setAttribute('disabled', 'true');
+		return;
+	} else {
+		menuProvince.removeAttribute('disabled');
+		caricaProvince(regione);
+	}
+});
+
+function caricaProvince(regione) {
+	menuProvince.innerHTML = '<option value="" selected></option>';
+	provinceReg = province.filter(provincia => provincia.prov_reg == regione);
+
+	// È come se avessimo scritto:
+	// for (let i = 0; i < province.length; i++) {
+	// 	if (province[i].prov_reg == regione) {
+	// 		provinceReg.push(province[i].prov_reg)
+	// 	}
+	// }
+	for (let i = 0; i < provinceReg.length; i++) {
+		let option = document.createElement('option');
+		option.setAttribute('value', provinceReg[i].prov_nome);
+		option.innerText = provinceReg[i].prov_nome;
+		menuProvince.appendChild(option);
+	}
+}
+
+menuProvince.addEventListener('change', function () {
+	let provincia = this.value;
+	if (provincia == '') {
+		stemmi.style.display = 'none';
+		return;
+	} else {
+		caricaImmagini(provincia);
+	}
+});
+
+
+function caricaImmagini(provincia) {
+	stemmi.style.display = 'flex';
+	for (let i = 0; i < provinceReg.length; i++) {
+		let nome = provinceReg[i].prov_nome;
+		if (nome == provincia) {
+			let regione = provinceReg[i].prov_reg;
+			let stemmaReg = provinceReg[i].prov_url;
+			document.getElementById('nomeRegione').innerText = `la regione selezionata è ${regione}`;
+			document.getElementById('stemmaRegione').setAttribute('src', stemmaReg);
+			document.getElementById('nomeProvincia').innerText = ` La provincia selezionata è ${nome}`; 
+			document.getElementById('stemmaProvincia').setAttribute('src', `assets/img/province/${nome}.png`);
+		}
+	}
+}
