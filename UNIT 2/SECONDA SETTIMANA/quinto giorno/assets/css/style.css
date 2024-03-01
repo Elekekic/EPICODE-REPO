@@ -19,3 +19,17 @@ hr {
 .norounded {
     border-radius: 0%;
 }
+
+ul li a:hover {
+    background-color: #212529 !important;
+    color: #D53302 !important;
+}
+
+footer a:hover {
+    opacity: 0.5;
+}
+
+svg:hover {
+    opacity: 0.5;
+}
+
