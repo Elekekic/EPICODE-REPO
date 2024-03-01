@@ -15,3 +15,7 @@ hr {
 .pointer {
     cursor:pointer; 
 }
+
+.norounded {
+    border-radius: 0%;
+}
