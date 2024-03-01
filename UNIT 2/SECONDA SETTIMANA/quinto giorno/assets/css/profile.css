@@ -1,0 +1,13 @@
+.pointer {
+    cursor:pointer; 
+}
+
+.hover:hover {
+    box-shadow: 0px 0px 15px -3px rgb(255, 255, 255, 0.4);
+}
+
+
+ul li a:hover {
+    background-color: #212529 !important;
+    color: #D53302 !important;
+}
