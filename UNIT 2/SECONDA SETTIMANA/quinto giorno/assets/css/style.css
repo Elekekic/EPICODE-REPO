@@ -1,0 +1,17 @@
+body, html {
+    margin: 10px;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.dropdown-menu:hover {
+ color: black;
+}
+
+hr {
+    border: 1px solid white;
+}
+
+.pointer {
+    cursor:pointer; 
+}
