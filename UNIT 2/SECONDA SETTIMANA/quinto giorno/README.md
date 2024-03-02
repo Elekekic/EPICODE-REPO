@@ -35,7 +35,7 @@ La prima pagina, rappresenta l'interfaccia iniziale di Netflix Nella navbar sono
   <img src="https://github.com/Elekekic/EPICODE-REPO/assets/157897660/460d8fba-8926-4c3a-9c1b-cc975b8cfe0a" width="400" height="300" /> 
 </p>
 
-La seconda pagina, rappresenta l'interfaccia dove l'user potra personalizzare il suo profilo. Cliccando il logo di Netflix si può ritornare alla pagina iniziale, oppure sempre dal menu a tendina si può scegliere altre pagine.
+La seconda pagina, dove l'user potra personalizzare il suo profilo. Cliccando il logo di Netflix si può ritornare alla pagina iniziale, oppure sempre dal menu a tendina si può scegliere altre pagine.
 
  > È stato anche aggiunto un modal per "change" sotto l'immagine del profilo, non cambia l'immagine ma con js si potrebbe farlo.
 
@@ -43,5 +43,11 @@ La seconda pagina, rappresenta l'interfaccia dove l'user potra personalizzare il
 
 - _ACCOUNT_
 
-  // da finire
+La terza pagina, dove l'user potra inserire i suoi dati o eventualmente cambiare qualcosa. Sempre nella navbar si può scegliere se andare alla pagina iniziale o nelle altre pagine.
+
+- _SIGNING OUT_
+
+La quarta pagina, semplice pagina per replicare il "sign out" di Netflix. Cliccando su "yes,bye" l'user sarà indirizzato .
+
+//da finire
 
