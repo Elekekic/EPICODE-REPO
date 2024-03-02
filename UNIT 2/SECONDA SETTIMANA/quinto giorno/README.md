@@ -29,7 +29,7 @@ La prima pagina, rappresenta l'interfaccia iniziale di Netflix Nella navbar sono
 
 <hr>
 
-- _USER PROFILE_
+- _MANAGE PROFILE_
 <p float="left">
   <img src="https://github.com/Elekekic/EPICODE-REPO/assets/157897660/0271e978-c364-4a03-97aa-a5f2d02489e3" width="600" height="300" />
   <img src="https://github.com/Elekekic/EPICODE-REPO/assets/157897660/460d8fba-8926-4c3a-9c1b-cc975b8cfe0a" width="400" height="300" /> 
