@@ -33,3 +33,27 @@ svg:hover {
     opacity: 0.5;
 }
 
+.transition img {
+    margin: 20px;
+}
+
+.transition img:hover {
+    transform: scale(1.1);
+transition: transform 0.5s;
+    animation: opacity 1s alternate both;
+}
+
+.transition img:not(:hover) {
+    transition: transform 0.5s;
+        animation: notHover 1s alternate both;
+}
+
+@keyframes opacity {
+    0% { opacity: 75%;}
+    100% { opacity: 100%;}
+}
+
+@keyframes notHover {
+    0% { opacity: 100%;}
+    100% { opacity: 75%;}
+}

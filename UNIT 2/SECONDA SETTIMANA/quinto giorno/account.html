@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <title>Account </title>
+</head>
+
+<body style="background-color: #F3F3F3;">
+
+    <header>
+        <nav class="navbar navbar-expand-lg text-white bg-black">
+            <div class="container-fluid text-white">
+                <a class="navbar-brand" href="index.html"> <img src="assets/img/netflix_logo.png" width="100px"> </a>
+                <button class="navbar-toggler text-white" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon text-white "></span>
+                </button>
+                <div class="collapse navbar-collapse text-white justify-content-lg-between" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link active text-white" aria-current="page" href="#"
+                                style="font-size: 0.9rem;">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="#" style="font-size: 0.9rem;">TV Shows</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="#" style="font-size: 0.9rem;">Movies</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="#" style="font-size: 0.9rem;">Recently Added</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="#" style="font-size: 0.9rem;">My list</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="#" style="font-size: 0.9rem;">Movies</a>
+                        </li>
+
+                    </ul>
+
+                    <div class="d-flex justify-content-end align-items-center ">
+                        <div class="p-3">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-search" viewBox="0 0 16 16">
+                                <path
+                                    d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0" />
+                            </svg>
+                        </div>
+                        <div>
+                            <p class="m-0 p-3"> KIDS</p>
+                        </div>
+                        <div class="p-3">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="feather feather-bell">
+                                <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path>
+                                <path d="M13.73 21a2 2 0 0 1-3.46 0"></path>
+                            </svg>
+                        </div>
+
+                        <div class="btn-group bg-black">
+                            <button type="button" class="btn dropdown-toggle" data-bs-toggle="dropdown"
+                                data-bs-display="static" aria-expanded="false">
+                                <img src="assets/img/avatar.png" style="width: 40px;">
+                            </button>
+                            <ul class="dropdown-menu dropdown-menu-lg-end bg-dark">
+                                <li><a class="dropdown-item text-white" href="profile.html">Manage Profiles</a></li>
+                                <li><a class="dropdown-item text-white" href="account.html">Account </a></li>
+                                <li><a class="dropdown-item text-white" href="#">Help Center </a></li>
+                                <hr>
+                                <li><a class="dropdown-item text-white" href="#"> Signout Netflix</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-10 offset-1 mt-4">
+                <div>
+                    <!-- TITOLO -->
+                    <h1 class="pb-3 display-5 border-bottom border-secondary "> Account </h1>
+                </div>
+                <!-- MEMBERSHIP & BILLING -->
+                <div class="container border-bottom border-secondary">
+                    <div class="row">
+                        <div class="col-12 col-md-4">
+                            <h5 class="text-secondary fw-normal"> MEMBERSHIP & BILLING </h5>
+                            <button type="button" class="btn btn-light shadow fs-6"> Cancel Membership </button>
+                        </div>
+                        <!-- INFO -->
+                        <div class="col col-md-8">
+                            <div class="d-flex justify-content-between pb-4 border-bottom border-secondary ">
+                                <div class="">
+                                    <h6 class="mt-4 fw-bold"> User@gmail.com</h6>
+                                    <h6 class="mt-3 text-secondary fw-normal"> Password: ****** </h6>
+                                    <h6 class="mt-3 text-secondary fw-normal"> Phone: 321 044 1279 </h6>
+                                </div>
+                                <div class="d-flex flex-column justify-content-end">
+                                    <a href="#" class="d-flex justify-content-end mt-3"> Change account email</a>
+                                    <a href="#" class="d-flex justify-content-end mt-3 "> Change password</a>
+                                    <a href="#" class="d-flex justify-content-end mt-3"> Change phone number</a>
+                                </div>
+                            </div>
+                            <!--  PAYPAL -->
+                            <div class="d-flex justify-content-between pb-4 ">
+                                <div class=" mt-4">
+                                    <img src="assets/img/paypal.png" width="100px">
+                                    <h6 class=" mt-1 fw-bold"> User@gmail.com</h6>
+                                </div>
+                                <div class="d-flex flex-column justify-content-end">
+                                    <a href="#" class="d-flex justify-content-end mt-3"> Update payment info </a>
+                                    <a href="#" class="d-flex justify-content-end mt-3 "> Billing details </a>
+                                    <a href="#" class="d-flex justify-content-end mt-3"> Redeem giftcard or promo code
+                                    </a>
+                                    <a href="#" class="d-flex justify-content-end mt-3"> Where to buy gift cards? </a>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+
+                <!-- PLAN DETAILS -->
+                <div class="container border-bottom border-secondary">
+                    <div class="row">
+                        <!-- TITOLO -->
+                        <div class="col-12 col-md-4">
+                            <h5 class="text-secondary fw-normal mt-3"> PLAN DETAILS </h5>
+                        </div>
+                        <!-- STANDARD-->
+                        <div class="col">
+                            <div class="d-flex justify-content-between pb-4 mt-3">
+                                <h6 class=" mt-1 fw-bold">Standard <span> <svg xmlns="http://www.w3.org/2000/svg"
+                                            width="16" height="16" fill="currentColor" class="bi bi-badge-hd"
+                                            viewBox="0 0 16 16">
+                                            <path
+                                                d="M7.396 11V5.001H6.209v2.44H3.687V5H2.5v6h1.187V8.43h2.522V11zM8.5 5.001V11h2.188c1.811 0 2.685-1.107 2.685-3.015 0-1.894-.86-2.984-2.684-2.984zm1.187.967h.843c1.112 0 1.622.686 1.622 2.04 0 1.353-.505 2.02-1.622 2.02h-.843z" />
+                                            <path
+                                                d="M14 3a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1zM2 2a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2z" />
+                                        </svg>
+                                    </span>
+                                </h6>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="d-flex flex-column justify-content-end">
+                                <a href="#" class="d-flex justify-content-end mt-3"> Change plan </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- SETTINGS -->
+                <div class="container border-bottom border-secondary">
+                    <div class="row">
+                        <!-- TITOLO -->
+                        <div class="col-8 col-md-4 mt-4">
+                            <h5 class="text-secondary fw-normal"> SETTINGS </h5>
+                        </div>
+                        <!-- SETTINGS TO THE LEFT -->
+                        <div class="col">
+                            <div class="d-flex justify-content-between pb-4 ">
+                                <div class="d-flex flex-column justify-content-end">
+                                    <a href="#" class="d-flex justify-content-start mt-3"> Parent Controls </a>
+                                    <a href="#" class="d-flex justify-content-start mt-3"> Test Participation </a>
+                                    <a href="#" class="d-flex justify-content-start mt-3"> Activate a device </a>
+                                    <a href="#" class="d-flex justify-content-start mt-3"> Recent device streaming
+                                        activity
+                                    </a>
+                                    <a href="#" class="d-flex justify-content-start mt-3"> Recent device streaming
+                                        activity
+                                    </a>
+                                    <a href="#" class="d-flex justify-content-start mt-3"> Signout all devices </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="container border-bottom border-secondary">
+                    <div class="row">
+                        <div class="col-8 col-md-4 mt-4">
+                            <h5 class="text-secondary fw-normal"> MY PROFILE </h5>
+                        </div>
+                        <div class="col-5 col-md-5 mt-4">
+                            <img src="assets/img/avatar.png" width="30px"> <span class=" ms-2 fw-bold"> User name
+                            </span>
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col">
+                                        <a href="#" class="d-flex justify-content-start mt-3"> Language </a>
+                                        <a href="#" class="d-flex justify-content-start mt-3"> Playback settings </a>
+                                        <a href="#" class="d-flex justify-content-start mt-3"> Subtitle appereance </a>
+                                    </div>
+                                    <div class="col">
+                                        <a href="#" class="d-flex  justify-content-lg-end mt-3"> Viewing activity </a>
+                                        <a href="#" class="d-flex justify-content-lg-end mt-3"> Ratings </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col mt-4">
+                            <a href="#" class="d-flex justify-content-end mt-3"> Manage profiles </a>
+                            <a href="#" class="d-flex justify-content-end mt-3"> Add profile emails </a>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- MY PROFILE  -->
+                <!-- <div class="d-flex justify-content-between pb-4 border-bottom border-secondary ">
+                    <div class=" mt-4">
+                        <h5 class="text-secondary fw-normal"> MY PROFILE </h5>
+                        <img src="assets/img/avatar.png" width="30px"> <span class=" ms-2 fw-bold"> User name </span>
+                    </div>
+                    <div class="d-flex flex-column justify-content-start">
+
+                       
+
+                    </div>
+                </div> -->
+
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
