@@ -18,14 +18,30 @@
 
 - _INDEX_
 <p float="left">
-  <img src="https://github.com/Elekekic/EPICODE-REPO/assets/157897660/272dff89-f258-42b9-865d-713513143292" width="700" height="400" />
-  <img src="https://github.com/Elekekic/EPICODE-REPO/assets/157897660/f655690e-9016-458d-9593-b7f09ecae7b8" width="270" height="350" /> 
+  <img src="https://github.com/Elekekic/EPICODE-REPO/assets/157897660/272dff89-f258-42b9-865d-713513143292" width="700" height="350" />
+  <img src="https://github.com/Elekekic/EPICODE-REPO/assets/157897660/f655690e-9016-458d-9593-b7f09ecae7b8" width="300" height="350" /> 
 </p>
 
 
-<p align="center"> La prima pagina, rappresenta l'interfaccia iniziale di Netflix Nella navbar sono presenti delle voci che permetteranno di andare alle altre pagine inserite.  </p>
+La prima pagina, rappresenta l'interfaccia iniziale di Netflix Nella navbar sono presenti delle voci che permetteranno di andare alle altre pagine inserite.
 
  > È stato anche aggiunto un piccolo menu a tendina per "Genres", puramente per un dettaglio in più.
 
+<hr>
 
+- _USER PROFILE_
+<p float="left">
+  <img src="https://github.com/Elekekic/EPICODE-REPO/assets/157897660/0271e978-c364-4a03-97aa-a5f2d02489e3" width="600" height="300" />
+  <img src="https://github.com/Elekekic/EPICODE-REPO/assets/157897660/460d8fba-8926-4c3a-9c1b-cc975b8cfe0a" width="400" height="300" /> 
+</p>
+
+La seconda pagina, rappresenta l'interfaccia dove l'user potra personalizzare il suo profilo. Cliccando il logo di Netflix si può ritornare alla pagina iniziale, oppure sempre dal menu a tendina si può scegliere altre pagine.
+
+ > È stato anche aggiunto un modal per "change" sotto l'immagine del profilo, non cambia ma veramente l'immagine ma con js si potrebbe farlo.
+
+<hr>
+
+- _ACCOUNT_
+
+  // da finire
 
