@@ -37,7 +37,7 @@ La prima pagina, rappresenta l'interfaccia iniziale di Netflix Nella navbar sono
 
 La seconda pagina, rappresenta l'interfaccia dove l'user potra personalizzare il suo profilo. Cliccando il logo di Netflix si può ritornare alla pagina iniziale, oppure sempre dal menu a tendina si può scegliere altre pagine.
 
- > È stato anche aggiunto un modal per "change" sotto l'immagine del profilo, non cambia ma veramente l'immagine ma con js si potrebbe farlo.
+ > È stato anche aggiunto un modal per "change" sotto l'immagine del profilo, non cambia l'immagine ma con js si potrebbe farlo.
 
 <hr>
 
