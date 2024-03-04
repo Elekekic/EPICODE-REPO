@@ -38,13 +38,9 @@ class Pet {
         this.breed = _breed;
     }
     stessoPadrone(padrone1) {
-        if (this.ownerName == padrone1.ownerName) {
-            return true
-        } else {
-           return false
-        }
+        // ternario 
+        return this.ownerName == padrone1.ownerName ? true : false;
     }
-
 }
 
 
