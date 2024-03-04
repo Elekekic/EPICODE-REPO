@@ -716,29 +716,46 @@ let provinceReg = [];
 window.addEventListener('load', init);
 
 
-//
+/*creiamo una function init che al caricamento della pagina:
+- mettera la select delle provincie su "disabled" in modo che l'user non potrà usufruirla.
+- popolare la select delle regioni tramite un for, dando ad ogni optiin creata la value della regione, 
+prendendo dall'array regioni e dalla proprietà "prov_regione" */
 function init() {
 	menuProvince.setAttribute('disabled', 'true');
 	for (let i = 0; i < regioni.length; i++) {
 		let option = document.createElement('option');
 		option.setAttribute('value', regioni[i].prov_regione);
+		//qui facciamo sì che il valore della select (le regioni) siano visibili nelle option
 		option.innerText = regioni[i].prov_regione;
+		// "appendiamo" tutte le option nella select creata per loro
 		menuRegioni.appendChild(option);
 	}
 }
 
+/* mettiamo un addEvenListener alla select che abbiamo appena popolato, dove associerà l'evento change alla callback function:
+- creiamo una variabile per prendermi il valore delle regioni dentro la select 
+- se il valore della regione scelta è vuota:
+	- non mostrare il div "nascosto" con gli stemmi 
+	- fai rimanere la select vuota
+	- fai restare ancora disabilitata la select delle province */
 menuRegioni.addEventListener('change', function () {
+	/* all'interno di una funzione e/o di un metodo, l'oggetto this rappresenta l'elemento con il quale sto lavorando */
 	let regione = this.value;
 	if (regione == '') {
 		stemmi.style.display = 'none';
 		menuProvince.innerHTML = '<option value="" selected></option>';
 		menuProvince.setAttribute('disabled', 'true');
+		/* IMPORTANTEE */
 		return;
+		/* se invece il valore della select non è vuoto:
+			- la select delle province viene resa disponibile al click
+			- popola quella select tramite la funzione caricaProvince */
 	} else {
 		menuProvince.removeAttribute('disabled');
 		caricaProvince(regione);
 	}
 });
+
 
 function caricaProvince(regione) {
 	menuProvince.innerHTML = '<option value="" selected></option>';
