@@ -708,7 +708,9 @@ const menuRegioni = document.getElementById('regioni_menu');
 const menuProvince = document.getElementById('province_menu');
 // prendo il div dove andrò a mettere i stemmi 
 const stemmi = document.getElementById('nascosto');
-// mi creo l'array che mi serve per il metodo filter 
+/* // mi creo l'array che mi serve per il metodo filter, siccome avendo bisogno di scrivere solo un = con il metodo filter, 
+non posso mettere questa variabile con const perchè sarebbe una "riassegnazione della costante" */
+
 let provinceReg = [];
 
 
@@ -756,7 +758,7 @@ menuRegioni.addEventListener('change', function () {
 	}
 });
 
-
+/* creiamo una funzione per popolare la select delle province grazie ad un filter */
 function caricaProvince(regione) {
 	menuProvince.innerHTML = '<option value="" selected></option>';
 	provinceReg = province.filter(provincia => provincia.prov_reg == regione);
