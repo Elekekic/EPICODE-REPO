@@ -37,19 +37,20 @@ class Pet {
         this.species = _species;
         this.breed = _breed;
     }
-    stessoPadrone(padrone1,) {
-        if (this.species == padrone1.species) {
-            console.log("true")
+    stessoPadrone(padrone1) {
+        if (this.ownerName == padrone1.ownerName) {
+            return true
         } else {
-            console.log("false")
+           return false
         }
     }
 
 }
 
+
+
 let button = document.getElementById("aggiungi");
 let tbody = document.getElementById("result");
-let colonna = document.createElement('td');
 
 
 button.addEventListener("click", e => {
@@ -74,11 +75,12 @@ button.addEventListener("click", e => {
 })
 
 const stampaRisultato = (pet1, pet2) => {
-    let colonna = document.createElement('td');
+    let cella = document.createElement('td');
     if (pet1.stessoPadrone(pet2)) {
-        colonna.innerHTML = `${pet1.petName} e ${pet2.petName} hanno lo stesso padrone`;
+        cella.innerText = `${pet1.petName} e ${pet2.petName} hanno lo stesso padrone`;
+
     } else {
-        colonna.innerHTML = `${pet1.petName} e ${pet2.petName} non hanno lo stesso padrone`;
+        cella.innerText = `${pet1.petName} e ${pet2.petName} non hanno lo stesso padrone`;
     }
-    tbody.appendChild(colonna);
+    tbody.appendChild(cella);
 }
