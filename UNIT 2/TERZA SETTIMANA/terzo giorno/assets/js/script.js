@@ -1,6 +1,6 @@
  let containerCard = document.getElementById("containerCard"); 
 let list = [];
-let ripristinaLibri = [];
+let Cart = [];
 
 
 const readData = async () => {
@@ -23,7 +23,6 @@ function stampa(list) {
         let card = document.createElement("div");
         card.classList.add("card");
         card.style.width = "14rem";
-       /*  card.style.padding = "1rem"; */
         card.style.margin = "1rem";
         card.innerHTML = ` 
             <img src="${list[i].img}" class="card-img-top h-50">
@@ -31,8 +30,8 @@ function stampa(list) {
                 <h5 class="card-title">${list[i].title}</h5> 
                 <p class="card-text bg-dark border rounded text-white text-center w-25">${list[i].category}</p>
                 <p class="card-text fs-1">${list[i].price}&euro;</p>
-                <a href="#" class="btn btn-success mt-4" id="buttonCompra">Compra ora</a>
-                <a href="#" class="btn btn-danger mt-2" id="buttonScarta">Scarta</a>
+                <a href="#" class="btn btn-success mt-4" id="${list[i].asin}" onclick="CompraOra()">Compra ora</a>
+                <a href="#" class="btn btn-danger mt-2" id="${list[i].asin}" onclick="Scarta()">Scarta</a>
             </div>`;
 
         containerCard.appendChild(card);
@@ -41,20 +40,12 @@ function stampa(list) {
 
 readData(); 
 
-let buttonScarta = document.getElementById("buttonScarta");
-let buttonCompra = document.getElementById("buttonCompra");
+let buttonScarta = document.getElementById("${list[i].asin}");
+let buttonCompra = document.getElementById("${list[i].asin}");
 
-function aggiornaInterfaccia() {
-    containerCard.innerHTML = "";
-    stampa(list);
-}
+
 
 containerCard.addEventListener("click", function(e) {
 e.preventDefault();
 
-    if (this.target.id === "buttonScarta") {
-        const index = this.target.getAttribute("data-index");
-        list.splice(index, 1);
-        aggiornaInterfaccia();
-    }
 });
