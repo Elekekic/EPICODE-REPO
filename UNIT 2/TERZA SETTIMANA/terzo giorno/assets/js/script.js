@@ -30,8 +30,8 @@ function stampa(list) {
                 <h5 class="card-title">${list[i].title}</h5> 
                 <p class="card-text bg-dark border rounded text-white text-center w-25">${list[i].category}</p>
                 <p class="card-text fs-1">${list[i].price}&euro;</p>
-                <a href="#" class="btn btn-success mt-4" id="${list[i].asin}" onclick="CompraOra()">Compra ora</a>
-                <a href="#" class="btn btn-danger mt-2" id="${list[i].asin}" onclick="Scarta()">Scarta</a>
+                <a href="#" class="btn btn-success mt-4" id="${list[i].asin}" onclick="compraOra(${list[i].asin})">Compra ora</a>
+                <a href="#" class="btn btn-danger mt-2" id="${list[i].asin}"  onclick="scartaOra(${list[i]})">Scarta</a>
             </div>`;
 
         containerCard.appendChild(card);
@@ -45,7 +45,30 @@ let buttonCompra = document.getElementById("${list[i].asin}");
 
 
 
+function aggiornaInterfaccia() {
+    containerCard.innerHTML = "";
+    stampa(list);
+}
+
+
+compraOra = (asin) => {
+    list = list.filter(item => item.asin !== asin);
+    aggiornaInterfaccia();
+}
+
+
+
+scartaOra = (index) => {
+    list.splice(index, 1);
+    aggiornaInterfaccia();
+
+}
+
+
 containerCard.addEventListener("click", function(e) {
 e.preventDefault();
-
+compraOra();
+scartaOra();
 });
+
+
