@@ -1,0 +1,24 @@
+body, html {
+    color: #E9E8E6;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Ubuntu", sans-serif;
+    font-style: normal;
+}
+
+.navbar-brand img {
+    filter:brightness(40)
+}
+
+.sticky {
+    position: sticky;
+    top: 0;
+    height: 300px;
+}
+
+/* #5A1D00
+
+#BC7439
+
+#C0ADA5 */
