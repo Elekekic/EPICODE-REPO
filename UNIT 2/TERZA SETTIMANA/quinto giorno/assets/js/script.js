@@ -35,18 +35,22 @@ const stampaCard = async () => {
     await addProduct();
     wait.style.display = 'none';
 
+    let cardsHTML = '';
+
     data.forEach((item) => {
-      box.innerHTML = `
-          <div class="card" style="width: 18rem;">
-            <img src=${item.imageUrl} class="card-img-top" alt="...">
+      cardsHTML += `
+          <div class="card m-4" style="width: 15rem;">
+            <img src=${item.imageUrl} class="card-img-top" alt=" ${item.name}">
                <div class="card-body">
                  <h5 class="card-title fs-4 mt-2">${item.name}</h5>
                  <p class="card-text">${item.description}</p>
-                 <a href="https://" class="btn btn-info">Scopri di più </a>
-                 <a href="#" class="btn btn-outline-dark">Modifica </a>
+                 <a href="https://" class="btn btn-outline-info">Scopri di più </a>
+                 <a href="#" class="btn btn-outline-secondary">Modifica </a>
                </div>
            </div>`
     });
+
+    box.innerHTML = cardsHTML;
   } catch (error) {
     console.log('Errore durante la stampa delle carte:', error);
   }
