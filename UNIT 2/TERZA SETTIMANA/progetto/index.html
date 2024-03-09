@@ -10,9 +10,9 @@
     <title>CRUDAZON</title>
 </head>
 
-<body>
+<body class="bg-dark">
     <header>
-        <nav class="navbar navbar-expand-lg shadow p-2">
+        <nav class="navbar navbar-expand-lg shadow-lg p-2">
             <div class="container-fluid">
                 <a class="navbar-brand" href="#">
                     <img src="assets/img/logo.png" alt="Logo Amazon" width="150" height="53">
@@ -26,11 +26,11 @@
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <li class="nav-item">
                             <a class="nav-link text-white fs-5 ">Welcome to Elena's Amazon
-                                version! Enjoy your stay :P</a>
+                                version! Enjoy your stay</a>
                         </li>
                     </ul>
                     <div class="d-flex">
-                        <button class="btn btn-outline-light" id="backOfficeBtn">Back Office</button>
+                        <button class="btn btn-outline-light" id="backOfficeBtn">Add Product</button>
                     </div>
                 </div>
             </div>
@@ -42,7 +42,7 @@
             <div class="row">
                 <h1> Available Products </h1>
                 <hr>
-                <div class="col">
+                <div class="col-7">
                     <div id="box" class="card-container d-flex flex-wrap ">
                         <!-- cards created by js -->
                     </div>
@@ -52,20 +52,16 @@
                                 role="status"><span class="visually-hidden">Loading...</span></h3>
                     </div>
                 </div>
-                <div class="col-5 position-relative mt-3">
-                    <div class=" position-sticky top-0 pt-3 d-flex border-start border-light ps-4 ">
-                        <p class="fs-5"> The product u want to see more of will be displayed here </p>
-                        <div class="">
-                            <!-- details of the card displayed here -->
-                        </div>
-
+                <div class="border-start border-light col-5">
+                    <h2 class="fs-4 ms-3"> Select a product to see more displayed here </h2>
+                    <div class=" position-relative mt-3" id="close">
+                        <div class=" position-sticky top-0 pt-3 d-flex ps-4 " id="boxDetail">
+                            <!-- card see detail -->
+                        </div>  
                     </div>
                 </div>
-
             </div>
-
         </div>
-
     </main>
 
 
