@@ -41,7 +41,7 @@ const stampaCard = async () => {
 
         data.forEach((item) => {
             cardsHTML += `
-          <div class="card m-4 shadow overflow-y-auto" style="width: 18em; height: 20em">
+          <div class="card m-4 shadow overflow-y-auto" style="width: 20em; height: 20em">
             <img src=${item.imageUrl} class="card-img-top w-50 mt-2 align-self-center" alt=" ${item.name}">
                <div class="card-body">
                  <h5 class="card-title fs-4 mt-2">${item.name}</h5>
