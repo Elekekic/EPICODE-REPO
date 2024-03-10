@@ -49,6 +49,5 @@ La terza pagina, dove si posso cambiare alcuni valori del prodotto oppure elimin
 
  > È stato anche aggiunto un alert quando si clicca il button "Delete" con lo spinner mentre si aspetta la conferma dell'user
 
-- [Torna su! :D](##ProjectPages)
 
 
