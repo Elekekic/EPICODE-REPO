@@ -44,10 +44,10 @@ const stampaCard = async () => {
           <div class="card m-4 shadow overflow-y-auto" style="width: 20em; height: 20em">
             <img src=${item.imageUrl} class="card-img-top w-50 mt-2 align-self-center" alt=" ${item.name}">
                <div class="card-body">
-                 <h5 class="card-title fs-4 mt-2">${item.name}</h5>
+                 <h5 class="card-title fs-4 mt-2" id="glow_black">${item.name}</h5>
                  <p class="card-text">${item.description}</p>
-                 <a href="#" class="btn btn-outline-info" onclick="showProduct('${item._id}')">See more </a>
-                 <a href="modify.html?id=${item._id}" class="btn btn-outline-secondary">Modify </a>
+                 <a href="#" class="btn btn-outline-info shadow" onclick="showProduct('${item._id}')">See more </a>
+                 <a href="modify.html?id=${item._id}" class="btn btn-outline-secondary shadow">Modify </a>
                </div>
            </div>`
         });
@@ -64,7 +64,7 @@ const detailProduct = (data) => {
 close.style.display = 'initial'
     let boxDetail = document.getElementById('boxDetail');
     boxDetail.innerHTML =
-        `<div class="card m-4 shadow-lg" style="width: 26rem;">
+        `<div class="card m-4 shadow-lg" style="width: 29rem;">
             <img src=${data.imageUrl} class="card-img-top w-50 mt-2 align-self-center" alt=" ${data.name}">
                 <div class="card-body">
                  <h5 class="card-title fs-4 mt-2">${data.name}</h5>

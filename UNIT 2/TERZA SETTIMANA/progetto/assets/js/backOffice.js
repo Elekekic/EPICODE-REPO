@@ -46,6 +46,7 @@ try {
     }
 
     await searchProduct(newProduct);
+    
     window.location.href = 'index.html'
 
 } catch (error) {

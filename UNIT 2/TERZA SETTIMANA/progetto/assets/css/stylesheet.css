@@ -2,8 +2,8 @@ body {
     margin: 0;
     padding: 0;
     color: #FCAF17;
-}; 
+}
 
-.invisible-scrollbar::-webkit-scrollbar {
-    display: none !important;
-  }
+#glow {
+    text-shadow: #FCAF17 0px 0px 17px !important;
+}
