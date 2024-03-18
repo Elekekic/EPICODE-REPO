@@ -194,6 +194,7 @@ button a {
   
   .value {
     font-size: 15px;
+    height: 43px;
     background-color: transparent;
     border: none;
     padding: 10px;
