@@ -5,7 +5,7 @@ let fineChiamataBtn = document.getElementById('fineChiamataBtn') as HTMLElement 
 let azzerraChiamataBtn = document.getElementById('azzerraChiamataBtn') as HTMLElement | null 
 let minutiTrascorsi: number; 
 let interval:number = setInterval(() => this.sottraiCredito(), 1000);
-
+let getData = document.getElementById('getData') 
 
 //interface
 interface Smartphone {
@@ -79,6 +79,15 @@ class User implements Smartphone {
         this.numeroChiamate = 0
         return console.log(`Le chiamate sono state azzerrate con successo!`)
     } */
+
+    getData.addEventListener('click', function (e) {
+        e.preventDefault();
+        nome = userName.value;
+        cognome = userSurname.value;
+        charge = Number(ricarica.value);
+        calls = Number(numCall.value);
+    
+    });
 }
 
 

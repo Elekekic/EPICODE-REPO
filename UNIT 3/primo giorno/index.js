@@ -5,7 +5,8 @@ var creditoresiduoBtn = document.getElementById('creditoresiduoBtn');
 var fineChiamataBtn = document.getElementById('fineChiamataBtn');
 var azzerraChiamataBtn = document.getElementById('azzerraChiamataBtn');
 var minutiTrascorsi;
-var interval = setInterval(function () { return _this.inizioChiamata(); }, 1000);
+var interval = setInterval(function () { return _this.sottraiCredito(); }, 1000);
+var getData = document.getElementById('getData');
 //classe
 var User = /** @class */ (function () {
     //constuctor
@@ -45,6 +46,15 @@ var User = /** @class */ (function () {
     User.prototype.chiamata404 = function () {
         console.log("Il suo credito residuo \u00E8 di ".concat(this.credito.toFixed(2), "\u20AC}")); // toFixed mi da due cifre decimali
     };
+    User.prototype.addEventListener = function () { };
+    User.prototype.function = function (e) {
+        e.preventDefault();
+        nome = userName.value;
+        cognome = userSurname.value;
+        charge = Number(ricarica.value);
+        calls = Number(numCall.value);
+    };
+    ;
     return User;
 }());
 inizioChiamataBtn === null || inizioChiamataBtn === void 0 ? void 0 : inizioChiamataBtn.addEventListener('click', function () { return persona1.inizioChiamata(); });
