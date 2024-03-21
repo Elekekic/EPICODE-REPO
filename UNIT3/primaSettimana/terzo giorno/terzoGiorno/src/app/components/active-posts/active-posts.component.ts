@@ -22,7 +22,8 @@ export class ActivePostsComponent {
   async getNews() {
     let response = await fetch('assets/db.json');
     let answer = await response.json();
-    let data = answer.filter((item: any) => item.active);
+    let data = answer; 
+    data = data.filter((item: any) => item.active); 
 
     return data; 
   }

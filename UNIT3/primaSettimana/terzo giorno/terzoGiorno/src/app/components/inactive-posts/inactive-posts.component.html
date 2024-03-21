@@ -2,7 +2,7 @@
   <div
     *ngFor="let newsItem of selectedInactivePost"
     class="d-flex flex-column align-items-start mb-3 bg-white p-2 border-bottom border-dark-subtle">
-    <div *ngIf="!newsItem.active">
+    <div>
       <a href="#"> 🔗 {{ newsItem.title }}</a>
       <div class="mt-2">
         <a href="#" class="btn btn-primary me-2">{{ newsItem.tags[0] }}</a>

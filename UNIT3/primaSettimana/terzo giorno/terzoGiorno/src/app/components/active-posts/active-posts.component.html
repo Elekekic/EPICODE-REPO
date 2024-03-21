@@ -1,10 +1,10 @@
 <div class="container">
   <div class="row" *ngIf="isloaded">
     <div class="card my-2 col-6 d-flex h-50" *ngFor="let newsItem of selectedPost">
-      <div class="card-body" *ngIf="newsItem.active" >
+      <div class="card-body h-75" >
         <p class="fw-semibold text-primary-emphasis">{{ newsItem.tags.join(", ").toUpperCase() }}</p>
         <h5 class="card-title fs-4">{{ newsItem.title }}</h5>
-        <p class="card-text">{{ newsItem.body.slice(0, 180) }} ... </p>
+        <p class="card-text">{{ newsItem.body.slice(0, 190) }} ... </p>
         <a href="#">Leggi di più </a>
       </div>
     </div>
