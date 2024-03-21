@@ -2,12 +2,11 @@ import { Component } from '@angular/core';
 import { News } from 'src/app/models/news';
 
 @Component({
-  selector: 'app-home',
-  templateUrl: './home.component.html',
-  styleUrls: ['./home.component.scss']
+  selector: 'app-true-posts',
+  templateUrl: './true-posts.component.html',
+  styleUrls: ['./true-posts.component.scss']
 })
-
-export class HomeComponent {
+export class TruePostsComponent {
   news: News[] = [];
   idDisplayed: number[] = [];
   selectedPost: News[] = [];
@@ -21,13 +20,15 @@ export class HomeComponent {
 
   async getNews() {
     let response = await fetch('assets/db.json');
-    let data = await response.json();
+    let answer = await response.json();
+    let data = answer; 
+    data = data.filter((item: any) => item.active); 
 
-    return data;
+    return data; 
   }
 
   randomiD() {
-    for (let i = 0; i < 1; i++) {
+    for (let i = 0; i < this.news.length; i++) {
       let index = Math.floor(Math.random() * this.news.length);
       let newsItem = this.news[index];
 
@@ -43,7 +44,8 @@ export class HomeComponent {
       }
 
       this.selectedPost.push(newsItem);
-      console.log('selectedPost:', this.selectedPost);
+      console.log('selectedPost:', this.selectedPost); 
     }
   }
 }
+

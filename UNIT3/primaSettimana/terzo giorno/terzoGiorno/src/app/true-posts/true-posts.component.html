@@ -1,0 +1,16 @@
+<h1 class="text-center mt-3"> Active Posts </h1>
+
+<div class="container">
+    <div class="row">
+        <div class="card my-3 d-flex h-50" *ngFor="let newsItem of selectedPost">
+            <div class="card-header p-0">
+                <p class="fw-semibold text-danger-emphasis my-2">{{ newsItem.tags.join(", ")}}</p>
+            </div>
+            <div class="card-body h-75" >
+              <h5 class="card-title fs-4">{{ newsItem.title }}</h5>
+              <p class="card-text">{{ newsItem.body }} ... </p>
+              <a [routerLink]="['/news', newsItem.id]" routerLinkActive="active" class="btn btn-primary"> More</a>
+            </div>
+          </div>
+    </div> 
+</div>

@@ -7,7 +7,6 @@ import { News } from 'src/app/models/news';
   styleUrls: ['./active-posts.component.scss'],
 })
 export class ActivePostsComponent {
-  isloaded = false; 
   news: News[] = [];
   idDisplayed: number[] = [];
   selectedPost: News[] = [];
@@ -46,7 +45,6 @@ export class ActivePostsComponent {
 
       this.selectedPost.push(newsItem);
       console.log('selectedPost:', this.selectedPost);
-      this.isloaded = true; 
     }
   }
 }
