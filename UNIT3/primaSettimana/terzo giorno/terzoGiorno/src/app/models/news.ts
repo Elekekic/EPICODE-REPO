@@ -4,4 +4,5 @@ export interface News {
     reactions: number; 
     body: string; 
     active: boolean; 
+    id: number; 
 }

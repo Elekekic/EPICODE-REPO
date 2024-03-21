@@ -1,9 +1,5 @@
 <div class="bg-body-secondary rounded-3 mt-3 p-5">
-    <h1 class="fw-bold"> In evidenzia: She has seen this scene before.</h1>
+    <h1 class="fw-bold" >In evidenzia:  <span *ngFor="let newsItem of selectedPost" >{{newsItem.title}} </span> </h1>
     <a href="#"> Leggi di più... </a>
-</div>
-
-<div class="d-flex">
-    <app-active-posts> </app-active-posts>
 </div>
 
