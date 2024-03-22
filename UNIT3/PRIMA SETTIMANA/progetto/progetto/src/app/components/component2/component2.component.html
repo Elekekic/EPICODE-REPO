@@ -1,0 +1,6 @@
+<h3> I brand visualizzati : </h3>
+<div class="d-flex justify-content-evenly">
+    <div class="d-flex" *ngFor="let logo of logos">
+         <img [src]="'https://listcarbrands.com/wp-content/uploads/' + logo" width="200px">
+    </div> 
+</div>

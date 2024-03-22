@@ -8,8 +8,8 @@ import { InactivePostsComponent } from './components/inactive-posts/inactive-pos
 import { PostDetailComponent } from './components/post-detail/post-detail.component';
 import { HomeComponent } from './components/home/home.component';
 import { RouterModule, Routes } from '@angular/router';
-import { TruePostsComponent } from './true-posts/true-posts.component';
-import { FalsePostsComponent } from './false-posts/false-posts.component';
+import { TruePostsComponent } from './components/true-posts/true-posts.component';
+import { FalsePostsComponent } from './components/false-posts/false-posts.component';
 
 const route: Routes = [
   {

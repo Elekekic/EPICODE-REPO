@@ -1,0 +1,20 @@
+<div class="d-flex rounded-5">
+    <h1> Sezione Fiat </h1>
+    <div class="container">
+        <div class="row justify-content-around">
+            <div class="card my-3 d-flex h-75 m-3 p-0" *ngFor="let carmodel of modelsSelected" style="width: 18rem">
+                <div [ngClass]="{'bg-success': carmodel.available ,'bg-danger' : !carmodel.available}">
+                    <div class="card-header p-0">
+                        <img [src]="'https://www.kimballstock.com/pix/car/p/' + carmodel.modelImage"
+                            class="card-img-top" alt="image car" />
+                    </div>
+                    <div class="card-body h-75">
+                        <h5 class="card-title fs-4"> {{ carmodel.brand }} {{ carmodel.model }}</h5>
+                        <p class="card-text">{{ carmodel.price }} &euro; </p>
+                        <p class="card-text">Availability: {{ carmodel.available ? 'Yes' : 'No' }} </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
