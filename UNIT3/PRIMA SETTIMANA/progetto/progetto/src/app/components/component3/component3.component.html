@@ -1,8 +1,8 @@
 
-<h2 class="mt-3 ">Auto in evidenza</h2>
+<h1 class="margin-custom display-5 "> Trending cars </h1>
 <div class="d-flex justify-content-evenly mt-5">
   <div *ngFor="let carmodel of modelsSelected">
-    <div class="card" style="width: 18rem" [ngClass]="{'bg-success': carmodel.available ,'bg-danger' : !carmodel.available}">
+    <div class="card" style="width: 18rem" [ngClass]="{'bg-success-subtle': carmodel.available ,'bg-danger-subtle' : !carmodel.available}">
       <img [src]="'https://www.kimballstock.com/pix/car/p/' + carmodel.modelImage" class="card-img-top"
         alt="image car"/>
       <div class="card-body">
@@ -14,7 +14,7 @@
           Price: {{ carmodel.price }} &euro;
         </p>
         <p class="card-text">Availability: {{ carmodel.available ? 'Yes' : 'No' }} </p>
-        <a class="btn btn-primary" [routerLink]="['/modules', carmodel.brand]" routerLinkActive="active" >All of {{carmodel.brand}} </a>
+        <button class="button-custom"  routerLink="/{{carmodel.brand}}" routerLinkActive="active" >All of {{carmodel.brand}} </button>
       </div>
     </div>
   </div>

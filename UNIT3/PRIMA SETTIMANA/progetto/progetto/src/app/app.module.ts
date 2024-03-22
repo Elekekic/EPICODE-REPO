@@ -29,11 +29,7 @@ const route: Routes = [
   {
     path: 'Fiat',
     component: FiatComponent
-  },
- /*  {
-    path: 'modules/:brand',
-    component: 
-  } */
+  }
   /* {
     path: '**',
     component: errore 404 

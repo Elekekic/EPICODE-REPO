@@ -8,19 +8,22 @@ import { Modules } from 'src/app/models/modules';
 })
 export class Component2Component {
 
+  takingAudiLogo!: Modules; 
+  takingFordLogo!: Modules;
+  takingFiatLogo!: Modules;
+
   modules: Modules[] = [];
-  logos: string[] = [];
 
 
   constructor() {
     this.getModules().then(data => {
-      let addedLogos: string[] = [];
-  
       data.forEach((module: any) => {
-        if ((module.brand === "Fiat" || module.brand === "Ford" || module.brand === "Audi") && !addedLogos.includes(module.brandLogo)) {
-          addedLogos.push(module.brandLogo);
-        } else {
-          this.logos.push(module.brandLogo);
+        if(module.brand === "Fiat") {
+          this.takingFiatLogo = module.brandLogo; 
+        } else if (module.brand === "Ford") {
+          this.takingFordLogo = module.brandLogo; 
+        } else if (module.brand === "Audi" ) {
+          this.takingAudiLogo = module.brandLogo; 
         }
       });
     });

@@ -18,6 +18,33 @@
         "available": true
     },
     {
+        "brand": "Fiat",
+        "brandLogo": "2016/02/Logo-Fiat-600x338.png",
+        "model": "500 Pop",
+        "modelImage": "06/aut-51-iz0259-01p.jpg",
+        "year": 2015,
+        "price": 13500,
+        "available": true
+    },
+    {
+        "brand": "Fiat",
+        "brandLogo": "2016/02/Logo-Fiat-600x338.png",
+        "model": "500 Abarth white ",
+        "modelImage": "06/aut-51-iz0257-01p.jpg",
+        "year": 2015,
+        "price": 3500,
+        "available": false
+    },
+    {
+        "brand": "Fiat",
+        "brandLogo": "2016/02/Logo-Fiat-600x338.png",
+        "model": "500e",
+        "modelImage": "06/aut-51-iz0275-01p.jpg",
+        "year": 2015,
+        "price": 10000,
+        "available": false
+    },
+    {
         "brand": "Ford",
         "brandLogo": "2016/03/Ford-Logo-600x338.png",
         "model": "Taurus",
@@ -25,6 +52,42 @@
         "year": 2009,
         "price": 5200,
         "available": false
+    },
+    {
+        "brand": "Ford",
+        "brandLogo": "2016/03/Ford-Logo-600x338.png",
+        "model": "Focus Titanium",
+        "modelImage": "05/aut-48-iz0015-01p.jpg",
+        "year": 2009,
+        "price": 18500,
+        "available": false
+    },
+    {
+        "brand": "Ford",
+        "brandLogo": "2016/03/Ford-Logo-600x338.png",
+        "model": "Taurus",
+        "modelImage": "01/aut-15-iz0614-01p.jpg",
+        "year": 2009,
+        "price": 5200,
+        "available": false
+    },
+    {
+        "brand": "Ford",
+        "brandLogo": "2016/03/Ford-Logo-600x338.png",
+        "model": "Mustang Mach 1",
+        "modelImage": "07/mst-04-bk0004-01p.jpg",
+        "year": 1969,
+        "price": 75000,
+        "available": true
+    },
+    {
+        "brand": "Ford",
+        "brandLogo": "2016/03/Ford-Logo-600x338.png",
+        "model": "Mustang Silver",
+        "modelImage": "07/mst-01-rk1263-01p.jpg",
+        "year": 2011,
+        "price": 30900,
+        "available": true
     },
     {
         "brand": "Ford",
@@ -52,5 +115,45 @@
         "year": 2020,
         "price": 41700,
         "available": false
+    },
+    {
+        "brand": "Audi",
+        "brandLogo": "2015/10/Audi-Logo-600x338.png",
+        "model": "A6",
+        "modelImage": "05/aut-48-iz0066-01p.jpg",
+        "year": 2013,
+        "price": 13000,
+        "available": true
+
+    },
+    {
+        "brand": "Audi",
+        "brandLogo": "2015/10/Audi-Logo-600x338.png",
+        "model": "R8",
+        "modelImage": "05/aut-45-iz0144-01p.jpg",
+        "year": 2011,
+        "price": 99000,
+        "available": false
+
+    },
+    {
+        "brand": "Audi",
+        "brandLogo": "2015/10/Audi-Logo-600x338.png",
+        "model": "A5",
+        "modelImage": "05/aut-48-iz0150-01p.jpg",
+        "year": 2012,
+        "price": 12990,
+        "available": true
+
+    },
+    {
+        "brand": "Audi",
+        "brandLogo": "2015/10/Audi-Logo-600x338.png",
+        "model": "TT",
+        "modelImage": "05/aut-43-iz0003-01p.jpg",
+        "year": 2012,
+        "price": 10500,
+        "available": true
+
     }
 ]
