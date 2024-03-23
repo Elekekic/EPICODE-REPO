@@ -29,7 +29,7 @@ export class Component3Component {
 
 
   randomModel() {
-    for (let i = 0; i < 4; i++) {
+    for (let i = 0; i < 3; i++) {
       let index = Math.floor(Math.random() * this.modules.length);
       let carModel = this.modules[index];
 

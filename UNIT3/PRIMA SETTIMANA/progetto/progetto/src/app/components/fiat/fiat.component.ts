@@ -8,6 +8,8 @@ import { Modules } from 'src/app/models/modules';
 })
 export class FiatComponent {
 
+  fiatLogo!: Modules
+
   modules: Modules[] = [];
   modelsDisplayed: string[] = [];
   modelsSelected: Modules[] = [];
@@ -26,7 +28,11 @@ export class FiatComponent {
     let response = await fetch('assets/db.json');
     let answer = await response.json();
     let data = answer;
-    data = data.filter((item: any) => item.brand === 'Fiat'); 
+    data = data.filter((item: any) => item.brand === 'Fiat');
+
+    if (data.length > 0) {
+      this.fiatLogo = data[0].brandLogo;
+    } 
 
     return data;
   }

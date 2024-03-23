@@ -2,11 +2,11 @@
 <h1 class="margin-custom display-5 "> Trending cars </h1>
 <div class="d-flex justify-content-evenly mt-5">
   <div *ngFor="let carmodel of modelsSelected">
-    <div class="card" style="width: 18rem" [ngClass]="{'bg-success-subtle': carmodel.available ,'bg-danger-subtle' : !carmodel.available}">
-      <img [src]="'https://www.kimballstock.com/pix/car/p/' + carmodel.modelImage" class="card-img-top"
-        alt="image car"/>
+    <div class="card justify-content-around" style="width: 18rem" [ngClass]="{'bg-success-subtle': carmodel.available ,'bg-danger-subtle' : !carmodel.available}">
+        <img [src]="'https://www.kimballstock.com/pix/car/p/' + carmodel.modelImage" class="card-img-top"
+        alt="image car"/>  
       <div class="card-body">
-        <h5 class="card-title">{{ carmodel.brand }} {{ carmodel.model }}</h5>
+        <h5 class="card-title fw-bold">{{ carmodel.brand }} {{ carmodel.model }}</h5>
         <p class="card-text">
           Year : {{ carmodel.year }}
         </p>

@@ -4,30 +4,32 @@ import { Modules } from 'src/app/models/modules';
 @Component({
   selector: 'app-ford',
   templateUrl: './ford.component.html',
-  styleUrls: ['./ford.component.scss']
+  styleUrls: ['./ford.component.scss'],
 })
 export class FordComponent {
 
+  fordLogo!: Modules;
   modules: Modules[] = [];
   modelsDisplayed: string[] = [];
   modelsSelected: Modules[] = [];
   logos: string[] = [];
-
 
   constructor() {
     this.getModules().then((_modules) => {
       this.modules = _modules;
       this.showingModel();
     });
-
   }
-
 
   async getModules() {
     let response = await fetch('assets/db.json');
     let answer = await response.json();
     let data = answer;
     data = data.filter((item: any) => item.brand === 'Ford');
+
+    if (data.length > 0) {
+      this.fordLogo = data[0].brandLogo;
+    } 
 
     return data;
   }

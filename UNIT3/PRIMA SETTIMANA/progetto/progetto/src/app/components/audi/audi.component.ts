@@ -8,6 +8,7 @@ import { Modules } from 'src/app/models/modules';
 })
 export class AudiComponent {
 
+  audiLogo!: Modules; 
   modules: Modules[] = [];
   modelsDisplayed: string[] = [];
   modelsSelected: Modules[] = [];
@@ -27,6 +28,10 @@ export class AudiComponent {
     let answer = await response.json();
     let data = answer;
     data = data.filter((item: any) => item.brand === 'Audi'); 
+
+    if (data.length > 0) {
+      this.audiLogo = data[0].brandLogo;
+    } 
 
     return data;
   }
