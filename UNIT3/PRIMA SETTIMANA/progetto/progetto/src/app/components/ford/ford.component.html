@@ -1,21 +1,26 @@
-<div class="d-flex rounded-5 justify-content-center align-items-center">
-    <h1 class="fw-bold"> Sezione Ford </h1>
-    <img [src]="'https://listcarbrands.com/wp-content/uploads/' + fordLogo" width="200px">
-</div>
-<div class="container">
-    <div class="row justify-content-around">
-        <div class="card my-3 d-flex h-75 m-3 p-0 shadow-lg" *ngFor="let carmodel of modelsSelected" style="width: 18rem">
-            <div [ngClass]="{'bg-success-subtle': carmodel.available ,'bg-danger-subtle' : !carmodel.available}">
-                <div class="card-header p-0">
-                    <img [src]="'https://www.kimballstock.com/pix/car/p/' + carmodel.modelImage" class="card-img-top"
-                        alt="image car" />
-                </div>
-                <div class="card-body h-75">
-                    <h5 class="card-title fs-4 fw-bold"> {{ carmodel.brand }} {{ carmodel.model }}</h5>
-                    <p class="card-text">{{ carmodel.price }} &euro; </p>
-                    <p class="card-text">Availability: {{ carmodel.available ? 'Yes' : 'No' }} </p>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
+<div class="d-flex rounded-5 justify-content-center align-items-center mt-5">
+    <p class="fs-3"> All of our Audi cars, before choosing make sure to <strong> check if they are available or not. </strong> </p> 
+ </div>
+ 
+ <div class="d-flex rounded-5 justify-content-center align-items-center mt-4">
+     <img [src]="'https://listcarbrands.com/wp-content/uploads/' + fordLogo" width="200px">
+ </div>
+ 
+ <div class="container margin-custom">
+     <div class="row justify-content-around">
+         <div class="card my-3 d-flex h-75 m-3 p-0 shadow-lg" *ngFor="let carmodel of modelsSelected" style="width: 18rem">
+             <div [ngClass]="{'bg-success-subtle': carmodel.available ,'bg-danger-subtle' : !carmodel.available}">
+                 <div class="card-header p-0">
+                     <img [src]="'https://www.kimballstock.com/pix/car/p/' + carmodel.modelImage" class="card-img-top"
+                         alt="image car" />
+                 </div>
+                 <div class="card-body h-75">
+                     <h5 class="card-title fs-4 fw-bold"> {{ carmodel.brand }} {{ carmodel.model }}</h5>
+                     <p class="card-text">{{ carmodel.price | number:'1.0-0' }} &euro; </p>
+                     <p class="card-text"> Year: {{ carmodel.year }} </p>
+                     <button class="button-custom" >Availability: {{ carmodel.available ? 'Yes' : 'No' }}  </button>
+                 </div>
+             </div>
+         </div>
+     </div>
+ </div>
