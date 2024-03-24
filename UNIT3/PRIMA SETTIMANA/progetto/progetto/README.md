@@ -37,7 +37,7 @@ La prima pagina, dove vengono illustrate i vari brand disponibili nel sito. Alla
 
 <br>
 
- _1. BRAND PAGE_
+ _2. BRAND PAGE_
 
  [![Watch the video]()](https://github.com/Elekekic/EPICODE-REPO/assets/157897660/0b5bc716-0c20-4a69-a654-b44b812bf61d)
 
