@@ -11,7 +11,7 @@
           Year : {{ carmodel.year }}
         </p>
         <p class="card-text">
-          Price: {{ carmodel.price }} &euro;
+          Price: {{ carmodel.price | number:'1.2-2' }} &euro;
         </p>
         <p class="card-text">Availability: {{ carmodel.available ? 'Yes' : 'No' }} </p>
         <button class="button-custom"  routerLink="/{{carmodel.brand}}" routerLinkActive="active" >All of {{carmodel.brand}} </button>
