@@ -5,7 +5,7 @@
         "model": "500L",
         "modelImage": "06/aut-51-iz0284-01p.jpg",
         "year": 2015,
-        "price": 7500,
+        "price": 7.500,
         "available": false
     },
     {
@@ -14,7 +14,7 @@
         "model": "500 Abarth",
         "modelImage": "06/aut-51-iz0271-01p.jpg",
         "year": 2010,
-        "price": 3500,
+        "price": 3.500,
         "available": true
     },
     {
@@ -23,7 +23,7 @@
         "model": "500 Pop",
         "modelImage": "06/aut-51-iz0259-01p.jpg",
         "year": 2015,
-        "price": 13500,
+        "price": 13.500,
         "available": true
     },
     {
@@ -32,7 +32,7 @@
         "model": "500 Abarth white ",
         "modelImage": "06/aut-51-iz0257-01p.jpg",
         "year": 2015,
-        "price": 3500,
+        "price": 3.500,
         "available": false
     },
     {
@@ -41,7 +41,7 @@
         "model": "500e",
         "modelImage": "06/aut-51-iz0275-01p.jpg",
         "year": 2015,
-        "price": 10000,
+        "price": 10.000,
         "available": false
     },
     {
@@ -50,7 +50,7 @@
         "model": "Taurus",
         "modelImage": "01/aut-15-iz0614-01p.jpg",
         "year": 2009,
-        "price": 5200,
+        "price": 5.200,
         "available": false
     },
     {
@@ -59,7 +59,7 @@
         "model": "Focus Titanium",
         "modelImage": "05/aut-48-iz0015-01p.jpg",
         "year": 2009,
-        "price": 18500,
+        "price": 18.500,
         "available": false
     },
     {
@@ -68,7 +68,7 @@
         "model": "Taurus",
         "modelImage": "01/aut-15-iz0614-01p.jpg",
         "year": 2009,
-        "price": 5200,
+        "price": 5.200,
         "available": false
     },
     {
@@ -77,7 +77,7 @@
         "model": "Mustang Mach 1",
         "modelImage": "07/mst-04-bk0004-01p.jpg",
         "year": 1969,
-        "price": 75000,
+        "price": 75.000,
         "available": true
     },
     {
@@ -86,7 +86,7 @@
         "model": "Mustang Silver",
         "modelImage": "07/mst-01-rk1263-01p.jpg",
         "year": 2011,
-        "price": 30900,
+        "price": 30.900,
         "available": true
     },
     {
@@ -95,7 +95,7 @@
         "model": "Focus",
         "modelImage": "06/aut-50-iz1081-01p.jpg",
         "year": 2014,
-        "price": 9700,
+        "price": 9.700,
         "available": true
     },
     {
@@ -104,7 +104,7 @@
         "model": "A3",
         "modelImage": "05/aut-46-iz0055-01p.jpg",
         "year": 2012,
-        "price": 4300,
+        "price": 4.300,
         "available": true
     },
     {
@@ -113,7 +113,7 @@
         "model": "Q7",
         "modelImage": "06/aut-51-iz0124-01p.jpg",
         "year": 2020,
-        "price": 41700,
+        "price": 41.700,
         "available": false
     },
     {
@@ -122,7 +122,7 @@
         "model": "A6",
         "modelImage": "05/aut-48-iz0066-01p.jpg",
         "year": 2013,
-        "price": 13000,
+        "price": 13.000,
         "available": true
 
     },
@@ -132,7 +132,7 @@
         "model": "R8",
         "modelImage": "05/aut-45-iz0144-01p.jpg",
         "year": 2011,
-        "price": 99000,
+        "price": 99.000,
         "available": false
 
     },
@@ -142,7 +142,7 @@
         "model": "A5",
         "modelImage": "05/aut-48-iz0150-01p.jpg",
         "year": 2012,
-        "price": 12990,
+        "price": 12.990,
         "available": true
 
     },
@@ -152,7 +152,7 @@
         "model": "TT",
         "modelImage": "05/aut-43-iz0003-01p.jpg",
         "year": 2012,
-        "price": 10500,
+        "price": 10.500,
         "available": true
 
     }
