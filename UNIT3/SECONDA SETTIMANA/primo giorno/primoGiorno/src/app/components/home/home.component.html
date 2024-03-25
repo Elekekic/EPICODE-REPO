@@ -1,0 +1,33 @@
+<div class="container mt-3 mb-5">
+  <div class="row">
+    <div class="col-7">
+      <div>
+        <div class="bg-body-secondary rounded-3 mt-3 p-5">
+          <h1 class="fw-bold">
+            Trending:
+            <span *ngFor="let newsItem of selectedPost"
+              >{{ newsItem.title }}
+            </span>
+          </h1>
+          <div *ngFor="let newsItem of selectedPost">
+           <a [routerLink]="['/news', newsItem.id]" routerLinkActive="active" > Read for more...  </a>  
+          </div>
+        </div>
+        <app-active-posts> </app-active-posts>
+
+      </div>
+    </div>
+    <div class="col-4 bg-body-secondary p-4 mt-3 rounded-3">
+      <h4>You may also like:</h4>
+      <div class="bg-white">
+        <app-inactive-posts> </app-inactive-posts>
+      </div>
+      <div>
+        <ul class="list-group">
+          <li class="list-group-item"><a routerLink="/true" routerLinkActive="active"> Active posts </a></li>
+          <li class="list-group-item"><a routerLink="/false" routerLinkActive="active"> Inactive posts </a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>

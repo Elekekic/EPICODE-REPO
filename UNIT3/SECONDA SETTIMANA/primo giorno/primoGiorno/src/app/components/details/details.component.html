@@ -1,0 +1,11 @@
+<div>
+    <div class="mb-3">
+        <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Title" [(ngModel)]="news.title" >
+      </div>
+      <div class="mb-3">
+        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Details" [(ngModel)]="news.body" ></textarea>
+    </div>
+    <button type="button" class="btn btn-outline-success" (click)="addNewItem()"> Save info </button>
+</div>
+
+
