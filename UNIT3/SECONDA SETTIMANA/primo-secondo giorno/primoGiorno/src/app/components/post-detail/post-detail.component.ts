@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { Subscription } from 'rxjs';
 import { News } from 'src/app/models/news';
 import { NewsServiceService } from 'src/app/service/news-service.service';
 
@@ -12,7 +11,6 @@ import { NewsServiceService } from 'src/app/service/news-service.service';
 export class PostDetailComponent implements OnInit {
   testId!: number;
   news!: News | undefined;
-  private sub!: Subscription;
   selectedPost!: News | null;
 
   constructor(
@@ -22,16 +20,20 @@ export class PostDetailComponent implements OnInit {
 
   ngOnInit(): void {
     this.route.params.subscribe((params) => {
+      // Mi ottengo l'ID dalla route attuale convertendolo in un numero usando il "+" davanti a params['id'].
       const Id = +params['id'];
-      this.news = this.postSrv.getPost(Id);
+      // Il risultato viene assegnato alla variabile this.news
+      this.news = this.postSrv.getPost(Id); // Mi chiamo il metodo getPost(con il paramentro) del service
     });
   }
 
   changeNews(news: News) {
+    // Letteralmente imposta la news selezionata nella variabile selectedPost
     this.selectedPost = news;
   }
 
   changeItems() {
+    // mi serve per quando al click di 'salva', voglio che si chiudi la card per cambiare i dettagli
     this.selectedPost = null;
   }
 }

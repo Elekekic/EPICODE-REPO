@@ -17,50 +17,41 @@ export class TruePostsComponent {
   constructor(private postSrv: NewsServiceService) {}
 
   async ngOnInit(): Promise<void> {
-    const news = await this.postSrv.getNews();
-    this.news = news;
-    this.randomiD();
-    this.getTags(news);
-    this.filterByTag('');
-  }
-
-  randomiD() {
-    for (let i = 0; i < this.news.length; i++) {
-      let index = Math.floor(Math.random() * this.news.length);
-      let newsItem = this.news[index];
-
-      if (newsItem) {
-        while (newsItem && this.idDisplayed.includes(newsItem.id)) {
-          index = Math.floor(Math.random() * this.news.length);
-          newsItem = this.news[index];
-        }
-
-        this.idDisplayed.push(newsItem.id);
-      } else {
-        console.error("newsItem doesn't exist");
-      }
-
-      this.selectedPost.push(newsItem);
-    }
-  }
+    // usato con la service per ottenre i dati 
+    const posts = await this.postSrv.getNews();
+    this.news = posts.filter((item) => item.active);
+    // chiamata per getTags 
+    this.getTags(this.news); 
+    // chiamata per filterTag
+    this.filterTag('');
+}
 
   getTags(news: News[]) {
+    // ciclo che itera su ogni oggetto post 
     news.forEach((post) => {
+      // All'interno di ogni oggetto post, viene iterato su ogni elemento dell'array tags. 
       post.tags.forEach((tag) => {
+        // viene verificato se l'array tags dell'oggetto corrente this include il tag corrente
         if (!this.tags.includes(tag)) {
+          // Se non c'è, viene pushato nell'array tags
           this.tags.push(tag);
-        }
+      }
       });
     });
-    console.log(this.tags);
     return this.tags;
   }
 
-  filterByTag(tag: string): void {
+
+  filterTag(tag: string): void {
+    // il paramentro tag diventa il valore di selectedTag 
     this.selectedTag = tag;
     if (tag === '') {
+      // Se il tag fornito è vuoto, verranno restituiti tutti gli elementi dell'array news.
       this.selectedPost = this.news;
     } else {
+      // Invece se il tag fornito c'è: 
+      // filter: crea un nuovo array con tutti gli elementi di news
+      // include: verifica se l'array tags di ciascun elemento item include il valore di tag.
       this.selectedPost = this.news.filter((item) => item.tags.includes(tag));
     }
   }

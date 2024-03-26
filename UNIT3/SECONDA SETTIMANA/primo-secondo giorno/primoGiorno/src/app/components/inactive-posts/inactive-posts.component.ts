@@ -9,7 +9,6 @@ import { NewsServiceService } from 'src/app/service/news-service.service';
   styleUrls: ['./inactive-posts.component.scss']
 })
 export class InactivePostsComponent {
-  isloaded = false; 
   news: News[] = [];
   idDisplayed: number[] = [];
   selectedInactivePost: News[] = [];
@@ -17,10 +16,9 @@ export class InactivePostsComponent {
   constructor(private postSrv: NewsServiceService) {}
 
   async ngOnInit(): Promise<void> {
-    console.log('ngOnInit attivato');
     const posts = await this.postSrv.getNews();
     this.news = posts;
-    this.randomiD(); 
+    this.randomiD();
 }
 
   randomiD() {
@@ -41,7 +39,6 @@ export class InactivePostsComponent {
 
       this.selectedInactivePost.push(newsItem);
       console.log('selectedPost:', this.selectedInactivePost); 
-      this.isloaded = true; 
     }
   }
 }
