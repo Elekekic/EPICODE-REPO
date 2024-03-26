@@ -3,7 +3,7 @@
     <div class="card my-2 col-6 d-flex h-50 p-0" *ngFor="let newsItem of selectedPost">
       <div class="card-header">
         <span *ngFor="let tag of newsItem.tags" >
-          <button class="fw-semibold my-2 mx-1 btn btn-dark"  appColors >{{ tag }}</button>
+          <button class="fw-semibold my-2 mx-1 btn btn-outline-dark" appColors >{{ tag }}</button>
         </span>
       </div>
       <div class="card-body h-75" >

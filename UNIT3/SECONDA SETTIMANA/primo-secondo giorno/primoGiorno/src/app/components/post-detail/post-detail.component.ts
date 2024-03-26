@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Subscription } from 'rxjs';
 import { News } from 'src/app/models/news';
+import { NewsServiceService } from 'src/app/service/news-service.service';
 
 @Component({
   selector: 'app-post-detail',
@@ -10,25 +11,21 @@ import { News } from 'src/app/models/news';
 })
 export class PostDetailComponent implements OnInit {
   testId!: number;
-  news!: News;
+  news!: News | undefined;
   private sub!: Subscription;
   selectedPost!: News | null;
 
   constructor(
-    private route: ActivatedRoute
+    private route: ActivatedRoute,
+    private postSrv: NewsServiceService
   ) {}
 
- async ngOnInit(): Promise<void> {
-    this.sub = this.route.params.subscribe(async (params) => {
-      this.testId = params['id'];
-      let response = await fetch(`http://localhost:3000/posts/${this.testId}`);
-      let answer = await response.json();
-      console.log(answer);
-      let data = answer;
-      return data;
+  ngOnInit(): void {
+    this.route.params.subscribe((params) => {
+      const Id = +params['id'];
+      this.news = this.postSrv.getPost(Id);
     });
   }
-
 
   changeNews(news: News) {
     this.selectedPost = news;
@@ -38,14 +35,3 @@ export class PostDetailComponent implements OnInit {
     this.selectedPost = null;
   }
 }
-
-/* async getNews() {
-    console.log(this.testId);
-    let response = await fetch(`http://localhost:3000/posts/${this.testId}`);
-    console.log(response);
-    let answer = await response.json();
-    console.log(answer);
-    let data = answer;
-
-    return data;
-  } */

@@ -12,6 +12,7 @@ export class FalsePostsComponent {
   idDisplayed: number[] = [];
   selectedPost: News[] = [];
   tags: string[] = [];
+  selectedTag: string = '';
 
   constructor(private postSrv: NewsServiceService) {}
 
@@ -21,6 +22,7 @@ export class FalsePostsComponent {
     this.news = posts;
     this.randomiD(); 
     this.getTags(this.news); 
+    this.filterByTag('');
 }
 
   randomiD() {
@@ -54,4 +56,14 @@ export class FalsePostsComponent {
     console.log(this.tags);
     return this.tags;
   }
+
+  filterByTag(tag: string): void {
+    this.selectedTag = tag;
+    if (tag === '') {
+      this.selectedPost = this.news;
+    } else {
+      this.selectedPost = this.news.filter((item) => item.tags.includes(tag));
+    }
+  }
+
 }

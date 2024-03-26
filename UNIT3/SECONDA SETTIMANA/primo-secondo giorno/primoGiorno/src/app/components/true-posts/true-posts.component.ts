@@ -12,6 +12,7 @@ export class TruePostsComponent {
   idDisplayed: number[] = [];
   selectedPost: News[] = [];
   tags: string[] = [];
+  selectedTag: string = '';
 
   constructor(private postSrv: NewsServiceService) {}
 
@@ -20,6 +21,7 @@ export class TruePostsComponent {
     this.news = news;
     this.randomiD();
     this.getTags(news);
+    this.filterByTag('');
   }
 
   randomiD() {
@@ -47,10 +49,19 @@ export class TruePostsComponent {
       post.tags.forEach((tag) => {
         if (!this.tags.includes(tag)) {
           this.tags.push(tag);
-      }
+        }
       });
     });
     console.log(this.tags);
     return this.tags;
+  }
+
+  filterByTag(tag: string): void {
+    this.selectedTag = tag;
+    if (tag === '') {
+      this.selectedPost = this.news;
+    } else {
+      this.selectedPost = this.news.filter((item) => item.tags.includes(tag));
+    }
   }
 }
