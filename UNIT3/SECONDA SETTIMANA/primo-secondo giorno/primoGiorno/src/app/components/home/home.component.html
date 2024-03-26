@@ -5,30 +5,33 @@
         <div class="bg-body-secondary rounded-3 mt-3 p-5">
           <h1 class="fw-bold">
             Trending:
-            <span *ngFor="let newsItem of selectedPost"
-              >{{ newsItem.title }}
-            </span>
+            <!-- Ciclo per far apparire titoli random e i suoi rispettivi link/routerLink -->
+            <div *ngFor="let newsItem of selectedPost">{{ newsItem.title }}
+              <div>
+                <a [routerLink]="['/news', newsItem.id]" class="fs-6"> Read for more... </a>
+              </div>
+            </div>
           </h1>
-          <div *ngFor="let newsItem of selectedPost">
-           <a [routerLink]="['/news', newsItem.id]" routerLinkActive="active" > Read for more...  </a>  
-          </div>
         </div>
+        <!-- Component active-posts -->
         <div class="m-2">
-       <app-active-posts> </app-active-posts>   
+          <app-active-posts> </app-active-posts>
         </div>
-        
+
 
       </div>
     </div>
     <div class="col-4 bg-body-secondary p-4 mt-3 rounded-3">
       <h4>You may also like:</h4>
       <div class="bg-white">
+        <!-- Component inactive-posts -->
         <app-inactive-posts> </app-inactive-posts>
       </div>
       <div>
+        <!-- Lista per mandarti direttamente ai component true o false -->
         <ul class="list-group">
-          <li class="list-group-item"><a routerLink="/true" routerLinkActive="active"> Active posts </a></li>
-          <li class="list-group-item"><a routerLink="/false" routerLinkActive="active"> Inactive posts </a></li>
+          <li class="list-group-item"><a routerLink="/true"> Active posts </a></li>
+          <li class="list-group-item"><a routerLink="/false"> Inactive posts </a></li>
         </ul>
       </div>
     </div>

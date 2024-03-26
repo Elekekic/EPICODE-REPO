@@ -22,7 +22,7 @@ export class FalsePostsComponent {
     this.news = posts.filter((item) => !item.active);
     // chiamata per getTags 
     this.getTags(this.news); 
-    // chiamata per filterTag
+    // chiamata per filterTag 
     this.filterTag('');
 }
 

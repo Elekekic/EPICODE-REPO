@@ -16,30 +16,35 @@ export class InactivePostsComponent {
   constructor(private postSrv: NewsServiceService) {}
 
   async ngOnInit(): Promise<void> {
+     // usato con la service per ottenre i dati 
     const posts = await this.postSrv.getNews();
     this.news = posts;
+    // chiamata per randomId
     this.randomiD();
 }
 
-  randomiD() {
-    for (let i = 0; i < 4; i++) {
-      let index = Math.floor(Math.random() * this.news.length);
-      let newsItem = this.news[index];
+randomiD() {
+  for (let i = 0; i < 4; i++) {
+    // Genero un indice casuale
+    let index = Math.floor(Math.random() * this.news.length);
+    //  Ottengo la news corrispondente all'indice generato casualmente
+    let newsItem = this.news[index];
 
-      if (newsItem) {
-        while (newsItem && this.idDisplayed.includes(newsItem.id)) {
-          index = Math.floor(Math.random() * this.news.length);
-          newsItem = this.news[index];
-        }
-
-        this.idDisplayed.push(newsItem.id);
-      } else {
-        console.error("newsItem doesn't exist");
+    // SE newsItem esiste: 
+    if (newsItem) {
+      // Controllami se la notizia è già stata visualizzata
+      while (newsItem && this.idDisplayed.includes(newsItem.id)) {
+         // Se la notizia è stata già visualizzata, generami un nuovo indice casuale e seleziona una nuova notizia
+        index = Math.floor(Math.random() * this.news.length);
+        // ottenendo un'altra news
+        newsItem = this.news[index];
       }
-
-      this.selectedInactivePost.push(newsItem);
-      console.log('selectedPost:', this.selectedInactivePost); 
+      // Aggiungi l'ID della notizia corrente all'elenco delle notizie già visualizzate
+      this.idDisplayed.push(newsItem.id);
     }
+    // se non è stata visualizzata, aggiungimela nel selectedInactivePost
+    this.selectedInactivePost.push(newsItem);
   }
+}
 }
 
