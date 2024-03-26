@@ -1,34 +1,28 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { News } from 'src/app/models/news';
+import { NewsServiceService } from 'src/app/service/news-service.service';
 
 @Component({
-  selector: 'app-false-posts',
-  templateUrl: './false-posts.component.html',
-  styleUrls: ['./false-posts.component.scss']
+  selector: 'app-active-posts',
+  templateUrl: './active-posts.component.html',
+  styleUrls: ['./active-posts.component.scss'],
 })
-export class FalsePostsComponent {
+export class ActivePostsComponent implements OnInit {
   news: News[] = [];
   idDisplayed: number[] = [];
   selectedPost: News[] = [];
 
-  constructor() {
-    this.getNews().then((_news) => {
-      this.news = _news;
-      this.randomiD();
-    });
-  }
+  constructor(private postSrv: NewsServiceService) {}
 
-  async getNews() {
-    let response = await fetch('http://localhost:3000/posts');
-    let answer = await response.json();
-    let data = answer; 
-    data = data.filter((item: any) => item.active); 
-
-    return data; 
-  }
+  async ngOnInit(): Promise<void> {
+    console.log('ngOnInit attivato');
+    const news = await this.postSrv.getNews();
+    this.news = news;
+    this.randomiD(); 
+}
 
   randomiD() {
-    for (let i = 0; i < this.news.length; i++) {
+    for (let i = 0; i < 2; i++) {
       let index = Math.floor(Math.random() * this.news.length);
       let newsItem = this.news[index];
 
@@ -44,6 +38,7 @@ export class FalsePostsComponent {
       }
 
       this.selectedPost.push(newsItem);
+      console.log('selectedPost:', this.selectedPost);
     }
   }
 }

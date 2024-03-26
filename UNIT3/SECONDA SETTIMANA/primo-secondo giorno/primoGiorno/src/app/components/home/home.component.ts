@@ -1,34 +1,29 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { News } from 'src/app/models/news';
+import { NewsServiceService } from 'src/app/service/news-service.service';
 
 @Component({
-  selector: 'app-active-posts',
-  templateUrl: './active-posts.component.html',
-  styleUrls: ['./active-posts.component.scss'],
+  selector: 'app-home',
+  templateUrl: './home.component.html',
+  styleUrls: ['./home.component.scss']
 })
-export class ActivePostsComponent {
+
+export class HomeComponent implements OnInit {
   news: News[] = [];
   idDisplayed: number[] = [];
   selectedPost: News[] = [];
 
-  constructor() {
-    this.getNews().then((_news) => {
-      this.news = _news;
-      this.randomiD();
-    });
-  }
+  constructor(private postSrv: NewsServiceService) {}
 
-  async getNews() {
-    let response = await fetch('http://localhost:3000/posts');
-    let answer = await response.json();
-    let data = answer; 
-    data = data.filter((item: any) => item.active); 
-
-    return data; 
-  }
+  async ngOnInit(): Promise<void> {
+    console.log('ngOnInit attivato');
+    const posts = await this.postSrv.getNews();
+    this.news = posts;
+    this.randomiD(); 
+}
 
   randomiD() {
-    for (let i = 0; i < 2; i++) {
+    for (let i = 0; i < 1; i++) {
       let index = Math.floor(Math.random() * this.news.length);
       let newsItem = this.news[index];
 

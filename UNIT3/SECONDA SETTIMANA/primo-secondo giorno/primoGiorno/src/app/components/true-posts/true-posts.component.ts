@@ -1,30 +1,25 @@
 import { Component } from '@angular/core';
 import { News } from 'src/app/models/news';
+import { NewsServiceService } from 'src/app/service/news-service.service';
 
 @Component({
   selector: 'app-true-posts',
   templateUrl: './true-posts.component.html',
-  styleUrls: ['./true-posts.component.scss']
+  styleUrls: ['./true-posts.component.scss'],
 })
 export class TruePostsComponent {
   news: News[] = [];
   idDisplayed: number[] = [];
   selectedPost: News[] = [];
+  tags: string[] = [];
 
-  constructor() {
-    this.getNews().then((_news) => {
-      this.news = _news;
-      this.randomiD();
-    });
-  }
+  constructor(private postSrv: NewsServiceService) {}
 
-  async getNews() {
-    let response = await fetch('http://localhost:3000/posts');
-    let answer = await response.json();
-    let data = answer; 
-    data = data.filter((item: any) => item.active); 
-
-    return data; 
+  async ngOnInit(): Promise<void> {
+    const news = await this.postSrv.getNews();
+    this.news = news;
+    this.randomiD();
+    this.getTags(news);
   }
 
   randomiD() {
@@ -46,5 +41,16 @@ export class TruePostsComponent {
       this.selectedPost.push(newsItem);
     }
   }
-}
 
+  getTags(news: News[]) {
+    news.forEach((post) => {
+      post.tags.forEach((tag) => {
+        if (!this.tags.includes(tag)) {
+          this.tags.push(tag);
+      }
+      });
+    });
+    console.log(this.tags);
+    return this.tags;
+  }
+}

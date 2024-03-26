@@ -12,6 +12,8 @@ import { RouterModule, Routes } from '@angular/router';
 import { TruePostsComponent } from './components/true-posts/true-posts.component';
 import { FalsePostsComponent } from './components/false-posts/false-posts.component';
 import { DetailsComponent } from './components/details/details.component';
+import { EllipsisPipe } from './pipes/ellipsis.pipe';
+import { ColorsDirective } from './directives/colors.directive';
 
 const route: Routes = [
   {
@@ -42,7 +44,9 @@ const route: Routes = [
     HomeComponent,
     TruePostsComponent,
     FalsePostsComponent,
-    DetailsComponent
+    DetailsComponent,
+    EllipsisPipe,
+    ColorsDirective
   ],
   imports: [
     BrowserModule,

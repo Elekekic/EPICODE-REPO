@@ -5,9 +5,9 @@
     <div>
       <a [routerLink]="['/news', newsItem.id]"> 🔗 {{ newsItem.title }}</a>
       <div class="mt-2">
-        <a href="#" class="btn btn-primary me-2">{{ newsItem.tags[0] }}</a>
-        <a href="#" class="btn btn-primary me-2">{{ newsItem.tags[1] }}</a>
-        <a href="#" class="btn btn-primary me-2">{{ newsItem.tags[2] }}</a>
+        <span *ngFor="let tag of newsItem.tags" >
+          <button class="fw-semibold my-2 mx-1 btn btn-outline-secondary" appColors >{{ tag }} </button>
+        </span>
       </div>
 
       <p>{{ newsItem.reactions }} 👍</p>
