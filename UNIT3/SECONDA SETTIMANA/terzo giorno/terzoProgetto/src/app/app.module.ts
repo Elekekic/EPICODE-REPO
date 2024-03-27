@@ -8,6 +8,20 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { HomeComponent } from './components/home/home.component';
 import { ProductsComponent } from './components/products/products.component';
 import { AddedProductsComponent } from './components/added-products/added-products.component';
+import { FavoriteProductsComponent } from './components/favorite-products/favorite-products.component';
+import { RouterModule, Routes } from '@angular/router';
+
+const route: Routes = [
+  {
+    path: '',
+    component: HomeComponent
+  },
+  {
+    path: 'favorites',
+    component: FavoriteProductsComponent
+  }
+]
+
 
 @NgModule({
   declarations: [
@@ -15,12 +29,14 @@ import { AddedProductsComponent } from './components/added-products/added-produc
     NavbarComponent,
     HomeComponent,
     ProductsComponent,
-    AddedProductsComponent
+    AddedProductsComponent,
+    FavoriteProductsComponent
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    RouterModule.forRoot(route)
   ],
   providers: [],
   bootstrap: [AppComponent]

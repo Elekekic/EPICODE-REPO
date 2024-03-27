@@ -19,8 +19,4 @@ export class ServiceService {
   getProducts() {
     return this.http.get<{ products: Products[]}>(this.apiURL);
   }
-
-  addToFavorites() {
-
-  }
 }

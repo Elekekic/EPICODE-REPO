@@ -11,7 +11,7 @@
                     <!-- Button for details and add to favorites -->
                     <div class="d-flex justify-content-between">
                         <a href="#" class="btn btn-outline-info"(click)="ClickAdd(product.id)" >Add to cart </a>
-                        <a href="#" class="btn btn-outline-danger">
+                        <a href="#" class="btn btn-outline-danger" (click)=" addToFavorites(product.id)">
                             <svg xmlns="http://www.w3.org/2000/svg" width="16"
                                 height="16" fill="currentColor" class="bi bi-heart-fill" viewBox="0 0 16 16">
                                 <path fill-rule="evenodd"
@@ -23,7 +23,7 @@
             </div>
         </div>
         <div class="col-4">
-       <app-added-products [favorites]="favorites"> </app-added-products>     
+       <app-added-products [cartProducts]="cartProducts"> </app-added-products>     
         </div>
     </div>
 </div>

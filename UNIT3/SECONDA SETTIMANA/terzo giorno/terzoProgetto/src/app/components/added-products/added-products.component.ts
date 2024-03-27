@@ -9,12 +9,13 @@ import { Products } from 'src/app/models/products';
 export class AddedProductsComponent {
   totalSum: number = 0;
 
-  @Input() favorites: Products[] = [];
+  @Input() cartProducts: Products[] = [];
 
-  constructor() {
+  ngOnInit() {
+    this.calculateTotalSum();
   }
 
   calculateTotalSum() {
-    this.totalSum = this.favorites.reduce((total, product) => total + product.price ,0);
+    this.totalSum = this.cartProducts.reduce((total, product) => total + product.price ,0);
   }
 }

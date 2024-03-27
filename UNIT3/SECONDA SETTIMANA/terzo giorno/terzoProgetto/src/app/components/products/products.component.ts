@@ -11,7 +11,9 @@ import { Subscription } from 'rxjs';
 export class ProductsComponent implements OnInit {
   products: Products[] = [];
   sub!: Subscription;
+  cartProducts: Products[] = [];
   favorites: Products[] = [];
+
 
   constructor(private productsSrv: ServiceService) {}
 
@@ -28,8 +30,17 @@ export class ProductsComponent implements OnInit {
   ClickAdd(id: number) {
     const product = this.products.find((product) => product.id === id);
     if (product) {
-      this.favorites.push(product);
+      this.cartProducts.push(product);
+      console.log(this.cartProducts); 
+    }
+  }
+
+  addToFavorites(id: number) {
+    const favs = this.products.find((product) => product.id === id);
+    if (favs) {
+      this.favorites.push(favs);
       console.log(this.favorites); 
     }
   }
+
 }

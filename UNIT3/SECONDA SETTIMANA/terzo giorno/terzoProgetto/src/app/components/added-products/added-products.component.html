@@ -6,13 +6,10 @@
 
 <h3> Total : {{ totalSum }} &euro; </h3>
 <ol class="list-group list-group-numbered">
-    <li class="list-group-item d-flex justify-content-between align-items-start" *ngFor="let product of favorites">
+    <li class="list-group-item d-flex justify-content-between align-items-start" *ngFor="let product of cartProducts">
         <div class="ms-2 me-auto">
             <div class="fw-bold">{{ product.title }}</div>
-            <div class="input-group mb-3">
-                <span class="input-group-text" id="basic-addon1">Price</span>
-                <input type="text" class="form-control" placeholder="Price" [(ngModel)]="product.price">
-            </div>
+            <div class="fw-light"> Price: {{ product.price }} &euro;</div>
         </div>
         <span class="badge text-bg-primary rounded-pill">1 </span>
     </li>
