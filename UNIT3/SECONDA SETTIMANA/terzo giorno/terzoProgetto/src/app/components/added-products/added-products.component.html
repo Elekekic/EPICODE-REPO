@@ -1,0 +1,20 @@
+<div class="d-flex">
+    <h3> Added to the <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-cart" viewBox="0 0 16 16">
+        <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5M3.102 4l1.313 7h8.17l1.313-7zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4m7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4m-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2m7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2"/>
+      </svg> </h3>
+</div>
+
+<h3> Total : {{ totalSum }} &euro; </h3>
+<ol class="list-group list-group-numbered">
+    <li class="list-group-item d-flex justify-content-between align-items-start" *ngFor="let product of favorites">
+        <div class="ms-2 me-auto">
+            <div class="fw-bold">{{ product.title }}</div>
+            <div class="input-group mb-3">
+                <span class="input-group-text" id="basic-addon1">Price</span>
+                <input type="text" class="form-control" placeholder="Price" [(ngModel)]="product.price">
+            </div>
+        </div>
+        <span class="badge text-bg-primary rounded-pill">1 </span>
+    </li>
+</ol>
+  
