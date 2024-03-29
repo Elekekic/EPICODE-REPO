@@ -1,7 +1,6 @@
-import { Component, InputDecorator, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { ServiceService } from 'src/app/service/service.service';
-import { Products } from 'src/app/models/products';
-import { Subscription } from 'rxjs';
+import { Products, CartItem } from 'src/app/models/products';
 
 @Component({
   selector: 'app-products',
@@ -10,30 +9,28 @@ import { Subscription } from 'rxjs';
 })
 export class ProductsComponent implements OnInit {
   products: Products[] = [];
-  sub!: Subscription;
   cartProducts: Products[] = [];
   favorites: Products[] = [];
+
+  existingProduct: any
 
 
   constructor(private productsSrv: ServiceService) {}
 
   ngOnInit(): void {
-    this.infoProducts();
-  }
-
-  infoProducts() {
-    this.sub = this.productsSrv.getProducts().subscribe((products) => {
-      this.products = products.products;
+    this.productsSrv.getProducts().subscribe(response => {
+      this.products = response.products;
     });
   }
 
-  ClickAdd(id: number) {
-    const product = this.products.find((product) => product.id === id);
+  addToCart(id: number) {
+    const product = this.products.find(product => product.id === id);
     if (product) {
-      this.cartProducts.push(product);
-      console.log(this.cartProducts); 
+      this.productsSrv.ClickAddCart(id); // Chiamata a ClickAdd
+      this.cartProducts.push(product); // Aggiungi direttamente il prodotto al carrello
     }
   }
+  
 
   addToFavorites(id: number) {
     const favs = this.products.find((product) => product.id === id);

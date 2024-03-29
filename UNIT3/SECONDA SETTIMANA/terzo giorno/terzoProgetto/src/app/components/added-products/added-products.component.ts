@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { Products } from 'src/app/models/products';
+import { Products, CartItem } from 'src/app/models/products';
 
 @Component({
   selector: 'app-added-products',
@@ -8,14 +8,11 @@ import { Products } from 'src/app/models/products';
 })
 export class AddedProductsComponent {
   totalSum: number = 0;
+  existingProduct: any
 
   @Input() cartProducts: Products[] = [];
 
-  ngOnInit() {
-    this.calculateTotalSum();
-  }
+  
 
-  calculateTotalSum() {
-    this.totalSum = this.cartProducts.reduce((total, product) => total + product.price ,0);
-  }
+
 }

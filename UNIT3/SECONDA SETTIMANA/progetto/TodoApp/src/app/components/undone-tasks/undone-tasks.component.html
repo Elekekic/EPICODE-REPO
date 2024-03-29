@@ -1,0 +1,13 @@
+<div class="container mb-5">
+    <h2 class="display-4 fw-bold"> <i class="bi bi-x-lg"></i> Undone Tasks </h2>
+    <hr> 
+    <div class="row">
+        <ul class="list-group">
+            <li class=" d-flex p-3 my-2 border rounded-3" [ngClass]="{'bg-success-subtle': task.completed, 'bg-danger-subtle': !task.completed}"  *ngFor="let task of tasks">
+                <input type="checkbox" [(ngModel)]="task.completed">
+                <span class="ms-3">{{ task.todo }}</span>                  
+            </li>
+        </ul>
+    </div>
+</div>
+

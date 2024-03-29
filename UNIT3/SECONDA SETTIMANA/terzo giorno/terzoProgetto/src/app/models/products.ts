@@ -8,4 +8,9 @@ export interface Products
     thumbnail: string,
   }
 
+  export interface CartItem extends Products {
+    amount:   number
+    totalPrice: number
+  }
+
 

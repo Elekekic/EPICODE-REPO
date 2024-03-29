@@ -1,0 +1,21 @@
+<div class="container mb-5">
+    <h2 class="display-4 fw-bold"> <i class="bi bi-journal"></i> Everyone's Notebook </h2>
+    <hr> 
+    <div class="row justify-content-around">
+       <div class="d-flex align-items-center border rounded-5 my-3 col-5 shadow" *ngFor="let item of userTasks" >
+        <div>
+            <img [src]="item.user.image" alt="{{ item.user.firstName }} {{ item.user.lastName }}">
+        </div>
+        <div>
+            <h2 class="display-6">{{ item.user.firstName }} {{ item.user.lastName }}</h2>
+            <hr> 
+            <ul>
+                <h4> Tasks: </h4>
+              <li *ngFor="let task of item.tasks">
+                {{ task.todo }}
+              </li>
+            </ul>
+        </div>
+       </div>
+    </div>
+</div>
