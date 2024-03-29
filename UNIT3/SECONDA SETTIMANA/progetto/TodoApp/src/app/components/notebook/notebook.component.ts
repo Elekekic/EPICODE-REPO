@@ -34,9 +34,7 @@ export class NotebookComponent implements OnInit {
     this.userTasks = [];
     this.users.forEach(user => {
       const userTasks = this.tasks.filter(task => task.userId === user.id);
-      if (userTasks.length > 0) {
         this.userTasks.push({ user, tasks: userTasks });
-      }
     });
   }
 }

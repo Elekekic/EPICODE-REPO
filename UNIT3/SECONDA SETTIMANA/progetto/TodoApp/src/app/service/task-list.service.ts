@@ -924,12 +924,4 @@ export class TaskListService {
       this.completedTasks.push(this.tasks[taskIndex]);
     }
   }
-
-  markAsUncompleted(taskId: number) {
-    const taskIndex = this.tasks.findIndex((task) => task.id === taskId);
-    if (taskIndex !== -1) {
-      this.tasks[taskIndex].completed = false;
-      this.uncompletedTasks.push(this.tasks[taskIndex]);
-    }
-  }
 }
