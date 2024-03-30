@@ -4,7 +4,6 @@ import { RouterModule, Routes } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
-import { HomeComponent } from './components/home/home.component';
 import { HeaderComponent } from './components/header/header.component';
 import { AllTasksComponent } from './components/all-tasks/all-tasks.component';
 import { UndoneTasksComponent } from './components/undone-tasks/undone-tasks.component';
@@ -15,7 +14,7 @@ import { NotebookComponent } from './components/notebook/notebook.component';
 const routes: Routes = [
   {
     path:"",
-    component: HomeComponent
+    component: AllTasksComponent
   },
   {
     path:"seeAll",
@@ -39,7 +38,6 @@ const routes: Routes = [
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent,
     HeaderComponent,
     AllTasksComponent,
     UndoneTasksComponent,
