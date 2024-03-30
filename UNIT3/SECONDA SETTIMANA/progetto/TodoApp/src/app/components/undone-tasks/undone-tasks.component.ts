@@ -26,7 +26,6 @@ export class UndoneTasksComponent {
     this.tasks = this.taskSrv.getTasks().filter((items) => !items.completed);
   }
 
-   
   getUsers() {
     this.users = this.userSrv.getUsers();
   }

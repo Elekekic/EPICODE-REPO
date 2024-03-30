@@ -909,19 +909,8 @@ export class TaskListService {
   ];
 
   constructor() {}
-
-  completedTasks: TaskList[] = [];
-  uncompletedTasks: TaskList[] = [];
-
+  
   getTasks() {
     return this.tasks;
-  }
-
-  markAsCompleted(taskId: number) {
-    const taskIndex = this.tasks.findIndex((task) => task.id === taskId);
-    if (taskIndex !== -1) {
-      this.tasks[taskIndex].completed = true;
-      this.completedTasks.push(this.tasks[taskIndex]);
-    }
   }
 }
