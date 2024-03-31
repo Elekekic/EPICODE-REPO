@@ -7,19 +7,19 @@
   <h2 class="display-4 fw-bold"> <i class="bi bi-journal-text"></i> Everyone's Notebook </h2>
   <hr>
   <div class="row justify-content-around">
-    <div class="d-flex align-items-center border rounded-5 my-3 shadow" *ngFor="let item of userTasks">
+    <div class="d-flex align-items-center border rounded-5 my-3 shadow transition" *ngFor="let item of userTasks">
       <div>
         <img [src]="item.user.image" alt="{{ item.user.firstName }} {{ item.user.lastName }}">
       </div>
       <div>
-        <h2 class="display-6">{{ item.user.firstName }} {{ item.user.lastName }}</h2>
+        <h2 class="display-6 mt-3">{{ item.user.firstName }} {{ item.user.lastName }}</h2>
         <a class="text-secondary m-0 link-underline-secondary"> {{item.user.title}}</a>
         <p class="text-secondary m-0 mt-2"> email: {{item.user.email}}</p>
         <hr>
         <ul>
           <h4>Tasks:</h4>
           <ng-container *ngIf="item.tasks && item.tasks.length > 0; else loadingTemplate">
-            <li class="d-flex p-3 my-2 border rounded-3"
+            <li class="d-flex p-3 my-2 border rounded-3 transition"
               [ngClass]="{'bg-success-subtle': task.completed, 'bg-danger-subtle': !task.completed}"
               *ngFor="let task of item.tasks">
               <input type="checkbox" [(ngModel)]="task.completed">
