@@ -11,7 +11,7 @@
         <!-- LIST TASKS -->
         <ul class="list-group">
             <ng-container *ngFor="let userTask of userTasks">
-                <li class=" d-flex p-3 my-2 border rounded-3"  [ngClass]="{'bg-success-subtle': task.completed ,'bg-danger-subtle' : !task.completed}" *ngFor="let task of userTask.tasks">
+                <li class=" d-flex p-3 my-2 border rounded-3 transition"  [ngClass]="{'bg-success-subtle': task.completed ,'bg-danger-subtle' : !task.completed}" *ngFor="let task of userTask.tasks">
                    <div>
                        <input type="checkbox" [(ngModel)]="task.completed">
                    </div>

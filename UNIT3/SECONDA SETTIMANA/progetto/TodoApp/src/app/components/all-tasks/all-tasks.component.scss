@@ -38,6 +38,17 @@
     height: 1rem;
    }
    
+
+// for the tasks 
+  
+.transition {
+    transition: transform 0.3s ease;
+}
+
+.transition:hover {
+    transform: scale(1.04);
+}
+
    
    
    
