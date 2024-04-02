@@ -4,7 +4,7 @@ export interface User {
     lastName: string;
     email: string;
     biography: string;
-    gender: { label: string; value: string }[];
+    gender: string;
     password: string;
     avatar: string; 
     confirmPassword: string;

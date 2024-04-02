@@ -1,4 +1,4 @@
-import { Component, ViewChild } from '@angular/core';
+import { Component, ViewChild, OnInit } from '@angular/core';
 import { User } from '../interface/user';
 import { NgForm } from '@angular/forms';
 
@@ -7,26 +7,30 @@ import { NgForm } from '@angular/forms';
   templateUrl: './first-form.component.html',
   styleUrls: ['./first-form.component.scss'],
 })
-export class FirstFormComponent {
+export class FirstFormComponent implements OnInit{
+
   user: User = {
     firstName: '',
     lastName: '',
     email: '',
     avatar: '', 
     biography: '',
-    gender: [
-      {
-        label: 'uomo',
-        value: 'uomo',
-      },
-      {
-        label: 'donna',
-        value: 'donna',
-      },
-    ],
+    gender: '',
     password: '',
     confirmPassword: '',
   };
+
+
+  genders = [
+    {
+      label: 'uomo',
+      value: 'uomo'
+    },
+    {
+      label: 'donna',
+      value: 'donna'
+    }
+  ]
 
   @ViewChild('form', { static: true }) form!: NgForm;
 
@@ -34,6 +38,7 @@ export class FirstFormComponent {
     this.form.statusChanges?.subscribe((status) => {
       console.log('Stato del form: ', status);
     });
+  
   }
 
   submit() {

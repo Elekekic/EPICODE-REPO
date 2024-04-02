@@ -19,6 +19,8 @@ export class SecondFormComponent {
 
   constructor(private fb: FormBuilder) { }
 
+  
+
   ngOnInit(): void {
     this.form = this.fb.group({
       userInfo: this.fb.group({
@@ -42,7 +44,7 @@ export class SecondFormComponent {
         ]),
         confirmPassword: this.fb.control(null, [
           Validators.required,
-          Validators.minLength(8),
+          Validators.minLength(8)
         ]),
         gender: this.fb.control (null, [
           Validators.required

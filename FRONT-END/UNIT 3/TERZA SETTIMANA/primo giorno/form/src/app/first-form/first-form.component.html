@@ -12,7 +12,7 @@
                                 <input type="file" class="form-control" id="avatar" [(ngModel)]="user.avatar"
                                     name="avatar" required #avatar="ngModel">
                                 <p *ngIf="avatar.invalid && avatar.touched">
-                                    <strong class="text-danger">Questo campo è obbligatorio</strong>
+                                    <strong class="text-danger">This field is required</strong>
                                 </p>
                             </div>
                             <div class="mb-3">
@@ -20,7 +20,7 @@
                                 <input type="firstName" class="form-control" id="firstName" [(ngModel)]="user.firstName"
                                     name="firstName" required #firstName="ngModel">
                                 <p *ngIf="firstName.invalid && firstName.touched">
-                                    <strong class="text-danger">Questo campo è obbligatorio</strong>
+                                    <strong class="text-danger">This field is required</strong>
                                 </p>
                             </div>
                             <div class="mb-3">
@@ -28,17 +28,17 @@
                                 <input type="lastName" class="form-control" id="lastName" [(ngModel)]="user.lastName"
                                     name="lastName" required #lastName="ngModel">
                                 <p *ngIf="lastName.invalid && lastName.touched">
-                                    <strong class="text-danger">Questo campo è obbligatorio</strong>
+                                    <strong class="text-danger">This field is required</strong>
                                 </p>
                             </div>
                             <div class="mb-3">
                                 <label for="email" class="form-label">Email</label>
                                 <input type="email" class="form-control" id="email" [(ngModel)]="user.email"
-                                    name="email" required #email="ngModel">
+                                    name="email" required #email="ngModel" pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}">
                                 <div id="emailHelp" class="form-text"> We'll never share your email with anyone else.
                                 </div>
-                                <p *ngIf="email.invalid && email.touched">
-                                    <strong class="text-danger">Questo campo è obbligatorio</strong>
+                                <p *ngIf="email.invalid && email.touched && email.errors?.['pattern']">
+                                    <strong class="text-danger">This field is required</strong>
                                 </p>
                             </div>
                             <div class="mb-3">
@@ -47,7 +47,7 @@
                                     [(ngModel)]="user.biography" name="biography" required
                                     #biography="ngModel"> </textarea>
                                 <p *ngIf="biography.invalid && biography.touched">
-                                    <strong class="text-danger">Questo campo è obbligatorio</strong>
+                                    <strong class="text-danger">This field is required</strong>
                                 </p>
                             </div>
                             <div class="mb-5">
@@ -55,7 +55,7 @@
                                 <input type="password" class="form-control" id="password" [(ngModel)]="user.password"
                                     name="password" required #password="ngModel">
                                 <p *ngIf="password.invalid && password.touched">
-                                    <strong class="text-danger">Questo campo è obbligatorio</strong>
+                                    <strong class="text-danger">This field is required</strong>
                                 </p>
                               
                             </div>
@@ -65,14 +65,14 @@
                                     [(ngModel)]="user.confirmPassword" name="confirmPassword" required
                                     #confirmPassword="ngModel">
                                 <p *ngIf="confirmPassword.invalid && confirmPassword.touched">
-                                    <strong class="text-danger">Questo campo è obbligatorio</strong>
+                                    <strong class="text-danger">This field is required</strong>
                                 </p>
                                 <p *ngIf="user.confirmPassword != user.password ">
                                     <strong class="text-danger">The passwords are different</strong>
                                 </p>
                                 
                             </div>
-                            <div class="radio mb-2" *ngFor="let gender of user.gender">
+                            <div class="radio mb-2" *ngFor="let gender of genders">
                                 <input type="radio" name="gender" id="gender" ngModel required [value]="gender.value"
                                     class="me-2">
                                 <label for="{{ gender.value }}"> {{ gender.label }}</label>
