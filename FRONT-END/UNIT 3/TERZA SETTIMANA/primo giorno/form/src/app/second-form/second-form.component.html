@@ -1,0 +1,73 @@
+<p class="display-6"> Reactive Form </p>
+
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-12">
+            <form [formGroup]="form">
+                <div formGroupName="userInfo">
+                    <div class="mb-3">
+                        <div class="mb-3">
+                            <label for="avatar" class="form-label">Profile pic</label>
+                            <input type="file" id="avatar" class="form-control" formControlName="avatar"/> 
+                           <!--  <p *ngIf="avatar.invalid && avatar.touched">
+                                <strong class="text-danger">Questo campo è obbligatorio</strong>
+                            </p> -->
+                        </div>
+                        <div class="mb-3">
+                            <label for="firstName" class="form-label">First name</label>
+                            <input type="text" id="firstName" class="form-control" formControlName="firstName"/> 
+                           <!--  <p *ngIf="avatar.invalid && avatar.touched">
+                                <strong class="text-danger">Questo campo è obbligatorio</strong>
+                            </p> -->
+                        </div>
+                        <div class="mb-3">
+                            <label for="lastName" class="form-label">Last name</label>
+                            <input type="text" id="lastName" class="form-control" formControlName="lastName"/> 
+                           <!--  <p *ngIf="avatar.invalid && avatar.touched">
+                                <strong class="text-danger">Questo campo è obbligatorio</strong>
+                            </p> -->
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label"> Email </label>
+                            <input type="email" id="email" class="form-control" formControlName="email"/> 
+                           <!--  <p *ngIf="avatar.invalid && avatar.touched">
+                                <strong class="text-danger">Questo campo è obbligatorio</strong>
+                            </p> -->
+                            <div class="form-text"> We'll never share your email with anyone else.
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="biography" class="form-label">Biography</label>
+                            <textarea type="text" id="biography" class="form-control" formControlName="biography"> </textarea> 
+                           <!--  <p *ngIf="avatar.invalid && avatar.touched">
+                                <strong class="text-danger">Questo campo è obbligatorio</strong>
+                            </p> -->
+                        </div>
+                        <div class="mb-3">
+                            <label for="password" class="form-label">Password</label>
+                            <input type="password" id="password" class="form-control" formControlName="password"> 
+                           <!--  <p *ngIf="avatar.invalid && avatar.touched">
+                                <strong class="text-danger">Questo campo è obbligatorio</strong>
+                            </p> -->
+                            <div class="form-text"> Min length 8 letters
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="confirmPassword" class="form-label"> Confirm password </label>
+                            <input type="password" id="confirmPassword" class="form-control" formControlName="confirmPassword"> 
+                           <!--  <p *ngIf="avatar.invalid && avatar.touched">
+                                <strong class="text-danger">Questo campo è obbligatorio</strong>
+                            </p> -->
+                            <div class="form-text"> Min length 8 letters
+                            </div>
+                        </div>
+                        <div class="radio mb-2" *ngFor="let gender of genders">
+                            <input  type="radio" formControlName="gender" [value]="gender" required class="me-2" >  <label>{{ gender }}</label>
+                        </div>
+                        <button type="submit" class="btn btn-outline-info shadow" [disabled]="form.invalid"  (click)="submit()">Submit</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

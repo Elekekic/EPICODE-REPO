@@ -1,0 +1,87 @@
+<p class="display-6"> Template Driven Form </p>
+
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-12">
+            <div>
+                <form #form="ngForm" (ngSubmit)="submit()">
+                    <div ngModelGroup="user" id="user" #userGroup="ngModelGroup">
+                        <div class="mb-3">
+                            <div class="mb-3">
+                                <label for="avatar" class="form-label">Profile pic</label>
+                                <input type="file" class="form-control" id="avatar" [(ngModel)]="user.avatar"
+                                    name="avatar" required #avatar="ngModel">
+                                <p *ngIf="avatar.invalid && avatar.touched">
+                                    <strong class="text-danger">Questo campo è obbligatorio</strong>
+                                </p>
+                            </div>
+                            <div class="mb-3">
+                                <label for="firstName" class="form-label">First name</label>
+                                <input type="firstName" class="form-control" id="firstName" [(ngModel)]="user.firstName"
+                                    name="firstName" required #firstName="ngModel">
+                                <p *ngIf="firstName.invalid && firstName.touched">
+                                    <strong class="text-danger">Questo campo è obbligatorio</strong>
+                                </p>
+                            </div>
+                            <div class="mb-3">
+                                <label for="lastName" class="form-label">Last name</label>
+                                <input type="lastName" class="form-control" id="lastName" [(ngModel)]="user.lastName"
+                                    name="lastName" required #lastName="ngModel">
+                                <p *ngIf="lastName.invalid && lastName.touched">
+                                    <strong class="text-danger">Questo campo è obbligatorio</strong>
+                                </p>
+                            </div>
+                            <div class="mb-3">
+                                <label for="email" class="form-label">Email</label>
+                                <input type="email" class="form-control" id="email" [(ngModel)]="user.email"
+                                    name="email" required #email="ngModel">
+                                <div id="emailHelp" class="form-text"> We'll never share your email with anyone else.
+                                </div>
+                                <p *ngIf="email.invalid && email.touched">
+                                    <strong class="text-danger">Questo campo è obbligatorio</strong>
+                                </p>
+                            </div>
+                            <div class="mb-3">
+                                <label for="biography" class="form-label">Biography</label>
+                                <textarea type="biography" class="form-control" id="biography"
+                                    [(ngModel)]="user.biography" name="biography" required
+                                    #biography="ngModel"> </textarea>
+                                <p *ngIf="biography.invalid && biography.touched">
+                                    <strong class="text-danger">Questo campo è obbligatorio</strong>
+                                </p>
+                            </div>
+                            <div class="mb-5">
+                                <label for="password" class="form-label">Password</label>
+                                <input type="password" class="form-control" id="password" [(ngModel)]="user.password"
+                                    name="password" required #password="ngModel">
+                                <p *ngIf="password.invalid && password.touched">
+                                    <strong class="text-danger">Questo campo è obbligatorio</strong>
+                                </p>
+                              
+                            </div>
+                            <div class="mb-4">
+                                <label for="confirmPassword" class="form-label">Confirm password</label>
+                                <input type="password" class="form-control" id="confirmPassword"
+                                    [(ngModel)]="user.confirmPassword" name="confirmPassword" required
+                                    #confirmPassword="ngModel">
+                                <p *ngIf="confirmPassword.invalid && confirmPassword.touched">
+                                    <strong class="text-danger">Questo campo è obbligatorio</strong>
+                                </p>
+                                <p *ngIf="user.confirmPassword != user.password ">
+                                    <strong class="text-danger">The passwords are different</strong>
+                                </p>
+                                
+                            </div>
+                            <div class="radio mb-2" *ngFor="let gender of user.gender">
+                                <input type="radio" name="gender" id="gender" ngModel required [value]="gender.value"
+                                    class="me-2">
+                                <label for="{{ gender.value }}"> {{ gender.label }}</label>
+                            </div>
+                            <button type="submit" class="btn btn-outline-info shadow" [disabled]="form.invalid">Submit</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
