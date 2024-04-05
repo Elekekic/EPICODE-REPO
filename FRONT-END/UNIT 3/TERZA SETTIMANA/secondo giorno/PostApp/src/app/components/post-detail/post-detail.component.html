@@ -1,0 +1,29 @@
+<div class="container mt-4" >
+    <h2 class="text-center"> More info of this news</h2>
+    <div class="card">
+        <div class="card-body" *ngIf="news">
+            <h3 class="card-title" >{{news.title}} / ID number: {{news.id}}</h3>
+            <h5 class="card-subtitle mb-2 text-body-secondary">
+                {{news.reactions}} 👍
+            </h5>
+            <p class="card-text">
+                {{news.body}}
+            </p>
+            <div class="mb-4">
+                <span class="badge bg-primary me-1 text-uppercase" *ngFor="let tag of news.tags" > {{ tag }} </span>
+            </div>
+
+             <!-- Button per cambiare informazioni sulla notizia -->
+            <button type="button" class="btn btn-outline-warning" (click)="changeNews(news)" >Change info </button>
+        </div>
+    </div>
+
+    <!-- Card per modificare le informazioni -->
+    <div *ngIf="selectedPost" class="card mt-3 p-3 mb-3" >
+        <h3 class="mb-4"> Make your changes </h3>
+         <!-- Utilizzo di app-component 'app-details' per modificare le informazioni sulla notizia -->
+    <app-details [news]="selectedPost" (newItem)="changeNews($event); changeItems()"> </app-details>    
+    </div>
+    
+</div>
+

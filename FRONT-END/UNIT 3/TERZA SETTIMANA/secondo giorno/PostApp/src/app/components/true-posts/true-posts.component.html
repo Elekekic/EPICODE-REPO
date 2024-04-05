@@ -1,0 +1,30 @@
+<h1 class="text-center my-3"> Active Posts </h1>
+
+<div class="container">
+  <div class="d-flex align-items-center justify-content-center">
+    <p class="fs-4 fw-semibold text-center m-0 mx-3"> Filter by: </p>
+    <!-- funzione che in base al tag fornito dal click, aggiorna l'attributo SelectedPost dell'oggetto corrente con i risultati filtrati. -->
+    <button *ngFor="let tag of tags" class="mx-1 btn btn-light" (click)="filterTag(tag)" > {{ tag }} </button> 
+  </div>
+  <div class="row justify-content-around">
+    <!-- ciclo per creare una card per ogni newsitem di selectedPost -->
+    <div class="card my-3 me-1 d-flex h-50 p-0 col-3" *ngFor="let newsItem of selectedPost">
+      <div class="card-header">
+        <span *ngFor="let tag of newsItem.tags">
+          <!-- appColors = selettore directive che mette colori random-->
+          <button class="fw-semibold my-2 mx-1 btn btn-outline-dark" appColors >{{ tag }}</button>
+        </span>
+      </div>
+      <!-- Se nessun tag è selezionato, tutti gli elementi verranno mostrati.
+          Se un tag è selezionato, verranno mostrati SOLO gli elementi che contengono il tag selezionato. -->
+      <ng-container *ngIf="selectedTag === '' || newsItem.tags.includes(selectedTag)" >
+        <div class="card-body h-75">
+          <h5 class="card-title fs-4">{{ newsItem.title }}</h5>
+          <p class="card-text">{{ newsItem.body | ellipsis }} </p>
+           <!-- link che manda alla pagina post-detail del suo ID -->
+          <a [routerLink]="['/news', newsItem.id]" routerLinkActive="active" class="btn btn-primary"> Read more</a>
+        </div>
+      </ng-container>
+    </div>
+  </div>
+</div>

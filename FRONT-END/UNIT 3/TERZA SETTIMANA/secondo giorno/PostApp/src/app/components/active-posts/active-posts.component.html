@@ -1,0 +1,16 @@
+<div class="container">
+  <div class="row">
+    <div class="card my-2 col-6 d-flex h-50 p-0" *ngFor="let newsItem of selectedPost">
+      <div class="card-header" >
+        <span *ngFor="let tag of newsItem.tags" >
+          <button class="fw-semibold my-2 mx-1 btn btn-info">{{ tag }}</button>
+        </span>
+      </div>
+      <div class="card-body h-75" >
+        <h5 class="card-title fs-4">{{ newsItem.title }}</h5>
+        <p class="card-text">{{ newsItem.body.slice(0, 190) }} ... </p>
+        <a [routerLink]="['/news', newsItem.id]" routerLinkActive="active" > Read for more... </a>
+      </div>
+    </div>
+  </div>
+</div>

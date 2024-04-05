@@ -1,0 +1,12 @@
+<div *ngFor="let newsItem of selectedInactivePost"
+  class="d-flex flex-column align-items-start mb-3 bg-white p-2 border-bottom border-dark-subtle">
+  <div>
+    <a [routerLink]="['/news', newsItem.id]"> 🔗 {{ newsItem.title }}</a>
+    <div class="mt-2">
+      <span *ngFor="let tag of newsItem.tags">
+        <button class="fw-semibold my-2 mx-1 btn btn-outline-info">{{ tag }} </button>
+      </span>
+    </div>
+    <p>{{ newsItem.reactions }} 👍</p>
+  </div>
+</div>
