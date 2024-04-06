@@ -18,6 +18,7 @@ import { ProfileComponent } from './components/profile/profile.component';
 import { FavoritesComponent } from './components/favorites/favorites.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { authGuard } from './auth/auth.guard';
 import { LandingPageComponent } from './components/landing-page/landing-page.component';
 
 
@@ -28,10 +29,13 @@ const routes: Route[] = [
   },
   {
     path:'movies',
-    component: HomeComponent, children: [
+    component: HomeComponent,
+    /* canActivate: [authGuard], */
+     children: [
       {
           path: ':id',
           component: MovieDetailComponent,
+         /*  canActivate: [authGuard], */
       },
   ]
 },
@@ -45,15 +49,18 @@ const routes: Route[] = [
   },
   {
     path:'favorites',
-    component: FavoritesComponent
+    component: FavoritesComponent,
+    canActivate: [authGuard],
   },
   {
     path:'profile',
-    component: ProfileComponent
+    component: ProfileComponent,
+    canActivate: [authGuard],
   },
   {
     path:'utents',
-    component: UtentsComponent
+    component: UtentsComponent,
+    canActivate: [authGuard],
   },
 ]
 

@@ -1,1 +1,18 @@
-<p>sign-up works!</p>
+<h1 class="text-white"> sign up </h1>
+
+<form #signUpForm="ngForm" (ngSubmit)="submit(signUpForm)">
+  <div class="mb-3">
+    <label for="name" class="form-label text-white">Full name</label>
+    <input type="text" class="form-control" id="name" name="name" ngModel required>
+  </div>
+  <div class="mb-3">
+    <label for="email" class="form-label text-white">Email address</label>
+    <input type="email" class="form-control" id="email" name="email" ngModel required>
+    <div id="emailHelp" class="form-text text-white">We'll never share your email with anyone else.</div>
+  </div>
+  <div class="mb-3">
+    <label for="password" class="form-label text-white">Password</label>
+    <input type="password" class="form-control" id="password" name="password" ngModel required>
+  </div>
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>

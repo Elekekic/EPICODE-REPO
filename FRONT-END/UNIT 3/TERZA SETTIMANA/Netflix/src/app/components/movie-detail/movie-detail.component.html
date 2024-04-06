@@ -1,1 +1,11 @@
 <p>movie-detail works!</p>
+
+<div class="container" *ngIf="detailMovie">
+    <div class="card">
+        <div class="card-header">
+            <h1> +18? {{detailMovie.adult}}</h1>
+        </div>
+        <img [src]="detailMovie.poster_path" alt="{{detailMovie.original_title}}">
+        <p> {{detailMovie.overview}}</p>
+    </div>
+</div>

@@ -1,33 +1,30 @@
-<nav class="navbar navbar-expand-lg bg-black">
+<nav class="navbar navbar-expand-lg">
     <div class="container-fluid">
-      <a class="navbar-brand text-white" href="#">Navbar</a>
+      <a class="navbar-brand text-white"> <img src="../../../assets/logo.png" width="170px" style="padding: 10px;"></a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <a class="nav-link active text-white" aria-current="page" href="#">Home</a>
+            <a  class="nav-link active text-white" routerLink="/movies" routerLinkActive="active">Home</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link text-white" href="#"> Utents</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link text-white" href="#"> </a>
+          <li *ngIf="user" class="nav-item">
+            <a class="nav-link text-white" routerLink="/utents" routerLinkActive="active"> Utents</a>
           </li>
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <a *ngIf="user" class="nav-link dropdown-toggle text-white" role="button" data-bs-toggle="dropdown" aria-expanded="false">
               Settings
             </a>
             <ul class="dropdown-menu bg-black">
-              <li><a class="dropdown-item text-white" href="#">Profile </a></li>
-              <li><a class="dropdown-item text-white" href="#">Favorites</a></li>
-              <li><a class="dropdown-item text-white" href="#">Log out</a></li>
+              <li><a class="dropdown-item text-white" routerLink="/profile" routerLinkActive="active">Profile </a></li>
+              <li><a class="dropdown-item text-white" routerLink="/favorites" routerLinkActive="active">Favorites</a></li>
             </ul>
           </li>
   
         </ul>
-          <a class="btn btn-outline-success" routerLink="/signin" routerLinkActive="active">Sign in </a>
+          <a class="btn btn-outline-success" *ngIf="!user" routerLink="/signin" routerLinkActive="active">Sign in </a>
+          <a class="btn btn-outline-danger" *ngIf="user" (click)="logout()">Log out </a>
       </div>
     </div>
   </nav>
