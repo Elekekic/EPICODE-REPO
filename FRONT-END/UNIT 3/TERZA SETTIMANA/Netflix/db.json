@@ -17,38 +17,18 @@
       "password": "$2a$10$.ZF0FKMNr2REzH0bWJsPcetByTrO7.KDlVHcRlhBERN2b3yJbXeQC",
       "name": "antonio copetti",
       "id": 6
+    },
+    {
+      "email": "fabio@scara.com",
+      "password": "$2a$10$z3SVYPYEmIslsUzcDh3bCuPSkeYoQuoq0.lqB5EjlYtV5xrXhgCxW",
+      "name": "fabio scara",
+      "id": 7
     }
   ],
   "favorites": [
     {
-      "userId": 2,
-      "movieId": 460465,
-      "id": 6
-    },
-    {
-      "userId": 3,
-      "movieId": 804435,
-      "id": 9
-    },
-    {
-      "userId": 3,
-      "movieId": 399566,
-      "id": 10
-    },
-    {
-      "userId": 2,
-      "movieId": 635302,
-      "id": 19
-    },
-    {
-      "userId": 2,
-      "movieId": 567189,
-      "id": 26
-    },
-    {
-      "userId": 2,
-      "movieId": 615457,
-      "id": 27
+      "userId": 4,
+      "movieId": 615457
     }
   ],
   "genres": [

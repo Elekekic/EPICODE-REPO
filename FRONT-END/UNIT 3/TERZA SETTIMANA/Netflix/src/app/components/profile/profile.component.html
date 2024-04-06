@@ -1,1 +1,4 @@
-<p>profile works!</p>
+
+<p *ngIf="loggedUser"> hello {{loggedUser.user.name}}</p>
+<p *ngIf="loggedUser"> your id: {{loggedUser.user.id}}</p>
+<p *ngIf="loggedUser"> your email: {{loggedUser.user.email}}</p>

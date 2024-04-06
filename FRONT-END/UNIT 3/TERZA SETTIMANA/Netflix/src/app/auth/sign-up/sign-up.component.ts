@@ -11,6 +11,7 @@ import { Router } from '@angular/router';
 export class SignUpComponent {
  constructor(private authSrv: AuthService, private router: Router) {}
 
+ 
 submit(form: NgForm) {
     console.log(form.value);
     this.authSrv.signup(form.value).subscribe(

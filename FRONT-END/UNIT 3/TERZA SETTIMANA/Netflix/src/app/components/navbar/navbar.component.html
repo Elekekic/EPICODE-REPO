@@ -1,19 +1,21 @@
 <nav class="navbar navbar-expand-lg">
-    <div class="container-fluid">
-      <a class="navbar-brand text-white"> <img src="../../../assets/logo.png" width="170px" style="padding: 10px;"></a>
+    <div class="container-fluid d-flex">
+      <a class="navbar-brand text-white" routerLink="/movies"> <img src="../../../assets/logo.png" width="170px" style="padding: 10px;"></a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <p class="text-white me-3 m-0 fs-3 fw-lighter" *ngIf="user"> Hello {{user.user.name}} !</p>
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          <li class="nav-item">
+  
+          <li *ngIf="user" class="nav-item">
             <a  class="nav-link active text-white" routerLink="/movies" routerLinkActive="active">Home</a>
           </li>
           <li *ngIf="user" class="nav-item">
-            <a class="nav-link text-white" routerLink="/utents" routerLinkActive="active"> Utents</a>
+            <a  class="nav-link text-white" routerLink="/utents" routerLinkActive="active"> Utents</a>
           </li>
-          <li class="nav-item dropdown">
-            <a *ngIf="user" class="nav-link dropdown-toggle text-white" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          <li *ngIf="user" class="nav-item dropdown">
+            <a  class="nav-link dropdown-toggle text-white" role="button" data-bs-toggle="dropdown" aria-expanded="false">
               Settings
             </a>
             <ul class="dropdown-menu bg-black">

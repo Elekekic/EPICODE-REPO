@@ -22,7 +22,7 @@ import { JwtHelperService } from '@auth0/angular-jwt';
     providedIn: 'root',
 })
 export class AuthService {
-    //FIXME: make sure u check this part clearly and make comments. eventually comment also the enviroment
+
     apiURL = environment.apiURL;
     jwt = new JwtHelperService; 
 
@@ -32,7 +32,12 @@ export class AuthService {
 
     constructor(private http: HttpClient, private router: Router) {}
 
-    //dati che devono nascere e morire qui per il metodo di login
+    // metodo per prendermi l'user 
+    getCurrentUser(): Auth | null {
+        return this.authSub.getValue();
+      }
+
+    // dati che devono nascere e morire qui per il metodo di login
     login(data: { email: string; password: string }) {
         return this.http.post<Auth>(`${this.apiURL}signin`, data).pipe(
             tap((data) => {
@@ -43,14 +48,14 @@ export class AuthService {
         );
     }
 
-    //metodo per il sign up
+    // metodo per il sign up
     signup(data: SignUp) {
         return this.http
             .post(`${this.apiURL}signup`, data)
             .pipe(catchError(this.handleError));
     }
 
-    //metodo per il log out
+    // metodo per il logout
     logout() {
         this.authSub.next(null);
         localStorage.removeItem('user');
@@ -58,16 +63,15 @@ export class AuthService {
     }
 
     restore() {
-        const userInfo = localStorage.getItem('user');
-        if (userInfo) {
-            const user: Auth = JSON.parse(userInfo);
-            this.authSub.next(user);
-            this.autoLogout(user);
+        const userJson = localStorage.getItem('user');
+        if (!userJson) {
+            return;
         }
+        const user: Auth = JSON.parse(userJson);
+        this.authSub.next(user);
+        this.autoLogout(user);
     }
-
-    //TODO: CHECK THIS!!! and understand it
-    //log out automatically after the expiration date
+    
     autoLogout(user: Auth) {
         const tokenExpirationDate = this.jwt.getTokenExpirationDate(
             user.accessToken
@@ -83,7 +87,6 @@ export class AuthService {
         }
     }
 
-    //FIXME: make sure this errors actually do send an alert and have the right errors in it
     public handleError(error: any) {
         let errorMessage = 'Errore nella chiamata';
         if (error.error) {

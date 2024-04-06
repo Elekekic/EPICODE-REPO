@@ -5,8 +5,6 @@ import { Route, RouterModule } from '@angular/router';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
-
-
 // componenti
 import { AppComponent } from './app.component';
 import { SignInComponent } from './auth/sign-in/sign-in.component';
@@ -19,73 +17,77 @@ import { FavoritesComponent } from './components/favorites/favorites.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { authGuard } from './auth/auth.guard';
+import { TokenInterceptor } from './auth/token-interceptor.interceptor';
 import { LandingPageComponent } from './components/landing-page/landing-page.component';
 
-
 const routes: Route[] = [
-  {
-    path:'',
-    component: LandingPageComponent
-  },
-  {
-    path:'movies',
-    component: HomeComponent,
-    /* canActivate: [authGuard], */
-     children: [
-      {
-          path: ':id',
-          component: MovieDetailComponent,
-         /*  canActivate: [authGuard], */
-      },
-  ]
-},
-  {
-    path:'signin',
-    component: SignInComponent
-  },
-  {
-    path:'signup',
-    component: SignUpComponent
-  },
-  {
-    path:'favorites',
-    component: FavoritesComponent,
-    canActivate: [authGuard],
-  },
-  {
-    path:'profile',
-    component: ProfileComponent,
-    canActivate: [authGuard],
-  },
-  {
-    path:'utents',
-    component: UtentsComponent,
-    canActivate: [authGuard],
-  },
-]
+    {
+        path: '',
+        component: LandingPageComponent,
+    },
+    {
+        path: 'movies',
+        component: HomeComponent,
+       /*  canActivate: [authGuard], */
+    },
+    {
+        path: 'movies/:id',
+        component: MovieDetailComponent,
+        /* canActivate: [authGuard], */
+    },
+    {
+        path: 'signin',
+        component: SignInComponent,
+    },
+    {
+        path: 'signup',
+        component: SignUpComponent,
+    },
+    {
+        path: 'favorites',
+        component: FavoritesComponent,
+       /*  canActivate: [authGuard], */
+    },
+    {
+        path: 'profile',
+        component: ProfileComponent,
+        /* canActivate: [authGuard], */
+    },
+    {
+        path: 'utents',
+        component: UtentsComponent,
+      /*   canActivate: [authGuard], */
+    },
+];
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    SignInComponent,
-    SignUpComponent,
-    HomeComponent,
-    MovieDetailComponent,
-    UtentsComponent,
-    ProfileComponent,
-    FavoritesComponent,
-    NavbarComponent,
-    LandingPageComponent
-  ],
-  imports: [
-    BrowserModule,
-    HttpClientModule,
-    RouterModule.forRoot(routes),
-    FormsModule,
-    ReactiveFormsModule,
-    NgbModule,
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
+    declarations: [
+        AppComponent,
+        SignInComponent,
+        SignUpComponent,
+        HomeComponent,
+        MovieDetailComponent,
+        UtentsComponent,
+        ProfileComponent,
+        FavoritesComponent,
+        NavbarComponent,
+        LandingPageComponent,
+    ],
+    imports: [
+        BrowserModule,
+        HttpClientModule,
+        RouterModule.forRoot(routes),
+        FormsModule,
+        ReactiveFormsModule,
+        NgbModule,
+    ],
+    providers: [
+        {
+            provide: HTTP_INTERCEPTORS,
+            useClass: TokenInterceptor,
+            multi: true,
+        },
+    ],
+    bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

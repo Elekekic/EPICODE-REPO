@@ -9,6 +9,7 @@ import { environment } from 'src/environments/environment.development';
 export class MoviesService {
 
  APIURL = environment.apiURL; 
+ favoriteMovies!: []
 
   constructor(private http: HttpClient) { }
 
@@ -26,5 +27,9 @@ export class MoviesService {
 
   IdMoviesTopRated(id: number) {
     return this.http.get<Movies> (`${this.APIURL}movies-toprated/${id}`)
+  }
+
+  Favmovies(id:number) {
+
   }
 }

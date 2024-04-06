@@ -4,5 +4,6 @@ export interface Auth {
         name: string,
         id: string,
         email: string
+        favorites: []; 
     }
 }
