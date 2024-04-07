@@ -1,15 +1,15 @@
 {
   "users": [
     {
-      "email": "sara@viola.com",
+      "email": "rosa@giordano.com",
       "password": "$2a$10$tY72M1WSxxdXFZh/Cv1BxelH543xMjI31p5Mucvlm7Nj9CQZDAxFC",
-      "name": "Sara Viola",
-      "id": 4
+      "name": "Rosa Giordano",
+      "id": 5
     },
     {
-      "email": "antonio@copetti.com",
+      "email": "felice@cesarano.com",
       "password": "$2a$10$.ZF0FKMNr2REzH0bWJsPcetByTrO7.KDlVHcRlhBERN2b3yJbXeQC",
-      "name": "Antonio Copetti",
+      "name": "Felice Cesarano",
       "id": 6
     },
     {
@@ -17,6 +17,18 @@
       "password": "$2a$10$UWL.bLMUFqZUtBe7e0gnIOew1A0D3gfR3O1HhqykxGvZeC16CVfgW",
       "name": "Elena Kekic",
       "id": 7
+    },
+    {
+      "email": "fabio@scaramozzino.com",
+      "password": "$2a$10$oiUyxzjy3SypXUwWIEA9DOeeByx3YngH8in4C6pRwPZckA2ADnoDa",
+      "name": "Fabio Scaramozzino",
+      "id": 8
+    },
+    {
+      "email": "ferdi@dinocera.com",
+      "password": "$2a$10$oiUyxzjy3SypXUwWIEA9DOeeByx3YngH8in4C6pRwPZckA2ADnoDa",
+      "name": "Ferdinano di Nocera",
+      "id": 9
     }
   ],
   "favorites": [

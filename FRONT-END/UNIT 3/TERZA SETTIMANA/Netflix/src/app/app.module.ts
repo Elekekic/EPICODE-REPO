@@ -28,12 +28,12 @@ const routes: Route[] = [
     {
         path: 'movies',
         component: HomeComponent,
-       /*  canActivate: [authGuard], */
+        canActivate: [authGuard],
     },
     {
         path: 'movies/:id',
         component: MovieDetailComponent,
-        /* canActivate: [authGuard], */
+        canActivate: [authGuard],
     },
     {
         path: 'signin',
@@ -46,17 +46,17 @@ const routes: Route[] = [
     {
         path: 'favorites',
         component: FavoritesComponent,
-       /*  canActivate: [authGuard], */
+        canActivate: [authGuard],
     },
     {
         path: 'profile',
         component: ProfileComponent,
-        /* canActivate: [authGuard], */
+        canActivate: [authGuard],
     },
     {
         path: 'utents',
         component: UtentsComponent,
-      /*   canActivate: [authGuard], */
+        canActivate: [authGuard],
     },
 ];
 
