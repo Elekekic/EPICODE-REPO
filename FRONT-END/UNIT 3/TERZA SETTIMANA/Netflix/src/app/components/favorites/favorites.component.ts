@@ -32,14 +32,13 @@ export class FavoritesComponent implements OnInit {
 
   
   deleteFavorite(movieId: number) {
-    this.favoritesService.deleteFavorite(movieId).subscribe(
+    this.favoritesService.deleteFavorites(movieId).subscribe(
       () => {
         this.allFavs = this.allFavs.filter(fav => fav.movieId !== movieId);
         console.log('Favorite deleted successfully');
       },
       (error) => {
         console.error('Error deleting favorite:', error);
-        // Handle error gracefully, e.g., show a message to the user
       }
     );
   }
