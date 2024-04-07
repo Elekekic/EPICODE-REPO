@@ -23,7 +23,7 @@ export class FavoritesService {
         });
     }
 
-    deleteFavorites(movieId: number) {
-      return this.http.delete(`${this.APIURL}favorites/${movieId}`);
+    deleteFavorites(Id: number) {
+      return this.http.delete(`${this.APIURL}favorites/${Id}`);
     }
 }

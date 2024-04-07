@@ -6,7 +6,7 @@
             <img [src]="fav.movie_backdrop_path"  alt="{{fav.movie_original_title}} Poster" >
             <h1 class="fs-2 fw-lighter text-white"> {{ fav.movie_original_title}} </h1>
             <p class="text-white " > {{ fav.movie_overview}} </p>
-            <a class="btn btn-outline-danger" (click)="deleteFavorite(fav.movieId)">Remove </a>
+            <a class="btn btn-outline-danger" (click)="deleteFavorite(fav.id)">Remove </a>
         </div>
     </div>
 </div>

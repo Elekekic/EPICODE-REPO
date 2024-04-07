@@ -46,10 +46,11 @@ export class HomeComponent implements OnInit {
                 userId: currentUser.user.id,
                 movieId: movie.id,
                 movie_overview: movie.overview,
-                movie_poster_path: movie.poster_path, 
+                movie_poster_path: movie.poster_path,
                 movie_vote_average: movie.vote_average,
                 movie_backdrop_path: movie.backdrop_path,
-                movie_original_title: movie.original_title
+                movie_original_title: movie.original_title,
+                id: movie.id
             };
             this.favoritesService.addFavorites(favorite).subscribe(
                 (response) => {

@@ -1,4 +1,5 @@
 export interface Favorites {
+    id: number; 
     userId: number, 
     movieId: number,
     movie_backdrop_path: string, 
