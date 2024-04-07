@@ -7,28 +7,108 @@
       "id": 4
     },
     {
-      "email": "elena@kekic.com",
-      "password": "$2a$10$yoMCAtrzG9O9m6BvzNLcb.pAn4OASMQmnJK5xrs1o3B19Zn0U/58G",
-      "name": "elena kekic",
-      "id": 5
-    },
-    {
       "email": "antonio@copetti.com",
       "password": "$2a$10$.ZF0FKMNr2REzH0bWJsPcetByTrO7.KDlVHcRlhBERN2b3yJbXeQC",
-      "name": "antonio copetti",
+      "name": "Antonio Copetti",
       "id": 6
     },
     {
-      "email": "fabio@scara.com",
-      "password": "$2a$10$z3SVYPYEmIslsUzcDh3bCuPSkeYoQuoq0.lqB5EjlYtV5xrXhgCxW",
-      "name": "fabio scara",
+      "email": "elena@kekic.com",
+      "password": "$2a$10$UWL.bLMUFqZUtBe7e0gnIOew1A0D3gfR3O1HhqykxGvZeC16CVfgW",
+      "name": "Elena Kekic",
       "id": 7
     }
   ],
   "favorites": [
     {
       "userId": 4,
-      "movieId": 615457
+      "movieId": 578701,
+      "movie_overview": "Un ragazzino, dopo essere stato testimone di un omicidio, si ritrova inseguito da due gemelli assassini nella natura selvaggia del Montana. Con lui c'è un'esperta di sopravvivenza, incaricata di proteggerlo. Un incendio nei boschi minaccerà però la vita di tutti quanti.",
+      "movie_poster_path": "https://image.tmdb.org/t/p/w500//qDGaNdeIwgHHXKYypo19oupxnrK.jpg",
+      "movie_vote_average": 7.1,
+      "movie_backdrop_path": "/iDdpiUnCeXvBmrkBFpL6lKsZt33.jpg",
+      "movie_original_title": "Those Who Wish Me Dead",
+      "id": 6
+    },
+    {
+      "userId": 4,
+      "movieId": 399566,
+      "movie_overview": "In un momento in cui i mostri camminano sulla Terra, la lotta dell'umanità per il suo futuro fa scatenare Godzilla e Kong su una rotta di collisione che vedrà le due forze più potenti della natura sul pianeta scontrarsi in una spettacolare battaglia per secoli. Mentre Monarch intraprende una pericolosa missione in un terreno inesplorato e scopre indizi sulle origini dei Titani, una cospirazione umana minaccia di spazzare via per sempre le creature, sia buone che cattive, dalla faccia della terra.",
+      "movie_poster_path": "https://image.tmdb.org/t/p/w500//6Xq0gAxrm8KMAKWP4KYYhPWoQXM.jpg",
+      "movie_vote_average": 8.1,
+      "movie_backdrop_path": "/inJjDhCjfhh3RtrJWBmmDqeuSYC.jpg",
+      "movie_original_title": "Godzilla vs. Kong",
+      "id": 7
+    },
+    {
+      "userId": 4,
+      "movieId": 635302,
+      "movie_overview": "Enmu, recentemente liberato dalle celle Muzan, si propone di attaccare un misterioso treno in movimento. Nel corso dell'attacco, il demone consuma molti passeggeri. Tanjiro Kamado viene in soccorso, ma questo treno in movimento trasporta più di un cattivo demone da combattere.",
+      "movie_poster_path": "https://image.tmdb.org/t/p/w500//m9cn5mhW519QKr1YGpGxNWi98VJ.jpg",
+      "movie_vote_average": 8.4,
+      "movie_backdrop_path": "/xPpXYnCWfjkt3zzE0dpCNME1pXF.jpg",
+      "movie_original_title": "劇場版「鬼滅の刃」無限列車編",
+      "id": 8
+    },
+    {
+      "userId": 6,
+      "movieId": 632357,
+      "movie_overview": "Alice è una giovane ragazza con problemi di udito. Questa, dopo una presunta visita della Vergine Maria, è inspiegabilmente in grado di ascoltare, parlare e curare i malati. Mentre la voce si diffonde e le persone vicine e lontane accorrono per assistere ai suoi miracoli, un giornalista caduto in disgrazia che spera di rilanciare la sua carriera visita la piccola città del New England per indagare. Quando eventi terrificanti iniziano ad accadere attorno alla giovane miracolata, il giornalista inizia a chiedersi se questi fenomeni siano opera della Vergine Maria o qualcosa di molto più sinistro.",
+      "movie_poster_path": "https://image.tmdb.org/t/p/w500//dxBTcvdH9d6apXZGnThPIVEJ376.jpg",
+      "movie_vote_average": 7.3,
+      "movie_backdrop_path": "/blk6UPEoaKwlFIEuHWhVEuTQULC.jpg",
+      "movie_original_title": "The Unholy",
+      "id": 9
+    },
+    {
+      "userId": 6,
+      "movieId": 635302,
+      "movie_overview": "Enmu, recentemente liberato dalle celle Muzan, si propone di attaccare un misterioso treno in movimento. Nel corso dell'attacco, il demone consuma molti passeggeri. Tanjiro Kamado viene in soccorso, ma questo treno in movimento trasporta più di un cattivo demone da combattere.",
+      "movie_poster_path": "https://image.tmdb.org/t/p/w500//m9cn5mhW519QKr1YGpGxNWi98VJ.jpg",
+      "movie_vote_average": 8.4,
+      "movie_backdrop_path": "/xPpXYnCWfjkt3zzE0dpCNME1pXF.jpg",
+      "movie_original_title": "劇場版「鬼滅の刃」無限列車編",
+      "id": 10
+    },
+    {
+      "userId": 6,
+      "movieId": 808023,
+      "movie_overview": "",
+      "movie_poster_path": "https://image.tmdb.org/t/p/w500//vXHzO26mJaOt4VO7ZFiM6No5ScT.jpg",
+      "movie_vote_average": 6.2,
+      "movie_backdrop_path": "/3Ef8PWUiP1ehO1ESEroxb736srR.jpg",
+      "movie_original_title": "The Virtuoso",
+      "id": 11
+    },
+    {
+      "userId": 7,
+      "movieId": 399566,
+      "movie_overview": "In un momento in cui i mostri camminano sulla Terra, la lotta dell'umanità per il suo futuro fa scatenare Godzilla e Kong su una rotta di collisione che vedrà le due forze più potenti della natura sul pianeta scontrarsi in una spettacolare battaglia per secoli. Mentre Monarch intraprende una pericolosa missione in un terreno inesplorato e scopre indizi sulle origini dei Titani, una cospirazione umana minaccia di spazzare via per sempre le creature, sia buone che cattive, dalla faccia della terra.",
+      "movie_poster_path": "https://image.tmdb.org/t/p/w500//6Xq0gAxrm8KMAKWP4KYYhPWoQXM.jpg",
+      "movie_vote_average": 8.1,
+      "movie_backdrop_path": "/inJjDhCjfhh3RtrJWBmmDqeuSYC.jpg",
+      "movie_original_title": "Godzilla vs. Kong",
+      "id": 12
+    },
+    {
+      "userId": 7,
+      "movieId": 717192,
+      "movie_overview": "Prima dell'impero criminale e dell'operazione di polizia, com'è iniziato tutto per Ferry Bouman, il narcoboss di \"Undercover\"? Con Frank Lammers ed Elise Schaap.",
+      "movie_poster_path": "https://image.tmdb.org/t/p/w500//w6n1pu9thpCVHILejsuhKf3tNCV.jpg",
+      "movie_vote_average": 7.3,
+      "movie_backdrop_path": "/fejok33Ijc6SppiEU1cfwA9Mo2.jpg",
+      "movie_original_title": "Ferry",
+      "id": 13
+    },
+    {
+      "userId": 7,
+      "movieId": 823855,
+      "movie_overview": "Un detective della Polizia forma uno strano legame con un serial killer per fermare un gruppo di criminali che operano a livello globale e che trattano la compravendita di minorenni.",
+      "movie_poster_path": "https://image.tmdb.org/t/p/w500//m6bUeV4mczG3z2YXXr5XDKPsQzv.jpg",
+      "movie_vote_average": 7.1,
+      "movie_backdrop_path": "/gPKcJzrbgs1670fOeKN1xQH9mNa.jpg",
+      "movie_original_title": "I Am All Girls",
+      "id": 14
     }
   ],
   "genres": [

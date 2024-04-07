@@ -1,4 +1,4 @@
-<h1> Movies </h1>
+<h1 class="text-center display-5 text-white mb-5 mt-3"> Welcome, choose your movie </h1>
 
 <div class="container">
     <div class="row-cols-4 d-flex flex-wrap">
@@ -8,7 +8,7 @@
                     <h1> {{movie.original_title}}</h1>
                     <p> Original language: {{movie.original_language}}</p>
                     <a class=" btn btn-outline-info" [routerLink]="['/movies', movie.id]" routerLinkActive="active"> More </a>
-                    <a class=" btn btn-outline-warning"> <i class="bi bi-heart-fill"></i> </a>
+                    <a class=" btn btn-outline-warning"  (click)="addToFavorites(movie)"> <i class="bi bi-heart-fill"></i> </a>
                 </div>
             </div>
     </div>

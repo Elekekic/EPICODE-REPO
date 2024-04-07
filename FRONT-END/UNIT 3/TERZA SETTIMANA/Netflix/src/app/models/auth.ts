@@ -2,8 +2,7 @@ export interface Auth {
     accessToken: string,
     user: {
         name: string,
-        id: string,
+        id: number,
         email: string
-        favorites: []; 
     }
 }
