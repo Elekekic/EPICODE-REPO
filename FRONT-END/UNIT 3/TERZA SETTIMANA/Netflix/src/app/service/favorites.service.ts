@@ -24,6 +24,6 @@ export class FavoritesService {
     }
 
     deleteFavorites(movieId: number) {
-      return this.http.delete(`${this.APIURL}favorites`);
+      return this.http.delete(`${this.APIURL}favorites/${movieId}`);
     }
 }
