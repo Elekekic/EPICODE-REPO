@@ -1,27 +1,38 @@
-# Netflix
+<div  align="center" >
+ <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/07/Angular_Logo_SVG.svg/2560px-Angular_Logo_SVG.svg.png" width="400" height="100" /> 
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.12.
+  This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.12. 
+</div>
+
 
 ## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
 
-## Code scaffolding
+- Esegui in terminale : `npm i json-server@0.17.4`,`npm i json-server-auth`, `npm i @auth0/angular-jwt`,  `npm i concurrently`
+- Modificare la parte script del package json con questi comandi :
+```
+"scripts": {
+    "ng": "ng",
+    "start": "ng serve -o",
+    "build": "ng build",
+    "watch": "ng build --watch --configuration development",
+    "test": "ng test",
+    "backend": "json-server-auth --watch db.json --port 4201",
+    "fullstack": "concurrently \"npm run backend\" \"npm run start\""
+  },
+  ```
+- Poi: `npm run fullstack` 
+- Naviga su: `http://localhost:4200/`.
+- L'applicazione si ricaricherà automaticamente se modifichi qualsiasi cosa dai file sorgenti.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
-## Build
+### Sono stati utilizzati:
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+> ![Static Badge](https://img.shields.io/badge/HTML-%23E34F26?style=for-the-badge&logo=html5&labelColor=black)  ![Static Badge](https://img.shields.io/badge/SCSS-%23CC6699?style=for-the-badge&logo=SASS&labelColor=black)
+   ![Static Badge](https://img.shields.io/badge/Bootstrap-%237952B3?style=for-the-badge&logo=Bootstrap&labelColor=black)   ![Static Badge](https://img.shields.io/badge/TypeScript-%233178C6?style=for-the-badge&logo=typescript&labelColor=black)
 
-## Running unit tests
+<br> 
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+<h2 > Come funziona </h2>
 
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+// da finire
