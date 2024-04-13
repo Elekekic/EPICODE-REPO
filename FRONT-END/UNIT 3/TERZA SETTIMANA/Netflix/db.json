@@ -29,6 +29,12 @@
       "password": "$2a$10$oiUyxzjy3SypXUwWIEA9DOeeByx3YngH8in4C6pRwPZckA2ADnoDa",
       "name": "Ferdinano di Nocera",
       "id": 9
+    },
+    {
+      "email": "mario@rossi.com",
+      "password": "$2a$10$0X8JncRG6ySzhCnGNsp3lOduKuszQrfljAaBvh1Hf2St.w6M.JoGu",
+      "name": "mario rossi",
+      "id": 10
     }
   ],
   "favorites": [
@@ -91,16 +97,6 @@
       "movie_backdrop_path": "/gPKcJzrbgs1670fOeKN1xQH9mNa.jpg",
       "movie_original_title": "I Am All Girls",
       "id": 14
-    },
-    {
-      "userId": 4,
-      "movieId": 823855,
-      "movie_overview": "Un detective della Polizia forma uno strano legame con un serial killer per fermare un gruppo di criminali che operano a livello globale e che trattano la compravendita di minorenni.",
-      "movie_poster_path": "https://image.tmdb.org/t/p/w500//m6bUeV4mczG3z2YXXr5XDKPsQzv.jpg",
-      "movie_vote_average": 7.1,
-      "movie_backdrop_path": "/gPKcJzrbgs1670fOeKN1xQH9mNa.jpg",
-      "movie_original_title": "I Am All Girls",
-      "id": 823855
     }
   ],
   "genres": [

@@ -4,6 +4,7 @@ import { Movies } from 'src/app/models/movies';
 import { Favorites } from 'src/app/models/favorites';
 import { AuthService } from 'src/app/auth/auth.service';
 import { FavoritesService } from 'src/app/service/favorites.service';
+import { Auth } from 'src/app/models/auth';
 
 @Component({
     selector: 'app-home',
@@ -13,6 +14,8 @@ import { FavoritesService } from 'src/app/service/favorites.service';
 export class HomeComponent implements OnInit {
     allMovies!: Movies[];
     dataToAddToFavorites!: Favorites;
+    user!: Auth | null; 
+    heartIcon: boolean = false;
 
     constructor(
         private movieSrv: MoviesService,
@@ -21,6 +24,8 @@ export class HomeComponent implements OnInit {
     ) {}
 
     ngOnInit() {
+        this.authService.user$.subscribe((user) => {
+            this.user = user});
         this.movieSrv.getMoviesPopular().subscribe(
             (movies) => {
                 this.allMovies = movies;
@@ -62,4 +67,5 @@ export class HomeComponent implements OnInit {
             );
         }
     }
+      
 }

@@ -1,15 +1,20 @@
-<h1 class="text-center display-5 text-white mb-5 mt-3"> Welcome, choose your movie </h1>
+<h1 *ngIf='user' class="text-center display-5 text-white mb-5 mt-3"> Welcome <span
+        class="text-danger fw-semibold">{{user.user.name}}</span>, choose your film </h1>
 
 <div class="container">
     <div class="row-cols-4 d-flex flex-wrap">
-            <div *ngFor="let movie of allMovies">
-                <div class="text-center mb-5 p-3">
-                    <img [src]="movie.poster_path" alt="{{movie.original_title}} Poster" width="200">
-                    <h1 class="fs-2 fw-lighter text-white"> {{movie.original_title}}</h1>
-                    <p> Original language: {{movie.original_language}}</p>
-                    <a class=" btn btn-outline-info me-3" [routerLink]="['/movies', movie.id]" routerLinkActive="active"> More </a>
-                    <a class=" btn btn-outline-warning"  (click)="addToFavorites(movie)"> <i class="bi bi-heart-fill"></i> </a>
-                </div>
+        <div *ngFor="let movie of allMovies">
+            <div class="text-center mb-5 p-3">
+                <img [src]="movie.poster_path" alt="{{movie.original_title}} Poster" width="200">
+                <h1 class="fs-2 fw-lighter text-white"> {{movie.original_title}}</h1>
+                <p> Original language: {{movie.original_language}}</p>
+                <a class="btn btn-outline-info me-3" [routerLink]="['/movies', movie.id]" routerLinkActive="active">
+                    More
+                </a>
+                <a class="btn btn-outline-warning" (click)="addToFavorites(movie); heartIcon = !heartIcon">
+                    <i class="bi bi-heart-fill" ></i>
+                </a>
             </div>
+        </div>
     </div>
 </div>

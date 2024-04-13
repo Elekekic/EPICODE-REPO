@@ -1,4 +1,8 @@
-
-<p *ngIf="loggedUser"> hello {{loggedUser.user.name}}</p>
-<p *ngIf="loggedUser"> your id: {{loggedUser.user.id}}</p>
-<p *ngIf="loggedUser"> your email: {{loggedUser.user.email}}</p>
+<div class="d-flex align-items-center flex-column">
+    <p *ngIf="loggedUser" class="display-4 text-white"> Hello <span
+            class="text-danger fw-semibold">{{loggedUser.user.name}}</span>, </p>
+    <div class="justify-content-end w-50 text-white mt-4">
+        <p *ngIf="loggedUser" class="fs-4" > This is your <span class="fw-bold text-info">id: </span>  {{loggedUser.user.id}}</p>
+        <p *ngIf="loggedUser" class="fs-4"> your <span class="fw-bold text-info">email: </span> {{loggedUser.user.email}}</p>
+    </div>
+</div>

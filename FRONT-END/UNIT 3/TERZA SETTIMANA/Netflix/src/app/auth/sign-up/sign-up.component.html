@@ -1,19 +1,13 @@
-<h1 class="text-white"> sign up </h1>
-
-<form #signUpForm="ngForm" (ngSubmit)="submit(signUpForm)">
-  <div class="mb-3">
-    <label for="name" class="form-label text-white">Full name</label>
-    <input type="text" class="form-control" id="name" name="name" ngModel required>
+<div class="d-flex justify-content-center">
+  <div class="form-container mt-5">
+    <p class="title display-4" >Create your account </p>
+    <form class="form" #signUpForm="ngForm" (ngSubmit)="submit(signUpForm)">
+      <input type="text" class="input form-control" id="name" name="name" ngModel required placeholder="full name">
+      <input type="email" class="input form-control" id="email" name="email" ngModel required placeholder="email">
+      <div id="emailHelp" class="form-text mt-0 text-white ms-2">We'll never share your email with anyone else.</div>
+      <input type="password" class=" input form-control" id="password" name="password" ngModel required
+        placeholder="password">
+      <button type="submit" class="form-btn">Sign up</button>
+    </form>
   </div>
-  <div class="mb-3">
-    <label for="email" class="form-label text-white">Email address</label>
-    <input type="email" class="form-control" id="email" name="email" ngModel required>
-    <div id="emailHelp" class="form-text text-white">We'll never share your email with anyone else.</div>
-  </div>
-  <div class="mb-3">
-    <label for="password" class="form-label text-white">Password</label>
-    <input type="password" class="form-control" id="password" name="password" ngModel required>
-  </div>
- <!--  TODO: put the confirm password -->
-  <button type="submit" class="btn btn-primary">Submit</button>
-</form>
+</div>
