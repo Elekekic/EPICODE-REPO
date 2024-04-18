@@ -1,4 +1,4 @@
-package esercizio1;
+package esercizi;
 
 public abstract class Dipendente {
 
