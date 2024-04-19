@@ -19,9 +19,7 @@ public class RegistrazioneAudio extends ElementoMultimediale {
     public void play() {
         System.out.println("Riproduzione Registrazione Audio: ");
         for (int i = 0; i < durata; i++) {
-            StringBuilder line = new StringBuilder(">");
-            line.append("!".repeat(Math.max(0, volume)));
-            System.out.println(line);
+            System.out.println(">" + " !".repeat(Math.max(0, volume)));
         }
     }
 }

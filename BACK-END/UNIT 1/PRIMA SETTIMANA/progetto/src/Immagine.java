@@ -8,7 +8,7 @@ public class Immagine extends ElementoMultimediale implements Luminosita {
 
     @Override
     public void play() {
-
+        System.out.println("Non puoi ascoltare un'immagine");
     }
 
     @Override
@@ -23,6 +23,9 @@ public class Immagine extends ElementoMultimediale implements Luminosita {
 
     @Override
     public void show() {
-        System.out.println(titolo + "*".repeat(Math.max(0, luminosita)));
+        System.out.println("Visualizzazione Immagine: ");
+        for (int i = 0; i < luminosita; i++) {
+            System.out.println(">>" + " *".repeat(Math.max(0, luminosita)));
+        }
     }
 }
