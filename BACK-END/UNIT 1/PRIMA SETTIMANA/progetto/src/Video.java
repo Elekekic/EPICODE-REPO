@@ -1,5 +1,5 @@
 public class Video extends ElementoMultimediale implements Luminosita {
-    private final int volume;
+    private int volume;
     private int luminosita;
 
     public Video(String titolo, int durata, int volume, int luminosita) {
@@ -17,6 +17,14 @@ public class Video extends ElementoMultimediale implements Luminosita {
                     " *".repeat(Math.max(0, luminosita));
             System.out.println(line);
         }
+    }
+
+    public void abbassaVolume() {
+        volume--;
+    }
+
+    public void alzaVolume() {
+        volume++;
     }
 
     @Override

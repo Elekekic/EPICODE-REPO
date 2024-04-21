@@ -113,9 +113,8 @@ public class Main {
             Video video = (Video) media;
             video.play();
 
-            boolean volumeModificato = false;
-
-            while (!volumeModificato) {
+            boolean luminositaModificato = false;
+            while (!luminositaModificato) {
                 System.out.print("Vuoi alzare (a) o abbassare (b) la luminosità? (a/b): ");
                 String scelta = scanner.nextLine();
 
@@ -123,10 +122,31 @@ public class Main {
                     video.aumentaLuminosita();
                     System.out.println("Luminosità alzata");
                     System.out.println("-----------------");
-                    volumeModificato = true;
+                    luminositaModificato = true;
                 } else if (scelta.equalsIgnoreCase("b")) {
                     video.diminuisciLuminosita();
                     System.out.println("Luminosità abbassata");
+                    System.out.println("-----------------");
+                    luminositaModificato = true;
+                } else {
+                    System.out.println("Scelta non valida. Riprova.");
+                    System.out.println("-----------------");
+                }
+            }
+
+            boolean volumeModificato = false;
+            while (!volumeModificato) {
+                System.out.print("Vuoi alzare (a) o abbassare (b) il volume? (a/b): ");
+                String scelta = scanner.nextLine();
+
+                if (scelta.equalsIgnoreCase("a")) {
+                    video.alzaVolume();
+                    System.out.println("volume alzato");
+                    System.out.println("-----------------");
+                    volumeModificato = true;
+                } else if (scelta.equalsIgnoreCase("b")) {
+                    video.abbassaVolume();
+                    System.out.println("volume abbassato");
                     System.out.println("-----------------");
                     volumeModificato = true;
                 } else {
