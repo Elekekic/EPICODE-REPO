@@ -12,6 +12,7 @@ public class Banca {
             System.out.println("Errore durante il prelievo: " + e.getMessage());
         }
 
+        System.out.println("-------------------- ");
         ContoOnLine conto2 = new ContoOnLine("Rossi Luigi", 50350.0, 1500);
 
         conto2.stampaSaldo();
