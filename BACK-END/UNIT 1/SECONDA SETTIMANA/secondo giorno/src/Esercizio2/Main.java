@@ -25,4 +25,8 @@ public class Main {
         }
         return random;
     }
+
+    public static List<Integer> secondaFunzione(List<Integer>) {
+
+    }
 }
