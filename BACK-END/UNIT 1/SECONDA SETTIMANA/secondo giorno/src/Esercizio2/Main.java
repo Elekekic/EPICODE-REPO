@@ -1,5 +1,6 @@
 package Esercizio2;
 
+import java.security.KeyStore;
 import java.util.*;
 
 public class Main {
@@ -12,7 +13,7 @@ public class Main {
         System.out.println("Inserisci un numero");
         int n = scanner.nextInt();
         scanner.nextLine();
-        System.out.println("True o False?");
+        System.out.println("true o false?");
         boolean b = scanner.nextBoolean();
 
         System.out.println("----------------------");
@@ -48,7 +49,6 @@ public class Main {
         secondaLista.addAll(listaReversed);
 
         return secondaLista;
-
     }
 
     public static void terzaFunzione(boolean b, List<Integer> lista) {
