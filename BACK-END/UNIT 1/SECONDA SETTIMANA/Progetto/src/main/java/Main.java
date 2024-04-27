@@ -88,10 +88,7 @@ public class Main {
             e.printStackTrace();
         }
 
-
-
     }
-
 
     private static Libri addBook() {
         Scanner scanner2 = new Scanner(System.in);
@@ -152,17 +149,17 @@ public class Main {
         return new Riviste(isbn, title, year, pages, author, genre, periodicita);
     }
 
-    private static void removeByISBN(int ISBN, Map<Integer, Object> oggettiMap) {
-        if (oggettiMap.containsKey(ISBN)) {
-            oggettiMap.remove(ISBN);
+    private static void removeByISBN(int ISBN, Map<Integer, Object> archivio) {
+        if (archivio.containsKey(ISBN)) {
+            archivio.remove(ISBN);
             System.out.println("Item with ISBN " + ISBN + " removed.");
         } else {
             System.out.println("Item with ISBN " + ISBN + " not found.");
         }
     }
 
-    private static void searchByISBN(int ISBN, Map<Integer, Object> oggettiMap) {
-        Object item = oggettiMap.get(ISBN);
+    private static void searchByISBN(int ISBN, Map<Integer, Object> archivio) {
+        Object item = archivio.get(ISBN);
         if (item != null) {
             System.out.println("Item found: " + item);
         } else {
@@ -170,8 +167,8 @@ public class Main {
         }
     }
 
-    private static void searchByAnnoPubblicazione(int anno, Map<Integer, Object> oggettiMap) {
-        oggettiMap.values().stream()
+    private static void searchByAnnoPubblicazione(int anno, Map<Integer, Object> archivio) {
+        archivio.values().stream()
                 .filter(obj -> {
                     if (obj instanceof Libri) {
                         return ((Libri) obj).getAnnoPubblicazione() == anno;
@@ -183,8 +180,8 @@ public class Main {
                 .forEach(System.out::println);
     }
 
-    private static void searchByAutore(String autore, Map<Integer, Object> oggettiMap) {
-        oggettiMap.values().stream()
+    private static void searchByAutore(String autore, Map<Integer, Object> archivio) {
+        archivio.values().stream()
                 .filter(obj -> {
                     if (obj instanceof Libri) {
                         return ((Libri) obj).getAutore().equals(autore);
