@@ -79,9 +79,9 @@ public class Main {
         String autore = scanner.nextLine();
         searchByAutore(autore, oggetti);
 
-
-        String oggettiInString =oggetti.stream().
-                map(obj -> obj.toString()).collect(Collectors.joining("#"));
+        String oggettiInString = oggetti.stream()
+                .map(Object::toString)
+                .collect(Collectors.joining("#"));
 
         System.out.println(oggettiInString);
 
@@ -89,20 +89,20 @@ public class Main {
 
         try {
             FileUtils.writeStringToFile(file, oggettiInString, Charset.defaultCharset());
-        }
-        catch (IOException e){
-            System.out.println(e.getMessage());
+        } catch (IOException e) {
+            e.printStackTrace();
         }
 
         try {
             String str = FileUtils.readFileToString(file, Charset.defaultCharset());
 
-            String[] oggettiInStr =  str.split("#");
+            String[] oggettiInStr = str.split("#");
 
-            Arrays.stream(oggettiInStr).forEach(s -> System.out.println(s));
+            Arrays.stream(oggettiInStr).forEach(System.out::println);
         } catch (IOException e) {
-            System.out.println(e.getMessage());;
+            e.printStackTrace();
         }
+
 
 
     }
