@@ -29,55 +29,55 @@ public class Main {
         oggetti.add(new Riviste(112038281, "Sports Illustrated", 2023, 60, "Sports Illustrated", "Sports", Periodicita.SEMESTRALE));
 
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Current items in the catalogue:");
-        for (Object obj : oggetti) {
-            System.out.println(obj);
-        }
-        System.out.println("--------------");
-        // AGGIUNTA BOOK
-        System.out.println("Welcome to your catalogue!");
-        System.out.println("Add a book!");
-        Libri book = addBook();
-        oggetti.add(book);
-
-        System.out.println();
-        // AGGUNTA MAGAZINE
-        System.out.println("Now, add a magazine!");
-        Riviste magazine = addMagazine();
-        oggetti.add(magazine);
-
-        System.out.println("--------------");
-        System.out.println("Added items in the catalogue:");
-        for (Object obj : oggetti) {
-            System.out.println(obj);
-        }
-        System.out.println("--------------");
-
-        // RIMOZIONE ITEM TRAMITE ISBN
-        System.out.println("Inserisci l'ISBN del prodotto che vuoi ELIMINARE: ");
-        int ISBN = scanner.nextInt();
-        removeByISBN(ISBN, oggetti);
-        System.out.println("--------------");
-
-
-        //RICERCA ITEMS TRAMITE ISBN
-        System.out.println("Inserisci l'ISBN del prodotto che vuoi TROVARE: ");
-        int ISBN2 = scanner.nextInt();
-        searchByISBN(ISBN2, oggetti);
-
-        System.out.println("--------------");
-
-        //RICERCA ITEMS TRAMITE ANNO DI PUBBLICAZIONE
-        System.out.println("Inserisci l'anno di pubblicazione dei prodotti che vuoi trovare: ");
-        int annoPubblicazione = scanner.nextInt();
-        searchByAnnoPubblicazione(annoPubblicazione, oggetti);
-
-        System.out.println("--------------");
-
-        //RICERCA ITEMS TRAMITE AUTORE
-        System.out.println("Inserisci l'anno di pubblicazione dei prodotti che vuoi trovare: ");
-        String autore = scanner.nextLine();
-        searchByAutore(autore, oggetti);
+//        System.out.println("Current items in the catalogue:");
+//        for (Object obj : oggetti) {
+//            System.out.println(obj);
+//        }
+//        System.out.println("--------------");
+//        // AGGIUNTA BOOK
+//        System.out.println("Welcome to your catalogue!");
+//        System.out.println("Add a book!");
+//        Libri book = addBook();
+//        oggetti.add(book);
+//
+//        System.out.println();
+//        // AGGUNTA MAGAZINE
+//        System.out.println("Now, add a magazine!");
+//        Riviste magazine = addMagazine();
+//        oggetti.add(magazine);
+//
+//        System.out.println("--------------");
+//        System.out.println("Added items in the catalogue:");
+//        for (Object obj : oggetti) {
+//            System.out.println(obj);
+//        }
+//        System.out.println("--------------");
+//
+//        // RIMOZIONE ITEM TRAMITE ISBN
+//        System.out.println("Inserisci l'ISBN del prodotto che vuoi ELIMINARE: ");
+//        int ISBN = scanner.nextInt();
+//        removeByISBN(ISBN, oggetti);
+//        System.out.println("--------------");
+//
+//
+//        //RICERCA ITEMS TRAMITE ISBN
+//        System.out.println("Inserisci l'ISBN del prodotto che vuoi TROVARE: ");
+//        int ISBN2 = scanner.nextInt();
+//        searchByISBN(ISBN2, oggetti);
+//
+//        System.out.println("--------------");
+//
+//        //RICERCA ITEMS TRAMITE ANNO DI PUBBLICAZIONE
+//        System.out.println("Inserisci l'anno di pubblicazione dei prodotti che vuoi trovare: ");
+//        int annoPubblicazione = scanner.nextInt();
+//        searchByAnnoPubblicazione(annoPubblicazione, oggetti);
+//
+//        System.out.println("--------------");
+//
+//        //RICERCA ITEMS TRAMITE AUTORE
+//        System.out.println("Inserisci l'anno di pubblicazione dei prodotti che vuoi trovare: ");
+//        String autore = scanner.nextLine();
+//        searchByAutore(autore, oggetti);
 
         String oggettiInString = oggetti.stream()
                 .map(Object::toString)
@@ -85,7 +85,7 @@ public class Main {
 
         System.out.println(oggettiInString);
 
-        File file = new File("./../folder/progetto.txt");
+        File file = new File("./../ProgettoTXT/progetto.txt");
 
         try {
             FileUtils.writeStringToFile(file, oggettiInString, Charset.defaultCharset());
