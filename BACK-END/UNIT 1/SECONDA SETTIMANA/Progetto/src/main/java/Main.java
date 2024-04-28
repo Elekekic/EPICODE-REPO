@@ -37,33 +37,45 @@ public class Main {
         System.out.println("Add a book!");
         Libri book = addBook();
         archivio.put(book.getCodiceISBN(), book);
+        System.out.println("--------------");
+        System.out.println(" UPDATED catalogue:");
+        archivio.forEach((isbn, item) -> System.out.println("ISBN: " + isbn + ", Item: " + item));
+        System.out.println("-------------------------");
 
         // AGGUNTA MAGAZINE
         System.out.println("Now, add a magazine!");
         Riviste magazine = addMagazine();
         archivio.put(magazine.getCodiceISBN(), magazine);
+        System.out.println("--------------");
+        System.out.println(" UPDATED catalogue:");
+        archivio.forEach((isbn, item) -> System.out.println("ISBN: " + isbn + ", Item: " + item));
+        System.out.println("-------------------------");
 
         // RIMOZIONE ITEM TRAMITE ISBN
         System.out.println("Enter the ISBN of the item you want to REMOVE: ");
         int ISBN = scanner.nextInt();
         removeByISBN(ISBN, archivio);
+        System.out.println("-------------------------");
 
         // RICERCA ITEMS TRAMITE ISBN
         System.out.println("Enter the ISBN of the item you want to FIND: ");
         int ISBN2 = scanner.nextInt();
         searchByISBN(ISBN2, archivio);
+        System.out.println("-------------------------");
 
         // RICERCA ITEMS TRAMITE ANNO DI PUBBLICAZIONE
-        System.out.println("Enter the year of publication of the items you want to find: ");
+        System.out.println("Enter the YEAR OF PUBBLICATON of the items you want to FIND: ");
         int annoPubblicazione = scanner.nextInt();
         searchByAnnoPubblicazione(annoPubblicazione, archivio);
+        scanner.nextLine();
+        System.out.println("-------------------------");
 
         // RICERCA ITEMS TRAMITE AUTORE
-        scanner.nextLine(); // Consuma il carattere newline rimanente
-        System.out.println("Enter the author of the items you want to find: ");
+        System.out.println("Enter the AUTHOR of the items you want to FIND (Full name): ");
         String autore = scanner.nextLine();
         searchByAutore(autore, archivio);
 
+        System.out.println("-------------------------");
         String oggettiInString = archivio.values().stream()
                 .map(Object::toString)
                 .collect(Collectors.joining("#"));
@@ -82,71 +94,117 @@ public class Main {
             String str = FileUtils.readFileToString(file, Charset.defaultCharset());
 
             String[] oggettiInStr = str.split("#");
-
+            System.out.println("-------------------------");
             Arrays.stream(oggettiInStr).forEach(System.out::println);
         } catch (IOException e) {
             e.printStackTrace();
         }
 
+        scanner.close();
+
     }
 
+    // !! MAIN FINISCE, INIZIANO I METODI !!
+
     private static Libri addBook() {
-        Scanner scanner2 = new Scanner(System.in);
-        System.out.print("ISBN (max 9 numbers): ");
-        int isbn = scanner2.nextInt();
-        scanner2.nextLine();
+        Scanner scanner = new Scanner(System.in);
+        try {
+            System.out.print("ISBN (max 9 numbers): ");
+            int isbn = scanner.nextInt();
+            scanner.nextLine();
+            if (String.valueOf(isbn).length() != 9) {
+                throw new notValidISBNException("ISBN must be a 9-digit number.");
+            }
 
-        System.out.print("Title: ");
-        String title = scanner2.nextLine();
+            System.out.print("Title: ");
+            String title = scanner.nextLine();
 
-        System.out.print("Year of Publication: ");
-        int year = scanner2.nextInt();
-        scanner2.nextLine();
+            System.out.print("Year of Publication: ");
+            int year = scanner.nextInt();
+            scanner.nextLine();
+            if (String.valueOf(year).length()  != 4) {
+                throw new notValidYearException("Year must be valid.");
+            }
 
-        System.out.print("Number of Pages: ");
-        int pages = scanner2.nextInt();
-        scanner2.nextLine();
+            System.out.print("Number of Pages: ");
+            int pages = scanner.nextInt();
+            scanner.nextLine();
 
-        System.out.print("Author: ");
-        String author = scanner2.nextLine();
+            System.out.print("Author: ");
+            String author = scanner.nextLine();
 
-        System.out.print("Genre: ");
-        String genre = scanner2.nextLine();
+            System.out.print("Genre: ");
+            String genre = scanner.nextLine();
 
-        System.out.print("Periodicity (SETTIMANALE, MENSILE, SEMESTRALE): ");
-        Periodicita periodicita = Periodicita.valueOf(scanner2.nextLine().toUpperCase());
+            System.out.print("Periodicity (SETTIMANALE, MENSILE, SEMESTRALE): ");
+            Periodicita periodicita = Periodicita.valueOf(scanner.nextLine().toUpperCase().trim());
 
+            return new Libri(isbn, title, year, pages, author, genre, periodicita);
 
-        return new Libri(isbn, title, year, pages, author, genre, periodicita);
+        } catch (InputMismatchException e) {
+            System.out.println("Invalid input. Please enter valid input.");
+            scanner.nextLine();
+            //l'utente riprova a rifare il libro dopo l'errore
+            return addBook();
+        } catch (IllegalArgumentException e) {
+            System.out.println("Invalid periodicity. Please enter SETTIMANALE, MENSILE, or SEMESTRALE.");
+            // l'utente riprova a rifare il libro dopo l'errore
+            return addBook();
+        } catch (notValidISBNException | notValidYearException e) {
+            System.out.println(e.getMessage());
+            // l'utente riprova a rifare il libro dopo l'errore
+            return addBook();
+        }
     }
 
     private static Riviste addMagazine() {
-        Scanner scanner1 = new Scanner(System.in);
-        System.out.print("ISBN (max 9 numbers): ");
-        int isbn = scanner1.nextInt();
-        scanner1.nextLine();
+        Scanner scanner = new Scanner(System.in);
+        try {
+            System.out.print("ISBN (max 9 numbers): ");
+            int isbn = scanner.nextInt();
+            scanner.nextLine();
+            if (String.valueOf(isbn).length() != 9) {
+                throw new notValidISBNException("Year must be valid.");
+            }
 
-        System.out.print("Title: ");
-        String title = scanner1.nextLine();
+            System.out.print("Title: ");
+            String title = scanner.nextLine();
 
-        System.out.print("Year of Publication: ");
-        int year = scanner1.nextInt();
-        scanner1.nextLine();
+            System.out.print("Year of Publication: ");
+            int year = scanner.nextInt();
+            scanner.nextLine();
+            if (String.valueOf(year).length() != 4) {
+                throw new notValidYearException("Year must be valid.");
+            }
 
-        System.out.print("Number of Pages: ");
-        int pages = scanner1.nextInt();
-        scanner1.nextLine();
+            System.out.print("Number of Pages: ");
+            int pages = scanner.nextInt();
+            scanner.nextLine();
 
-        System.out.print("Author: ");
-        String author = scanner1.nextLine();
+            System.out.print("Author: ");
+            String author = scanner.nextLine();
 
-        System.out.print("Genre: ");
-        String genre = scanner1.nextLine();
+            System.out.print("Genre: ");
+            String genre = scanner.nextLine();
 
-        System.out.print("Periodicity (SETTIMANALE, MENSILE, SEMESTRALE): ");
-        Periodicita periodicita = Periodicita.valueOf(scanner1.nextLine().toUpperCase());
+            System.out.print("Periodicity (SETTIMANALE, MENSILE, SEMESTRALE): ");
+            Periodicita periodicita = Periodicita.valueOf(scanner.nextLine().toUpperCase().trim());
 
-        return new Riviste(isbn, title, year, pages, author, genre, periodicita);
+            return new Riviste(isbn, title, year, pages, author, genre, periodicita);
+        } catch (InputMismatchException e) {
+            System.out.println("Invalid input. Please enter valid input.");
+            scanner.nextLine(); // Clear scanner buffer
+            // Retry adding the magazine
+            return addMagazine();
+        } catch (IllegalArgumentException e) {
+            System.out.println("Invalid periodicity. Please enter SETTIMANALE, MENSILE, or SEMESTRALE.");
+            // Retry adding the magazine
+            return addMagazine();
+        } catch (notValidISBNException | notValidYearException e) {
+            System.out.println(e.getMessage());
+            // l'utente riprova a rifare il libro dopo l'errore
+            return addMagazine();
+        }
     }
 
     private static void removeByISBN(int ISBN, Map<Integer, Object> archivio) {
@@ -184,9 +242,9 @@ public class Main {
         archivio.values().stream()
                 .filter(obj -> {
                     if (obj instanceof Libri) {
-                        return ((Libri) obj).getAutore().equals(autore);
+                        return ((Libri) obj).getAutore().equalsIgnoreCase(autore); // ho messo ignore Case in modo da non guardare anche le maiuscole o minuscole di un nome/cognome
                     } else if (obj instanceof Riviste) {
-                        return ((Riviste) obj).getAutore().equals(autore);
+                        return ((Riviste) obj).getAutore().equalsIgnoreCase(autore);
                     }
                     return false;
                 })
