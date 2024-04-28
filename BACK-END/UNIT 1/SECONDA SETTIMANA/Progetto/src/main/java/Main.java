@@ -164,7 +164,7 @@ public class Main {
             int isbn = scanner.nextInt();
             scanner.nextLine();
             if (String.valueOf(isbn).length() != 9) {
-                throw new notValidISBNException("Year must be valid.");
+                throw new notValidISBNException("ISBN must be a 9-digit number.");
             }
 
             System.out.print("Title: ");
