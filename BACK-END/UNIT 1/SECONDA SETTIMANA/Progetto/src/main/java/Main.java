@@ -193,12 +193,12 @@ public class Main {
             return new Riviste(isbn, title, year, pages, author, genre, periodicita);
         } catch (InputMismatchException e) {
             System.out.println("Invalid input. Please enter valid input.");
-            scanner.nextLine(); // Clear scanner buffer
-            // Retry adding the magazine
+            scanner.nextLine();
+            // l'utente riprova a rifare il libro dopo l'errore
             return addMagazine();
         } catch (IllegalArgumentException e) {
             System.out.println("Invalid periodicity. Please enter SETTIMANALE, MENSILE, or SEMESTRALE.");
-            // Retry adding the magazine
+            // l'utente riprova a rifare il libro dopo l'errore
             return addMagazine();
         } catch (notValidISBNException | notValidYearException e) {
             System.out.println(e.getMessage());
