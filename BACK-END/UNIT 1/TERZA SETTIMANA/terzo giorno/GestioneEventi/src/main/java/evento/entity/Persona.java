@@ -23,24 +23,34 @@ public class Persona {
     @Enumerated(EnumType.STRING)
     private Sesso sesso;
 
+    @OneToMany(mappedBy = "persona")
+    private List<Partecipazione> partecipazioni;
+
     public enum Sesso {
         M,F
     }
 
-    @OneToMany(mappedBy = "persona")
-    private List<Partecipazione> listaPartecipazioni;
-
-    public Persona() {
-    }
-
-    public Persona(long id, String nome, String cognome, String email, LocalDate data_di_nascita, Sesso sesso, List<Partecipazione> listaPartecipazioni) {
+    public Persona(long id, String nome, String cognome, String email, LocalDate data_di_nascita, Sesso sesso, List<Partecipazione> partecipazioni) {
         this.id = id;
         this.nome = nome;
         this.cognome = cognome;
         this.email = email;
         this.data_di_nascita = data_di_nascita;
         this.sesso = sesso;
-        this.listaPartecipazioni = listaPartecipazioni;
+        this.partecipazioni = partecipazioni;
+    }
+    public Persona() {}
+
+    public List<Partecipazione> getPartecipazioni() {
+        return partecipazioni;
+    }
+
+    public void setPartecipazioni(List<Partecipazione> partecipazioni) {
+        this.partecipazioni = partecipazioni;
+    }
+
+    public void setId(long id) {
+        this.id = id;
     }
 
     public long getId() {
@@ -87,10 +97,6 @@ public class Persona {
         this.sesso = sesso;
     }
 
-    public void setListaPartecipazioni(List<Partecipazione> lista_partecipazioni) {
-        this.listaPartecipazioni = lista_partecipazioni;
-
-    }
 
     @Override
     public String toString() {
