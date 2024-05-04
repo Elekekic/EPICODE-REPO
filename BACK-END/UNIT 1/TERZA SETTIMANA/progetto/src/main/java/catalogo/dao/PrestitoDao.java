@@ -42,7 +42,7 @@ public class PrestitoDao {
 
     //7. Ricerca degli elementi ATTUALMENTE IN PRESTITO dato un numero tessera utente
     public List<Prestito> getByNumeroTesseraUtente(int numeroTessera) {
-        Query query = em.createQuery("SELECT p FROM Prestito p WHERE p.utente.numeroTessera = :numeroTessera AND p.dataRestituzioneEffettiva IS NULL");
+        Query query = em.createQuery("SELECT p FROM Prestiti p WHERE p.utente.numeroTessera = :numeroTessera AND p.dataRestituzioneEffettiva IS NULL");
         query.setParameter("numeroTessera", numeroTessera);
         return query.getResultList();
     }
