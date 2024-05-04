@@ -42,17 +42,15 @@ public class PrestitoDao {
 
     //7. Ricerca degli elementi ATTUALMENTE IN PRESTITO dato un numero tessera utente
     public List<Prestito> getByNumeroTesseraUtente(int numeroTessera) {
-        Query query = em.createQuery("SELECT p FROM Prestiti p WHERE p.utente.numeroTessera = :numeroTessera AND p.dataRestituzioneEffettiva IS NULL");
+        Query query = em.createQuery("SELECT p FROM Prestito p WHERE p.utente.numeroTessera = :numeroTessera");
         query.setParameter("numeroTessera", numeroTessera);
         return query.getResultList();
     }
 
     //8. Ricerca di tutti i PRESTITI SCADUTI o non ancora restituiti
     public List<Prestito> getPrestitiScaduti() {
-        LocalDate oggi = LocalDate.now();
-
-        Query query = em.createQuery("SELECT p FROM Prestito p WHERE p.dataRestituzionePrevista < :oggi AND p.dataRestituzioneEffettiva IS NULL");
-        query.setParameter("oggi", oggi);
+        Query query = em.createQuery("SELECT p FROM Prestito p WHERE p.dataRestituzioneEffettiva < :oggi OR p.dataRestituzionePrevista IS NULL");
+        query.setParameter("oggi", LocalDate.now());
         return query.getResultList();
     }
 

@@ -77,8 +77,8 @@ public class Main {
 //        Prestito prestito = new Prestito();
 //        prestito.setUtente(utente);
 //        prestito.setElementoPrestato(libri);
-//        prestito.setDataInizioPrestito(LocalDate.of(2024, 05, 04));
-//        prestito.setDataRestituzioneEffettiva(LocalDate.of(2024, 10, 04));
+//        prestito.setDataInizioPrestito(LocalDate.of(2024, 01, 04));
+//        prestito.setDataRestituzioneEffettiva(LocalDate.of(2024, 05, 04));
 //        prestitoDao.save(prestito);
 
         System.out.println("ricerca elementi prestati tramite il numero tessera utente");
