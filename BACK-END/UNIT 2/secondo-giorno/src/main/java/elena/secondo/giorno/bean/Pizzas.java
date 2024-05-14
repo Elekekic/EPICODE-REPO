@@ -1,4 +1,4 @@
-package elena.primogiorno1.bean;
+package elena.secondo.giorno.bean;
 
 import lombok.Data;
 

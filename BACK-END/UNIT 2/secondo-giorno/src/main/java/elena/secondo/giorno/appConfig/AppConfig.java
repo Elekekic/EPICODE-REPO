@@ -1,10 +1,9 @@
-package elena.primogiorno1.appConfig;
+package elena.secondo.giorno.appConfig;
 
-
-import elena.primogiorno1.bean.Drinks;
-import elena.primogiorno1.bean.Menu;
-import elena.primogiorno1.bean.Pizzas;
-import elena.primogiorno1.bean.Toppings;
+import elena.secondo.giorno.bean.Drinks;
+import elena.secondo.giorno.bean.Menu;
+import elena.secondo.giorno.bean.Pizzas;
+import elena.secondo.giorno.bean.Toppings;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Scope;
@@ -102,7 +101,7 @@ public class AppConfig {
     public Pizzas getMargheritaPizza() {
         Pizzas pizza = new Pizzas();
         pizza.setName("Margherita Pizza");
-        pizza.getMozarella();
+        pizza.getTomato();
         pizza.getMozarella();
         pizza.setCalories(1104);
         pizza.setPrice(5.50);
@@ -114,7 +113,7 @@ public class AppConfig {
     public Pizzas getSalamiPizza() {
         Pizzas pizza = new Pizzas();
         pizza.setName("Salami Pizza");
-        pizza.getMozarella();
+        pizza.getTomato();
         pizza.getMozarella();
         pizza.setToppings(List.of(getSalami()));
         pizza.setCalories(1160);
@@ -127,7 +126,7 @@ public class AppConfig {
     public Pizzas getHamPizza() {
         Pizzas pizza = new Pizzas();
         pizza.setName("Ham Pizza");
-        pizza.getMozarella();
+        pizza.getTomato();
         pizza.getMozarella();
         pizza.setToppings(List.of(getHam()));
         pizza.setCalories(1160);
@@ -140,9 +139,9 @@ public class AppConfig {
     public Pizzas getHawaiianizza() {
         Pizzas pizza = new Pizzas();
         pizza.setName("Hawaiian Pizza");
+        pizza.getTomato();
         pizza.getMozarella();
-        pizza.getMozarella();
-        pizza.setToppings(List.of(getHam()));
+        pizza.setToppings(List.of(getHam(),getPineapple()));
         pizza.setCalories(1024);
         pizza.setPrice(7.50);
         return pizza;
