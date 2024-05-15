@@ -9,25 +9,26 @@ import org.springframework.stereotype.Component;
 import java.util.List;
 
 @Data
-@Component("table1")
-@PropertySource("application.properties")
+@Component
 public class Tables {
 
-    private String numero;
-
+    private int numero;
     private Stato stato;
-
-    @Value("${table1.copertiMax}")
-    private int copertiMax;
-
-    private List<Orders> ordini;
+    private int numMaxCoperti;
+    private double priceCoperto;
+    private boolean occupied;
 
     @Autowired
-    public void setOrdini(List<Orders> ordini) {
-        this.ordini = ordini;
-   }
+    private List<Orders> ordini;
+
 
    public enum Stato {
        LIBERO,OCCUPATO
    }
+
+    public void print() {
+        System.out.println("numero tavolo--> " + numero);
+        System.out.println("numero massimo coperti--> " + numMaxCoperti);
+        System.out.println("Free/Occupied--> " + (this.occupied ? "Free" : "Occupied"));
+    }
 }

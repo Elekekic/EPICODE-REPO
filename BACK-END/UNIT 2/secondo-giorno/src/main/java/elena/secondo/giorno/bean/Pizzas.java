@@ -5,13 +5,12 @@ import lombok.Data;
 import java.util.List;
 
 @Data
-public class Pizzas {
+public class Pizzas extends Item {
 
     private String name;
-    private String tomato = "tomato";
-    private String mozarella = "mozarella";
-    private double price;
-    private int calories;
+    private String primoIngredienteBase = "tomato";
+    private String secondoIngredienteBase = "mozarella";
+    private boolean Xl = true;
 
     private List<Toppings> toppings;
 

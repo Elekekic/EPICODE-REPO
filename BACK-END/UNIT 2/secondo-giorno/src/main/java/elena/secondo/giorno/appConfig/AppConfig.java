@@ -1,9 +1,7 @@
 package elena.secondo.giorno.appConfig;
 
-import elena.secondo.giorno.bean.Drinks;
-import elena.secondo.giorno.bean.Menu;
-import elena.secondo.giorno.bean.Pizzas;
-import elena.secondo.giorno.bean.Toppings;
+import elena.secondo.giorno.bean.*;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Scope;
@@ -101,10 +99,11 @@ public class AppConfig {
     public Pizzas getMargheritaPizza() {
         Pizzas pizza = new Pizzas();
         pizza.setName("Margherita Pizza");
-        pizza.getTomato();
-        pizza.getMozarella();
+        pizza.getPrimoIngredienteBase();
+        pizza.getSecondoIngredienteBase();
         pizza.setCalories(1104);
         pizza.setPrice(5.50);
+        pizza.isXl();
         return pizza;
     }
 
@@ -113,11 +112,12 @@ public class AppConfig {
     public Pizzas getSalamiPizza() {
         Pizzas pizza = new Pizzas();
         pizza.setName("Salami Pizza");
-        pizza.getTomato();
-        pizza.getMozarella();
+        pizza.getPrimoIngredienteBase();
+        pizza.getSecondoIngredienteBase();
         pizza.setToppings(List.of(getSalami()));
         pizza.setCalories(1160);
         pizza.setPrice(6.50);
+        pizza.isXl();
         return pizza;
     }
 
@@ -126,11 +126,12 @@ public class AppConfig {
     public Pizzas getHamPizza() {
         Pizzas pizza = new Pizzas();
         pizza.setName("Ham Pizza");
-        pizza.getTomato();
-        pizza.getMozarella();
+        pizza.getPrimoIngredienteBase();
+        pizza.getSecondoIngredienteBase();
         pizza.setToppings(List.of(getHam()));
         pizza.setCalories(1160);
         pizza.setPrice(5.50);
+        pizza.isXl();
         return pizza;
     }
 
@@ -139,11 +140,12 @@ public class AppConfig {
     public Pizzas getHawaiianizza() {
         Pizzas pizza = new Pizzas();
         pizza.setName("Hawaiian Pizza");
-        pizza.getTomato();
-        pizza.getMozarella();
+        pizza.getPrimoIngredienteBase();
+        pizza.getSecondoIngredienteBase();
         pizza.setToppings(List.of(getHam(),getPineapple()));
         pizza.setCalories(1024);
         pizza.setPrice(7.50);
+        pizza.isXl();
         return pizza;
     }
 
@@ -154,6 +156,17 @@ public class AppConfig {
         menu.setToppings(List.of(getHam(),getCheese(),getPineapple(),getOnions(),getSalami()));
         menu.setPizzas(List.of(getHamPizza(),getMargheritaPizza(),getHawaiianizza(),getSalamiPizza()));
         return menu;
+    }
+
+    @Bean("Table-1")
+    Tables getTable1 (@Value("${}") double PriceCoperto,  @Value("${table1.copertiMax}") int copertiMax) {
+       Tables table = new Tables();
+       table.setNumero(1);
+       table.setCopertiMax(copertiMax);
+       table.setStato(Tables.Stato.LIBERO);
+       table.setOccupied(false);
+       table.setPriceCoperto(PriceCoperto);
+        return table;
     }
 
 }
