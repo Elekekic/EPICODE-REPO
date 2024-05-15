@@ -1,6 +1,8 @@
 package elena.secondo.giorno.bean;
 
 import lombok.Data;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
@@ -10,7 +12,7 @@ import java.util.List;
 @Data
 @Component
 public class Order {
-
+    Logger logger = LoggerFactory.getLogger(Order.class);
 
     private Table table;
     private List<Item> listaOrdine;
@@ -30,14 +32,14 @@ public class Order {
 
 
     public void print() {
-        System.out.println("numero ordine: " + this.numeroOrdine);
-        System.out.println("Dettagli lista: ");
+        logger.info("numero ordine: " + this.numeroOrdine);
+        logger.info("Dettagli lista: ");
         this.listaOrdine.forEach(System.out::println);
-        System.out.println("stato attuale: " + this.stato);
-        System.out.println("numero coperti: " + this.numCoperti);
-        System.out.println("ora acquisizione: " + this.oraAcquisizione);
-        System.out.println("numero tavolo: " + this.table.getNumero());
-        System.out.println("TOTALE: " + this.getTotal());
+        logger.info("stato attuale: " + this.stato);
+        logger.info("numero coperti: " + this.numCoperti);
+        logger.info("ora acquisizione: " + this.oraAcquisizione);
+        logger.info("numero tavolo: " + this.table.getNumero());
+        logger.info("TOTALE: " + this.getTotal());
 
     }
 

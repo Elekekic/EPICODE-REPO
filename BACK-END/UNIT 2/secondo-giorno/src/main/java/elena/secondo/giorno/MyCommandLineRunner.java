@@ -3,11 +3,11 @@ package elena.secondo.giorno;
 import elena.secondo.giorno.bean.Menu;
 import elena.secondo.giorno.bean.Order;
 import elena.secondo.giorno.bean.Table;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.stereotype.Component;
-
-import java.util.List;
 
 @Component
 public class MyCommandLineRunner implements CommandLineRunner {
