@@ -162,7 +162,7 @@ public class AppConfig {
     Tables getTable1 (@Value("${}") double PriceCoperto,  @Value("${table1.copertiMax}") int copertiMax) {
        Tables table = new Tables();
        table.setNumero(1);
-       table.setCopertiMax(copertiMax);
+       table.setNumMaxCoperti(copertiMax);
        table.setStato(Tables.Stato.LIBERO);
        table.setOccupied(false);
        table.setPriceCoperto(PriceCoperto);
