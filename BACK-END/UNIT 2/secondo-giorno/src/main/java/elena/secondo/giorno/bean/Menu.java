@@ -1,6 +1,7 @@
 package elena.secondo.giorno.bean;
 
 import lombok.Data;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import java.util.List;
@@ -9,11 +10,14 @@ import java.util.List;
 @Component
 public class Menu {
 
-    private List<Pizzas> pizzas;
+    @Autowired
+    private List<Pizza> pizzas;
 
-    private List<Drinks> drinks;
+    @Autowired
+    private List<Drink> drinks;
 
-    private List<Toppings> toppings;
+    @Autowired
+    private List<Topping> toppings;
 
     public void printMenu() {
         System.out.println("MENU ------");

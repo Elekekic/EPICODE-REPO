@@ -10,16 +10,20 @@ import java.util.List;
 
 @Data
 @Component
-public class Tables {
+@PropertySource("application.properties")
+public class Table {
 
     private int numero;
     private Stato stato;
     private int numMaxCoperti;
-    private double priceCoperto;
+
+    @Value("${coperto.price}")
+    private double copertoPrice;
+
     private boolean occupied;
 
     @Autowired
-    private List<Orders> ordini;
+    private List<Order> ordini;
 
 
    public enum Stato {
@@ -27,8 +31,9 @@ public class Tables {
    }
 
     public void print() {
-        System.out.println("numero tavolo--> " + numero);
-        System.out.println("numero massimo coperti--> " + numMaxCoperti);
-        System.out.println("Free/Occupied--> " + (this.occupied ? "Free" : "Occupied"));
+        System.out.println("numero tavolo: " + numero);
+        System.out.println("numero massimo coperti: " + numMaxCoperti);
+        System.out.println("Free/Occupied: " + (this.occupied ? "Free" : "Occupied"));
+        System.out.println("costo coperto: " + this.copertoPrice);
     }
 }

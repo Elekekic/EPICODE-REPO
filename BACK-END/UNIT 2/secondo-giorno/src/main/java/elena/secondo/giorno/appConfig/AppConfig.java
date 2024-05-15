@@ -6,6 +6,8 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Scope;
 
+import java.time.LocalTime;
+import java.util.ArrayList;
 import java.util.List;
 
 @Configuration
@@ -13,8 +15,8 @@ public class AppConfig {
 
     @Bean("Lemonade")
     @Scope("prototype")
-    public Drinks getLemonade() {
-        Drinks drink = new Drinks();
+    public Drink getLemonade() {
+        Drink drink = new Drink();
         drink.setName("Lemonade");
         drink.setLitres(0.5);
         drink.setPrice(1.29);
@@ -24,8 +26,8 @@ public class AppConfig {
 
     @Bean("Water")
     @Scope("prototype")
-    public Drinks getWater() {
-        Drinks drink = new Drinks();
+    public Drink getWater() {
+        Drink drink = new Drink();
         drink.setName("Water");
         drink.setLitres(0.5);
         drink.setPrice(1.29);
@@ -35,8 +37,8 @@ public class AppConfig {
 
     @Bean("Wine")
     @Scope("prototype")
-    public Drinks getWine() {
-        Drinks drink = new Drinks();
+    public Drink getWine() {
+        Drink drink = new Drink();
         drink.setName("Wine");
         drink.setLitres(0.75);
         drink.setPrice(7.49);
@@ -46,58 +48,58 @@ public class AppConfig {
 
     @Bean("Cheese")
     @Scope("prototype")
-    public Toppings getCheese() {
-        Toppings toppings = new Toppings();
-        toppings.setNome("Cheese");
-        toppings.setCalories(92);
-        toppings.setPrice(0.69);
-        return toppings;
+    public Topping getCheese() {
+        Topping topping = new Topping();
+        topping.setNome("Cheese");
+        topping.setCalories(92);
+        topping.setPrice(0.69);
+        return topping;
     }
 
     @Bean("Ham")
     @Scope("prototype")
-    public Toppings getHam() {
-        Toppings toppings = new Toppings();
-        toppings.setNome("Ham");
-        toppings.setCalories(35);
-        toppings.setPrice(0.89);
-        return toppings;
+    public Topping getHam() {
+        Topping topping = new Topping();
+        topping.setNome("Ham");
+        topping.setCalories(35);
+        topping.setPrice(0.89);
+        return topping;
     }
 
     @Bean("Onions")
     @Scope("prototype")
-    public Toppings getOnions() {
-        Toppings toppings = new Toppings();
-        toppings.setNome("Onions");
-        toppings.setCalories(22);
-        toppings.setPrice(0.69);
-        return toppings;
+    public Topping getOnions() {
+        Topping topping = new Topping();
+        topping.setNome("Onions");
+        topping.setCalories(22);
+        topping.setPrice(0.69);
+        return topping;
     }
 
     @Bean("Pineapple")
     @Scope("prototype")
-    public Toppings getPineapple() {
-        Toppings toppings = new Toppings();
-        toppings.setNome("Pineapple");
-        toppings.setCalories(24);
-        toppings.setPrice(0.79);
-        return toppings;
+    public Topping getPineapple() {
+        Topping topping = new Topping();
+        topping.setNome("Pineapple");
+        topping.setCalories(24);
+        topping.setPrice(0.79);
+        return topping;
     }
 
     @Bean("Salami")
     @Scope("prototype")
-    public Toppings getSalami() {
-        Toppings toppings = new Toppings();
-        toppings.setNome("Salami");
-        toppings.setCalories(86);
-        toppings.setPrice(0.99);
-        return toppings;
+    public Topping getSalami() {
+        Topping topping = new Topping();
+        topping.setNome("Salami");
+        topping.setCalories(86);
+        topping.setPrice(0.99);
+        return topping;
     }
 
     @Bean("Margherita Pizza")
     @Scope("prototype")
-    public Pizzas getMargheritaPizza() {
-        Pizzas pizza = new Pizzas();
+    public Pizza getMargheritaPizza() {
+        Pizza pizza = new Pizza();
         pizza.setName("Margherita Pizza");
         pizza.getPrimoIngredienteBase();
         pizza.getSecondoIngredienteBase();
@@ -109,8 +111,8 @@ public class AppConfig {
 
     @Bean("Salami Pizza")
     @Scope("prototype")
-    public Pizzas getSalamiPizza() {
-        Pizzas pizza = new Pizzas();
+    public Pizza getSalamiPizza() {
+        Pizza pizza = new Pizza();
         pizza.setName("Salami Pizza");
         pizza.getPrimoIngredienteBase();
         pizza.getSecondoIngredienteBase();
@@ -123,8 +125,8 @@ public class AppConfig {
 
     @Bean("Ham Pizza")
     @Scope("prototype")
-    public Pizzas getHamPizza() {
-        Pizzas pizza = new Pizzas();
+    public Pizza getHamPizza() {
+        Pizza pizza = new Pizza();
         pizza.setName("Ham Pizza");
         pizza.getPrimoIngredienteBase();
         pizza.getSecondoIngredienteBase();
@@ -137,8 +139,8 @@ public class AppConfig {
 
     @Bean("Hawaiian Pizza")
     @Scope("prototype")
-    public Pizzas getHawaiianizza() {
-        Pizzas pizza = new Pizzas();
+    public Pizza getHawaiianizza() {
+        Pizza pizza = new Pizza();
         pizza.setName("Hawaiian Pizza");
         pizza.getPrimoIngredienteBase();
         pizza.getSecondoIngredienteBase();
@@ -159,14 +161,31 @@ public class AppConfig {
     }
 
     @Bean("Table-1")
-    Tables getTable1 (@Value("${}") double PriceCoperto,  @Value("${table1.copertiMax}") int copertiMax) {
-       Tables table = new Tables();
+    Table getTable (@Value("${coperto.price}") double PriceCoperto, @Value("${table-1.copertiMax}") int copertiMax) {
+       Table table = new Table();
        table.setNumero(1);
        table.setNumMaxCoperti(copertiMax);
-       table.setStato(Tables.Stato.LIBERO);
+       table.setStato(Table.Stato.LIBERO);
        table.setOccupied(false);
-       table.setPriceCoperto(PriceCoperto);
+       table.setCopertoPrice(PriceCoperto);
         return table;
     }
+
+    @Bean("Order-1")
+    Order getOrder () {
+        Order order = new Order();
+        order.setStato(Order.Stato.IN_CORSO);
+        order.setNumeroOrdine(1);
+        order.setOraAcquisizione(LocalTime.of(12,23));
+        order.setNumCoperti(4);
+        List<Item> items = new ArrayList<>();
+        items.add(getWine());
+        items.add(getHamPizza());
+        items.add(getWater());
+        items.add(getMargheritaPizza());
+        order.setListaOrdine(items);
+        return order;
+    }
+
 
 }
