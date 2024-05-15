@@ -1,6 +1,7 @@
 package elena.secondo.giorno.appConfig;
 
 import elena.secondo.giorno.bean.*;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -172,12 +173,13 @@ public class AppConfig {
     }
 
     @Bean("Order-1")
-    Order getOrder () {
+    Order getOrder (@Qualifier("Table-1") Table table) {
         Order order = new Order();
         order.setStato(Order.Stato.IN_CORSO);
         order.setNumeroOrdine(1);
         order.setOraAcquisizione(LocalTime.of(12,23));
         order.setNumCoperti(4);
+        order.setTable(table);
         List<Item> items = new ArrayList<>();
         items.add(getWine());
         items.add(getHamPizza());

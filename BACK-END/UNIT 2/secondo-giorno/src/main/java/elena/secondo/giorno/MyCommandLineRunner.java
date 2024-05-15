@@ -17,7 +17,6 @@ public class MyCommandLineRunner implements CommandLineRunner {
     public void run(String... args) throws Exception {
         AnnotationConfigApplicationContext ctx = new AnnotationConfigApplicationContext(SecondoGiornoApplication.class);
         try {
-
             Menu menu = ctx.getBean("menu", Menu.class);
             menu.printMenu();
 

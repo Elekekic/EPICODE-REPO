@@ -22,7 +22,7 @@ public class Table {
 
     private boolean occupied;
 
-    @Autowired
+
     private List<Order> ordini;
 
 
