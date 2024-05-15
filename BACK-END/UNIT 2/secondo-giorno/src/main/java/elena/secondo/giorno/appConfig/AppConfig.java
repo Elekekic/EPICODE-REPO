@@ -162,13 +162,13 @@ public class AppConfig {
     }
 
     @Bean("Table-1")
-    Table getTable (@Value("${coperto.price}") double PriceCoperto, @Value("${table-1.copertiMax}") int copertiMax) {
+    Table getTable (@Value("${coperto.price}") double priceCoperto, @Value("${table-1.copertiMax}") int copertiMax) {
        Table table = new Table();
        table.setNumero(1);
        table.setNumMaxCoperti(copertiMax);
        table.setStato(Table.Stato.LIBERO);
        table.setOccupied(false);
-       table.setCopertoPrice(PriceCoperto);
+       table.setCopertoPrice(priceCoperto);
         return table;
     }
 

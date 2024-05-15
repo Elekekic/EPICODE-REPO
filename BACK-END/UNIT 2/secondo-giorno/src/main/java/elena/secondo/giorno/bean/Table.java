@@ -17,7 +17,9 @@ import java.util.List;
 public class Table {
 
     private int numero;
+
     private Stato stato;
+
     private int numMaxCoperti;
 
     @Value("${coperto.price}")
@@ -25,9 +27,7 @@ public class Table {
 
     private boolean occupied;
 
-
     private List<Order> ordini;
-
 
    public enum Stato {
        LIBERO,OCCUPATO
@@ -36,7 +36,7 @@ public class Table {
     public void print() {
         System.out.println("numero tavolo: " + numero);
         System.out.println("numero massimo coperti: " + numMaxCoperti);
-        System.out.println("Free/Occupied: " + (this.occupied ? "Free" : "Occupied"));
+        System.out.println("Free/Occupied: " + (this.occupied ? "Occupied" : "Free"));
         System.out.println("costo coperto: " + this.copertoPrice);
     }
 }
