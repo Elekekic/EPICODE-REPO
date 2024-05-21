@@ -40,7 +40,7 @@ public class AutoreController {
         }
     }
 
-    @PutMapping(path = "/api/autori/{id}", produces = MediaType.APPLICATION_XML_VALUE)
+    @PutMapping("/api/autori/{id}")
     @ResponseStatus(HttpStatus.OK)
     public Autore updateAutore(@PathVariable int id, @RequestBody Autore autore) throws AutoreNonTrovatoException {
         String avatar = "https://ui-avatars.com/api/?name=" + autore.getNome() + "+" + autore.getCognome();
