@@ -1,6 +1,8 @@
 package elena.secondogiorno.DTO;
 
+import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotEmpty;
+import jakarta.validation.constraints.NotNull;
 import lombok.Data;
 
 @Data
@@ -8,22 +10,21 @@ public class BlogPostDto {
 
     private int id;
 
-    @NotEmpty(message = "Il campo categoria non può essere vuoto")
+    @NotBlank(message = "La categoria non può essere null o vuoto o solo spazi")
     private String categoria;
 
-    @NotEmpty(message = "Il campo titolo non può essere vuoto")
+    @NotBlank(message = "Il titolo non può essere null o vuoto o solo spazi")
     private String titolo;
 
-    @NotEmpty(message = "Il campo cover non può essere vuoto")
     private String cover;
 
-    @NotEmpty(message = "Il campo cognome non può essere vuoto")
+    @NotBlank(message = "Il nome non può essere null o vuoto o solo spazi")
     private String contenuto;
 
-    @NotEmpty(message = "Il campo tempo di lettura non può essere vuoto")
     private int tempoDiLettura;
 
 
+    @NotNull(message = "L'autore non può essere null ")
     private int autoreId;
 
 }

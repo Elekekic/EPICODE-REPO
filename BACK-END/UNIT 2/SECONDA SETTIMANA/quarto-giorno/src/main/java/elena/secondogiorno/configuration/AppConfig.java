@@ -13,9 +13,8 @@ import java.util.Properties;
 @Configuration
 public class AppConfig {
 
-
     @Bean
-    public Cloudinary uploader (@Value("${cloudinary.name}") String name,
+    public Cloudinary getCloudinary(@Value("${cloudinary.name}") String name,
                                 @Value("${cloudinary.apikey}") String apikey,
                                 @Value("${cloudinary.secret}") String secret) {
 
@@ -33,7 +32,7 @@ public class AppConfig {
                                                 @Value("${gmail.mail.smtp.starttls.enable}" )String starttls,
                                                 @Value("${gmail.mail.debug}" )String debug,
                                                 @Value("${gmail.mail.from}" )String from,
-                                                @Value("${gmail.mail.from.password}" )String appPassword,
+                                                @Value("${gmail.mail.from.password}" )String password,
                                                 @Value("${gmail.smtp.ssl.enable}" )String ssl,
                                                 @Value("${gmail.smtp.host}" )String host,
                                                 @Value("${gmail.smtp.port}" )String port){
@@ -42,7 +41,7 @@ public class AppConfig {
         mailSender.setPort(Integer.parseInt(port));
 
         mailSender.setUsername(from);
-        mailSender.setPassword(appPassword);
+        mailSender.setPassword(password);
 
         Properties props = mailSender.getJavaMailProperties();
         props.put("mail.transport.protocol", protocol);

@@ -1,9 +1,6 @@
 package elena.secondogiorno.DTO;
 
-import jakarta.validation.constraints.Email;
-import jakarta.validation.constraints.NotEmpty;
-import jakarta.validation.constraints.NotNull;
-import jakarta.validation.constraints.Size;
+import jakarta.validation.constraints.*;
 import lombok.Data;
 
 import java.time.LocalDate;
@@ -13,20 +10,18 @@ public class AutoreDto {
 
 
     @Size(max = 30)
-    @NotEmpty(message = "Il campo nome non può essere vuoto")
+    @NotBlank(message = "Il nome non può essere null o vuoto o solo spazi")
     private String nome;
 
     @Size(max = 30)
-    @NotEmpty(message = "Il campo cognome non può essere vuoto")
+    @NotBlank(message = "Il cognome non può essere null o vuoto o solo spazi")
     private String cognome;
 
-    @NotEmpty(message = "Il campo email non può essere vuoto")
+
     @Email
+    @NotBlank(message = "L'email non può essere null o vuoto o solo spazi")
     private String email;
 
-    @NotEmpty(message = "Il campo data di nascita non può essere vuoto")
-    private LocalDate dataDiNascita;
 
-    @NotEmpty(message = "Il campo avatar non può essere vuoto")
-    private String avatar;
+    private LocalDate dataDiNascita;
 }

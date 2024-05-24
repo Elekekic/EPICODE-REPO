@@ -12,6 +12,7 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
+import org.springframework.mail.MailMessage;
 import org.springframework.mail.SimpleMailMessage;
 import org.springframework.mail.javamail.JavaMailSenderImpl;
 import org.springframework.stereotype.Service;
@@ -28,9 +29,6 @@ public class AutoreService {
 
     @Autowired
     private AutoreRepository autoreRepository;
-
-    @Autowired
-    private BlogPostrepository blogPostrepository;
 
     @Autowired
     private Cloudinary cloudinary;
@@ -53,14 +51,13 @@ public class AutoreService {
         autore.setEmail(autoreDto.getEmail());
         autore.setCognome(autoreDto.getCognome());
         autore.setDataDiNascita(autoreDto.getDataDiNascita());
-        String avatar = "https://ui-avatars.com/api/?name=" + autoreDto.getNome() + "+" + autoreDto.getCognome();
-        autore.setAvatar(avatar);
+        autore.setAvatar("https://ui-avatars.com/api/?name=" + autore.getNome() + "+" + autore.getCognome());
         autoreRepository.save(autore);
-        sendMail(autore.getEmail());
-        return "Autore con id: " + autore.getId() + "aggiunto/a con successo";
+        sendMail(autore.getEmail()); // in modo da poter mandare le email di conferma
+        return "Autore con id: " + autore.getId() + " aggiunto/a con successo";
     }
 
-    public Autore updateAutore(int id, AutoreDto autoreDto) throws AutoreNonTrovatoException {
+    public Autore updateAutore(int id, AutoreDto autoreDto) {
         Optional<Autore> autoreOptional = getAutoreById(id);
 
         if (autoreOptional.isPresent()) {
@@ -69,23 +66,23 @@ public class AutoreService {
             autore.setCognome(autoreDto.getCognome());
             autore.setEmail(autoreDto.getEmail());
             autore.setDataDiNascita(autoreDto.getDataDiNascita());
-            String avatar = "https://ui-avatars.com/api/?name=" + autoreDto.getNome() + "+" + autoreDto.getCognome();
-            autore.setAvatar(avatar);
-            autore.setEmail(autoreDto.getEmail());
+            autore.setAvatar("https://ui-avatars.com/api/?name=" + autore.getNome() + "+" + autore.getCognome());
+
             return autoreRepository.save(autore);
+
         } else {
-            throw new AutoreNonTrovatoException("Autore con id:" + id + " non trovata");
+            throw new AutoreNonTrovatoException("Autore con id:" + id + " non trovato/a");
         }
     }
 
-    public String deleteAutore(int id) throws AutoreNonTrovatoException {
-        Optional<Autore> autoreOpt = autoreRepository.findById(id);
+    public String deleteAutore(int id) {
+        Optional<Autore> autoreOpt = getAutoreById(id);
 
         if (autoreOpt.isPresent()) {
             autoreRepository.delete(autoreOpt.get());
-            return "Autore con ID: " + id + "cancellato con successo";
+            return "Autore con ID: " + id + "cancellato/a con successo";
         } else {
-            throw new AutoreNonTrovatoException("Autore non trovato");
+            throw new AutoreNonTrovatoException("Autore con id:" + id + " non trovato/a");
         }
     }
 
@@ -100,15 +97,15 @@ public class AutoreService {
             autoreRepository.save(autore);
             return "Autore con ID: " + id + " aggiornato correttamente con successo";
         } else {
-            throw new AutoreNonTrovatoException(" studente non trovato");
+            throw new AutoreNonTrovatoException("Autore non trovato/a");
         }
     }
 
     private void sendMail(String email) {
         SimpleMailMessage message = new SimpleMailMessage();
         message.setTo(email);
-        message.setSubject("Registrazione Servizio rest");
-        message.setText("Registrazione al servizio rest avvenuta con successo");
+        message.setSubject("Registrazione App BlogPost");
+        message.setText("Registrazione all'app BlogPost avvenuta con successo! :)");
 
         javaMailSender.send(message);
     }

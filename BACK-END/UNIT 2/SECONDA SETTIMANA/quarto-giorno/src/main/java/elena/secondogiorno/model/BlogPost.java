@@ -11,6 +11,7 @@ public class BlogPost {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
+
     private String categoria;
     private String titolo;
     private String cover;
