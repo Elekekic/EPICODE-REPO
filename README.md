@@ -1,10 +1,16 @@
-
 <div align="center">
-<h1 > REPOSITORY WITH EXERCISES FROM EPICODE </h1>
-
-![img](https://github.com/Elekekic/EPICODE-REPO/assets/157897660/8f2d6602-f206-4c85-a50e-9a91eab1b2d3)
-
-
+<img src="https://github.com/Elekekic/EPICODE-REPO/assets/157897660/76b00f36-7d92-4652-a6cc-00a296ebee5d" width="400px" />
 </div>
 
+<h1 > REPOSITORY WITH EXERCISES FROM EPICODE </h1>
 
+### 🗃️ FRONT-END PROJECTS :
+
+  - **UNIT 1** | _HTML & CSS, Javascript beginner_
+  - **UNIT 2** | _UX & UI, Bootstrap, Javascript advanced_
+  - **UNIT 3** | _Angular_
+  - **EXTRA**  | _Typescript_
+
+### 🗃️ BACK-END PROJECTS :
+  - **UNIT 1** | _Java_
+  - **UNIT 2** | _Spring framework_
