@@ -6,11 +6,11 @@
 
 ### 🗃️ FRONT-END PROJECTS :
 
-  - **UNIT 1** | _HTML & CSS, Javascript beginner_
-  - **UNIT 2** | _UX & UI, Bootstrap, Javascript advanced_
-  - **UNIT 3** | _Angular_
-  - **EXTRA**  | _Typescript_
+  - **UNIT 1**:  _HTML & CSS, Javascript beginner_
+  - **UNIT 2**:  _UX & UI, Bootstrap, Javascript advanced_
+  - **UNIT 3**:  _Angular_
+  - **EXTRA**:  _Typescript_
 
 ### 🗃️ BACK-END PROJECTS :
-  - **UNIT 1** | _Java_
-  - **UNIT 2** | _Spring framework_
+  - **UNIT 1**:  _Java_
+  - **UNIT 2**:  _Spring framework_
