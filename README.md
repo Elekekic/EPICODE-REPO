@@ -2,7 +2,7 @@
 <img src="https://github.com/Elekekic/EPICODE-REPO/assets/157897660/76b00f36-7d92-4652-a6cc-00a296ebee5d" width="400px" />
 </div>
 
-<h1 > REPOSITORY WITH EXERCISES FROM EPICODE </h1>
+<h1 > DAILY EXERCISES & MINI PROJECTS </h1>
 
 ### 🗃️ FRONT-END PROJECTS :
 
