@@ -4,6 +4,8 @@
 
 <h1 > DAILY EXERCISES & MINI PROJECTS </h1>
 
+![GitHub last commit](https://img.shields.io/github/last-commit/Elekekic/EPICODE-REPO)
+
 ### 🗃️ FRONT-END PROJECTS :
 
   - **UNIT 1**:  _HTML & CSS, Javascript beginner_
